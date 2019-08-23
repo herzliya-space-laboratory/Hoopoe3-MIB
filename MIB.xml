@@ -301,12 +301,12 @@
       </ServiceSubtype>
 
       <ServiceSubtype Value="91" Name="SolarPanels">
-        <Parameter Name="SP temp0" Type="uint32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp1" Type="uint32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp2" Type="uint32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp3" Type="uint32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp4" Type="uint32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp5" Type="uint32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+        <Parameter Name="SP temp0" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		<Parameter Name="SP temp1" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		<Parameter Name="SP temp2" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		<Parameter Name="SP temp3" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		<Parameter Name="SP temp4" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		<Parameter Name="SP temp5" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
       </ServiceSubtype>
 
     </ServiceType>
