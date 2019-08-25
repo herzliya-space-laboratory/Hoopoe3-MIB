@@ -1,80 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <GSCMIB>
   <Telemetry>
-	<ServiceType Value="12" Name="Download ImageDataBase">
-	  <ServiceSubtype Value="97" Name="ImageDataBase packet">
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+  	<ServiceType Value="12" Name="Download ImageDataBase">
+  	  <ServiceSubtype Value="97" Name="ImageDataBase packet">
+  		  <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
-	  
-	  <ServiceSubtype Value="96" Name="first ImageDataBase packet">
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="size" Type="uint32" IsLittleEndian="true" />
+  	  
+  	  <ServiceSubtype Value="96" Name="first ImageDataBase packet">
+  		  <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+  		  <Parameter Name="size" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
-	</ServiceType>
-  
+  	</ServiceType>
+
+
     <ServiceType Value="11" Name="image dump">
 
-	  <ServiceSubtype Value="106" Name="first jpeg packet">
+  	  <ServiceSubtype Value="106" Name="first jpeg packet">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="file size" Type="uint32" IsLittleEndian="true" />
+  		  <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+  		  <Parameter Name="file size" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 	
       <ServiceSubtype Value="105" Name="jpeg">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="104" Name="raw">
-		<Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="103" Name="thumbnail1">
-		<Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="102" Name="thumbnail2">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="101" Name="thumbnail3">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="100" Name="thumbnail4">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="99" Name="thumbnail5">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="98" Name="thumbnail6">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
-		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
+		    <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
       </ServiceSubtype>
-
     </ServiceType>
 
     <ServiceType Value="3" Name="General Beacon">
-
       <ServiceSubtype Value="25" Name="General Beacon">
         <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="Batt_Curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
@@ -106,9 +105,7 @@
         <Parameter Name="Number_Resets" Type="uint32" IsLittleEndian="false" />
         <Parameter Name="Last_Resets" Type="datetime" Unit="sec" IsLittleEndian="false" />
         <Parameter Name="states" Type="byte" Unit="Ask Elai" IsLittleEndian="false" />
-
       </ServiceSubtype>
-
     </ServiceType>
 
     <ServiceType Name="ADCS" Value="42">
@@ -213,7 +210,6 @@
     </ServiceType>
 
     <ServiceType Value="173" Name="Housekeeping">
-
       <ServiceSubtype Value="13" Name="EPS">
         <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="false" />
@@ -302,13 +298,12 @@
 
       <ServiceSubtype Value="91" Name="SolarPanels">
         <Parameter Name="SP temp0" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp1" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp2" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp3" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp4" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		<Parameter Name="SP temp5" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		    <Parameter Name="SP temp1" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		    <Parameter Name="SP temp2" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		    <Parameter Name="SP temp3" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		    <Parameter Name="SP temp4" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+		      <Parameter Name="SP temp5" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
       </ServiceSubtype>
-
     </ServiceType>
 
     <ServiceType Value="13" Name="General">
@@ -318,10 +313,8 @@
         <Parameter Name="AckType" Description="Type of ack" Type="byte" Unit="x" IsLittleEndian="false" />
         <Parameter Name="ErrorType" Description="Type of error (if there is)" Type="byte" Unit="x" IsLittleEndian="false" />
       </ServiceSubtype>
-
     </ServiceType>
   </Telemetry>
-
 
   <Telecommands>
 
@@ -343,7 +336,7 @@
         <Parameter Name="heater high temp" Description="heater high temp" Type="byte" Unit="mV" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="99" Name="allow ADCS">
+	    <ServiceSubtype Value="99" Name="allow ADCS">
       </ServiceSubtype>
 
       <ServiceSubtype Value="100" Name="shut forever ADCS">
@@ -355,15 +348,14 @@
       <ServiceSubtype Value="102" Name="shut forever camera">
       </ServiceSubtype>
       
-	  <ServiceSubtype Value="11" Name="update alpha parameter">
-		<Parameter Name="alpha" Type="float"/>
+	    <ServiceSubtype Value="11" Name="update alpha parameter">
+		    <Parameter Name="alpha" Type="float"/>
       </ServiceSubtype>
 	  
       <ServiceSubtype Value="20" Name="update COMM voltages">
         <Parameter Name="aprs shut volt" Description="heater low temp" Type="uint16" Unit="C" IsLittleEndian="false" />
         <Parameter Name="beacon high delay volt" Description="heater high temp" Type="uint16" Unit="C" IsLittleEndian="false" />
       </ServiceSubtype>
-
     </ServiceType>
 
     <ServiceType Value="13" Name="Comm">
@@ -385,32 +377,31 @@
 
       <ServiceSubtype Value="25" Name="shut transponder">
       </ServiceSubtype>
-      
-	  <ServiceSubtype Value="26" Name="change transponder RSSI">
+
+      <ServiceSubtype Value="26" Name="change transponder RSSI">
         <Parameter Name="RSSI" Description="new value" Type="uint16" Unit="¯\_(ツ)_/¯" IsLittleEndian="false" />
       </ServiceSubtype>
-	  
-	  <ServiceSubtype Value="55" Name="change transmition bit rate">
+    
+      <ServiceSubtype Value="55" Name="change transmition bit rate">
         <Parameter Name="bit rate" Type="byte" IsLittleEndian="false"/>
       </ServiceSubtype>
-	  
+    
       <ServiceSubtype Value="91" Name="stop dump">
-      </ServiceSubtype>
-	  
+      </ServiceSubtype>  
     </ServiceType>
 
     <ServiceType Value="20" Name="General">
 	
-       <ServiceSubtype Value="0" Name="generic I2C">
+      <ServiceSubtype Value="0" Name="generic I2C">
         <Parameter Name="I2C adress" Description="I2C adress" Type="byte" Unit="seconds" IsLittleEndian="false" />
         <Parameter Name="command length" Description="command length" Type="byte" IsLittleEndian="false" />
         <Parameter Name="command param" Description="command parameter" Type="string" Size="40" IsLittleEndian="true" />
       </ServiceSubtype>
-	  
-	   <ServiceSubtype Value="17" Name="upload time">
-		<Parameter Name="time" Description="time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
-      </ServiceSubtype>
 
+      <ServiceSubtype Value="17" Name="upload time">
+        <Parameter Name="time" Description="time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
+      </ServiceSubtype>
+	  
       <ServiceSubtype Value="33" Name="dump">
         <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
@@ -422,7 +413,7 @@
         <Parameter Name="unix end time" Description="end time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
       </ServiceSubtype>
       
-	  <ServiceSubtype Value="35" Name="delete packets">
+	    <ServiceSubtype Value="35" Name="delete packets">
         <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
@@ -432,7 +423,7 @@
         <Parameter Name="unix end time" Description="end time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="45" Name="reset files">
+	    <ServiceSubtype Value="45" Name="reset files">
         <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
@@ -440,26 +431,25 @@
         <Parameter Name="file type [4]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
       </ServiceSubtype>
       
-	  <ServiceSubtype Value="46" Name="restart file system">
+	    <ServiceSubtype Value="46" Name="restart file system">
       </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="66" Name="hard reset">
+  	  <ServiceSubtype Value="66" Name="hard reset">
         <Parameter Name="subsystem index" Description="enum" Type="byte" IsLittleEndian="false" />
-	  </ServiceSubtype>
+  	  </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="67" Name="reset satellite">
-	  </ServiceSubtype>
+  	  <ServiceSubtype Value="67" Name="reset satellite">
+  	  </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="68" Name="soft reset">
+  	  <ServiceSubtype Value="68" Name="soft reset">
         <Parameter Name="subsystem index" Description="enum" Type="byte" IsLittleEndian="false" />
-	  </ServiceSubtype>
+  	  </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="69" Name="reset satellite">
-	  </ServiceSubtype>
+  	  <ServiceSubtype Value="69" Name="reset satellite">
+  	  </ServiceSubtype>
 	  
       <ServiceSubtype Value="122" Name="DummyFunc">
       </ServiceSubtype>
-
     </ServiceType>
 
     <ServiceType Value="154" Name="ADCS">
@@ -778,8 +768,6 @@
         <Parameter Name="Use Star Tracker" Type="byte" IsLittleEndian="true"/>
         <Parameter Name="Magnetometer Mode" Type="byte" IsLittleEndian="true"/>
       </ServiceSubtype>
-
-
     </ServiceType>
 
     <ServiceType Value="251" Name="Imaging">
@@ -862,51 +850,47 @@
         <Parameter Name="new duration" Type="uint32" Unit="unix" IsLittleEndian="true" />
       </ServiceSubtype>
 
-	  <ServiceSubtype Value="16" Name="Turn Off Gecko">
+	    <ServiceSubtype Value="16" Name="Turn Off Gecko">
       </ServiceSubtype>
 
-	  <ServiceSubtype Value="17" Name="Turn On Gecko">
+	    <ServiceSubtype Value="17" Name="Turn On Gecko">
       </ServiceSubtype>
 
-	  <ServiceSubtype Value="18" Name="Set Chunk Size">
-		<Parameter Name="Chunk Width" Type="uint16" Unit="" IsLittleEndian="true" />
-		<Parameter Name="Chunk Height" Type="uint16" Unit="" IsLittleEndian="true" />
+  	  <ServiceSubtype Value="18" Name="Set Chunk Size">
+    		<Parameter Name="Chunk Width" Type="uint16" Unit="" IsLittleEndian="true" />
+    		<Parameter Name="Chunk Height" Type="uint16" Unit="" IsLittleEndian="true" />
       </ServiceSubtype>
-
-
     </ServiceType>
 
     <ServiceType Value="42" Name="GST">
       <ServiceSubtype Value="32" Name="reset delayed command list">
       </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="42" Name="reset subSystem FRAM">
+  	  <ServiceSubtype Value="42" Name="reset subSystem FRAM">
         <Parameter Name="subsystem index" Description="enum" Type="byte" IsLittleEndian="false" />
-	  </ServiceSubtype>
+  	  </ServiceSubtype>
     </ServiceType>
 	
     <ServiceType Value="88" Name="online TM">
 	
-	  <ServiceSubtype Value="0" Name="Get online TM">
+  	  <ServiceSubtype Value="0" Name="Get online TM">
         <Parameter Name="TM index" Description="enum" Type="byte" IsLittleEndian="false" />
-	  </ServiceSubtype>
-	  
-	  <ServiceSubtype Value="1" Name="reset off line TLM list">
+  	  </ServiceSubtype>
+  	  
+  	  <ServiceSubtype Value="1" Name="reset off line TLM list">
       </ServiceSubtype>
-  
-	  <ServiceSubtype Value="2" Name="Add item to off line TLM list">
+    
+  	  <ServiceSubtype Value="2" Name="Add item to off line TLM list">
         <Parameter Name="TM index" Description="enum" Type="byte" />
-		<Parameter Name="Period" Description="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
-		<Parameter Name="unix stop saving time" Description="stop time" Type="datetime" Unit="seconds" IsLittleEndian="true" />
-	  </ServiceSubtype>
-	  
-	  <ServiceSubtype Value="3" Name="Delete item from off line TLM list">
+  		  <Parameter Name="Period" Description="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+  		  <Parameter Name="unix stop saving time" Description="stop time" Type="datetime" Unit="seconds" IsLittleEndian="true" />
+  	  </ServiceSubtype>
+  	  
+  	  <ServiceSubtype Value="3" Name="Delete item from off line TLM list">
         <Parameter Name="TM index" Description="enum" Type="byte" IsLittleEndian="false" />
-	  </ServiceSubtype>
-    </ServiceType>
-	
+  	  </ServiceSubtype>
+    </ServiceType>	
   </Telecommands>
-
 
   <TelemetryCals>
     <!-- telemetry calibrations -->
@@ -920,12 +904,11 @@
     <Calibration Id="4" Name="temp" Type="polynomial" Function="x" Solution="y" A1="0.01" A0="0" />
     <Calibration Id="5" Name="trxvu-rssi" Type="polynomial" Function="x" Solution="y" A1="0.03" A0="-152" />
     <Calibration Id="6" Name="trxvu-doppler" Type="polynomial" Function="x" Solution="y" A1="13.352" A0="-22300" />
-	<Calibration Id="7" Name="trxvu-temps" Type="polynomial" Function="x" Solution="y" A1="-0.07669" A0="195.6037" />
-	<Calibration Id="8" Name="trxvu-bus-voltage" Type="polynomial" Function="x" Solution="y" A1="0.00488" A0="0" />
-	<Calibration Id="9" Name="trxvu-bus-current" Type="polynomial" Function="x" Solution="y" A1="0.16643964" A0="0" />
-	<Calibration Id="10" Name="solar-panels" Type="polynomial" Function="x" Solution="y" A1="0.0009765625" A0="0" />
+    <Calibration Id="7" Name="trxvu-temps" Type="polynomial" Function="x" Solution="y" A1="-0.07669" A0="195.6037" />
+    <Calibration Id="8" Name="trxvu-bus-voltage" Type="polynomial" Function="x" Solution="y" A1="0.00488" A0="0" />
+    <Calibration Id="9" Name="trxvu-bus-current" Type="polynomial" Function="x" Solution="y" A1="0.16643964" A0="0" />
+    <Calibration Id="10" Name="solar-panels" Type="polynomial" Function="x" Solution="y" A1="0.0009765625" A0="0" />	
   </TelemetryCals>
-
 
   <TelecommandCals>
     <!-- telecommands calibrations -->
