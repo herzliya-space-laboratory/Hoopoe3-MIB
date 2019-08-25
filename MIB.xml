@@ -230,12 +230,12 @@
         <Parameter Name="currentChanel4" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="currentChanel5" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="currentChanel6" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="temp1" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="temp2" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="temp3" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="temp4" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="batt temp 1" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="batt temp 2" Type="uint16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="temp1" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="temp2" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="temp3" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="temp4" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="batt temp 1" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="batt temp 2" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="Number of EPS reboots" Type="uint32" Unit="counter" IsLittleEndian="false" />
         <Parameter Name="Cause of last reset" Type="byte" RangeStart="255" RangeEnd="255" />
         <Parameter Name="pptMode" Type="byte" Unit="can be 1/2/3" />
