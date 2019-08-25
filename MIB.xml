@@ -356,7 +356,7 @@
       </ServiceSubtype>
       
 	  <ServiceSubtype Value="11" Name="update alpha parameter">
-		<Parameter Name="alpha" Type="byte"/>
+		<Parameter Name="alpha" Type="float"/>
       </ServiceSubtype>
 	  
       <ServiceSubtype Value="20" Name="update COMM voltages">
