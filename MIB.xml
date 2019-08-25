@@ -76,6 +76,9 @@
     <ServiceType Value="3" Name="General Beacon">
       <ServiceSubtype Value="25" Name="General Beacon">
         <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="pre vbatt 0" Type="uint16" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="pre vbatt 1" Type="uint16" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="pre vbatt 2" Type="uint16" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="Batt_Curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="3v3_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="5v_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
@@ -104,7 +107,7 @@
         <Parameter Name="NumberDelayd_comms" Type="byte" IsLittleEndian="false" />
         <Parameter Name="Number_Resets" Type="uint32" IsLittleEndian="false" />
         <Parameter Name="Last_Resets" Type="datetime" Unit="sec" IsLittleEndian="false" />
-        <Parameter Name="states" Type="byte" Unit="Ask Elai" IsLittleEndian="false" />
+        <Parameter Name="states" Type="byte" IsLittleEndian="false" />
       </ServiceSubtype>
     </ServiceType>
 
