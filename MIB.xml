@@ -212,112 +212,111 @@
       </ServiceSubtype>
     </ServiceType>
 
-    <ServiceType Value="173" Name="Housekeeping">
-      <ServiceSubtype Value="13" Name="EPS">
-        <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="photoCurrent3" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="photoCurrent2" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="photoCurrent1" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="Total photo current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="Battery voltage" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="Total system current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="currentChanel1" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="currentChanel2" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="currentChanel3" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="currentChanel4" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="currentChanel5" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="currentChanel6" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="temp1" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="temp2" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="temp3" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="temp4" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="batt temp 1" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="batt temp 2" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="Number of EPS reboots" Type="uint32" Unit="counter" IsLittleEndian="false" />
+    <ServiceType Value="88" Name="TLM">
+      <ServiceSubtype Value="50" Name="EPS">
+        <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="photoCurrent3" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="photoCurrent2" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="photoCurrent1" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="Total photo current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="Battery voltage" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="Total system current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel1" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel2" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel3" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel4" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel5" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel6" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="temp1" Type="int16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="temp2" Type="int16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="temp3" Type="int16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="temp4" Type="int16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="batt temp 1" Type="int16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="batt temp 2" Type="int16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="Number of EPS reboots" Type="uint32" Unit="counter" IsLittleEndian="true" />
         <Parameter Name="Cause of last reset" Type="byte" RangeStart="255" RangeEnd="255" />
         <Parameter Name="pptMode" Type="byte" Unit="can be 1/2/3" />
-        <Parameter Name="channelStatus" Type="byte" Unit="every bit" IsLittleEndian="false" />
-        <Parameter Name="system state" Type="byte" Unit="ԅ(≖‿≖ԅ)" IsLittleEndian="false" />
-        <Parameter Name="EPS state numnber" Type="byte" Unit="every bit" IsLittleEndian="false" />
+        <Parameter Name="channelStatus" Type="byte" Unit="every bit" IsLittleEndian="true" />
+        <Parameter Name="system state" Type="byte" Unit="ԅ(≖‿≖ԅ)" IsLittleEndian="true" />
+        <Parameter Name="EPS state numnber" Type="byte" Unit="every bit" IsLittleEndian="true" />
       </ServiceSubtype>
 
-      <ServiceSubtype Value="23" Name="Cam">
-        <Parameter Name="VoltageInput5V" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentInput5V" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageFPGA1V" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentFPGA1V" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageFPGA1V8" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentFPGA1V8" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageFPGA2V5" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentFPGA2V5" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageFPGA3V3" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentFPGA3V3" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageFlash1V8" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentFlash1V8" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageFlash3V3" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentFlash3V3" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageSNSR1V8" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentSNSR1V8" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageSNSR3V3" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentSNSR3V3" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageSNSRVDDPIX" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="CurrentSNSRVDDPIX" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="VoltageFlashVTT09" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="TempSMU3AB" Type="float" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="TempSMU3BC" Type="float" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="TempREGU6" Type="float" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="TempREGU8" Type="float" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="TempFlash" Type="float" Unit="deg" IsLittleEndian="false" />
+      <ServiceSubtype Value="51" Name="Comm">
+        <Parameter Name="bus_volt" Type="uint16" Calibration="8" Unit="V" IsLittleEndian="true" />
+        <Parameter Name="total_current" Type="uint16" Calibration="9" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="Txrefl" Type="uint16" Unit="mW" IsLittleEndian="true" />
+        <Parameter Name="Txfrow" Type="uint16" Unit="mW" IsLittleEndian="true" />
+     <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="true" />
+        <Parameter Name="pa_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="locosc_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="ant_temp_A" Type="uint16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="ant_temp_B" Type="uint16" Unit="deg" IsLittleEndian="true" />
+      </ServiceSubtype>
+      <ServiceSubtype Value="52" Name="Cam">
+        <Parameter Name="VoltageInput5V" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentInput5V" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageFPGA1V" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentFPGA1V" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageFPGA1V8" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentFPGA1V8" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageFPGA2V5" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentFPGA2V5" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageFPGA3V3" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentFPGA3V3" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageFlash1V8" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentFlash1V8" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageFlash3V3" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentFlash3V3" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageSNSR1V8" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentSNSR1V8" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageSNSR3V3" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentSNSR3V3" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageSNSRVDDPIX" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="CurrentSNSRVDDPIX" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="VoltageFlashVTT09" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="TempSMU3AB" Type="float" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="TempSMU3BC" Type="float" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="TempREGU6" Type="float" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="TempREGU8" Type="float" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="TempFlash" Type="float" Unit="deg" IsLittleEndian="true" />
       </ServiceSubtype>
 
-      <ServiceSubtype Value="45" Name="Comm">
-        <Parameter Name="bus_volt" Type="uint16" Calibration="8" Unit="V" IsLittleEndian="false" />
-        <Parameter Name="total_current" Type="uint16" Calibration="9" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="Txrefl" Type="uint16" Unit="mW" IsLittleEndian="false" />
-        <Parameter Name="Txfrow" Type="uint16" Unit="mW" IsLittleEndian="false" />
-    <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="false" />
-        <Parameter Name="pa_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="locosc_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="ant_temp_A" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="ant_temp_B" Type="uint16" Unit="deg" IsLittleEndian="false" />
+      <ServiceSubtype Value="53" Name="SolarPanels">
+        <Parameter Name="SP temp0" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
+		    <Parameter Name="SP temp1" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
+		    <Parameter Name="SP temp2" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
+		    <Parameter Name="SP temp3" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
+		    <Parameter Name="SP temp4" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
+		    <Parameter Name="SP temp5" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
       </ServiceSubtype>
 
-      <ServiceSubtype Value="78" Name="ADCS">
-        <Parameter Name="CubeSense 3V3 current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="CubeSense Nadir SRAM current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="CubeSense Sun SRAM current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="CubeControl 3V3 current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="CubeControl 5V current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="CubeControl Vbat current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="Wheel 1 Current " Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="Wheel 2 Current " Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="Wheel 3 Current " Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="CubeStar current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="Mag current" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="MCU Temperature" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="Magnetometer Temperature" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="Redundant Magnetometer Temperature" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="x-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="y-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="z-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="false" />
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="91" Name="SolarPanels">
-        <Parameter Name="SP temp0" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		    <Parameter Name="SP temp1" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		    <Parameter Name="SP temp2" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		    <Parameter Name="SP temp3" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		    <Parameter Name="SP temp4" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
-		      <Parameter Name="SP temp5" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="false" />
+      <ServiceSubtype Value="54" Name="ADCS">
+        <Parameter Name="CubeSense 3V3 current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="CubeSense Nadir SRAM current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="CubeSense Sun SRAM current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="CubeControl 3V3 current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="CubeControl 5V current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="CubeControl Vbat current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="Wheel 1 Current " Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="Wheel 2 Current " Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="Wheel 3 Current " Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="CubeStar current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="Mag current" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="MCU Temperature" Type="uint16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="Magnetometer Temperature" Type="uint16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="Redundant Magnetometer Temperature" Type="uint16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="x-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="y-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="z-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="true" />
       </ServiceSubtype>
     </ServiceType>
 
     <ServiceType Value="13" Name="General">
 
       <ServiceSubtype Value="90" Name="Ack">
-        <Parameter Name="CommandId" Description="ID of relevant command" Type="uint32" RangeStart="0" RangeEnd="999999" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="CommandId" Description="ID of relevant command" Type="uint32" RangeStart="0" RangeEnd="999999" Unit="mV" IsLittleEndian="true" />
         <Parameter Name="AckType" Description="Type of ack" Type="byte" Unit="x" IsLittleEndian="false" />
         <Parameter Name="ErrorType" Description="Type of error (if there is)" Type="byte" Unit="x" IsLittleEndian="false" />
       </ServiceSubtype>
