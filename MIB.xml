@@ -239,6 +239,8 @@
         <Parameter Name="Cause of last reset" Type="byte" RangeStart="255" RangeEnd="255" />
         <Parameter Name="pptMode" Type="byte" Unit="can be 1/2/3" />
         <Parameter Name="channelStatus" Type="byte" Unit="every bit" IsLittleEndian="false" />
+        <Parameter Name="system state" Type="byte" Unit="ԅ(≖‿≖ԅ)" IsLittleEndian="false" />
+        <Parameter Name="EPS state numnber" Type="byte" Unit="every bit" IsLittleEndian="false" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="23" Name="Cam">
@@ -273,6 +275,9 @@
       <ServiceSubtype Value="45" Name="Comm">
         <Parameter Name="bus_volt" Type="uint16" Calibration="8" Unit="V" IsLittleEndian="false" />
         <Parameter Name="total_current" Type="uint16" Calibration="9" Unit="mA" IsLittleEndian="false" />
+        <Parameter Name="Txrefl" Type="uint16" Unit="mW" IsLittleEndian="false" />
+        <Parameter Name="Txfrow" Type="uint16" Unit="mW" IsLittleEndian="false" />
+    <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="false" />
         <Parameter Name="pa_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="locosc_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="ant_temp_A" Type="uint16" Unit="deg" IsLittleEndian="false" />
