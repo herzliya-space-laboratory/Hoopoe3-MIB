@@ -325,6 +325,58 @@
         <Parameter Name="used" Type="uint32" Unit="byte" IsLittleEndian="true" />
         <Parameter Name="bad" Type="uint32" Unit="byte" IsLittleEndian="true" />
       </ServiceSubtype>
+
+      <ServiceSubtype Value="255" Name="File system space B">
+        <Parameter Name="is empty 0" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 0" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 1" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 1" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 2" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 2" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 3" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 3" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 4" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 4" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 5" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 5" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 6" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 6" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 7" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 7" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 8" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 8" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+
+        <Parameter Name="is empty 9" Type="byte" Unit="true/false" />
+        <Parameter Name="TM type 9" Type="byte" Unit="( ˇ෴ˇ )" />
+        <Parameter Name="stop time" Type="datetime" Unit="sec" IsLittleEndian="true" />
+        <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
+      </ServiceSubtype>
     </ServiceType>
 
     <ServiceType Value="13" Name="General">
