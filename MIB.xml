@@ -312,7 +312,14 @@
         <Parameter Name="z-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="true" />
       </ServiceSubtype>
 
-      <ServiceSubtype Value="73" Name="File system space">
+      <ServiceSubtype Value="73" Name="File system space A">
+        <Parameter Name="total" Type="uint32" Unit="byte" IsLittleEndian="true" />
+        <Parameter Name="free" Type="uint32" Unit="byte" IsLittleEndian="true" />
+        <Parameter Name="used" Type="uint32" Unit="byte" IsLittleEndian="true" />
+        <Parameter Name="bad" Type="uint32" Unit="byte" IsLittleEndian="true" />
+      </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="74" Name="File system space B">
         <Parameter Name="total" Type="uint32" Unit="byte" IsLittleEndian="true" />
         <Parameter Name="free" Type="uint32" Unit="byte" IsLittleEndian="true" />
         <Parameter Name="used" Type="uint32" Unit="byte" IsLittleEndian="true" />
