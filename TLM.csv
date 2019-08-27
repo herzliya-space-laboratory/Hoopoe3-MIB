@@ -1,0 +1,30 @@
+COMM,ISIStrxvuRxTelemetry,88,63,,rx_doppler,uint16,,,,,,,Rx Telemetry receiver doppler.
+,,,,,rx_rssi,uint16,,,,,,,Rx Telemetry rssi measurement.
+,,,,,bus_volt,uint16,,,,,,,Rx Telemetry bus voltage.
+,,,,,vutotal_curr,uint16,,,,,,,Tx Telemetry total current.
+,,,,,vutx_curr,uint16,,,,,,,Tx Telemetry transmitter current.
+,,,,,vurx_curr,uint16,,,,,,,Tx Telemetry receiver current.
+,,,,,vupa_curr,uint16,,,,,,,Tx Telemetry power amplifier current.
+,,,,,pa_temp,uint16,,,,,,,Rx Telemetry power amplifier temperature
+,,,,,board_temp,uint16,,,,,,,Rx Telemetry board temperature.
+,ISIStrxvuRxTelemetry_revC,88,64,,rx_doppler,uint16,,,,,,,Rx Telemetry receiver doppler.
+,,,,,total_current,uint16,,,,,,,Rx Telemetry total current.
+,,,,,bus_volt,uint16,,,,,,,Rx Telemetry bus voltage.
+,,,,,locosc_temp,uint16,,,,,,,Rx Telemetry local oscillator temperature
+,,,,,pa_temp,uint16,,,,,,,Rx Telemetry power amplifier temperature.
+,,,,,rx_rssi,uint16,,,,,,,Rx Telemetry rssi measurement.
+,ISIStrxvuTxTelemetry,88,65,,tx_reflpwr,uint16,,,,,,,Tx Telemetry reflected power.
+,,,,,tx_fwrdpwr,uint16,,,,,,,Tx Telemetry forward power.
+,,,,,bus_volt,uint16,,,,,,,Tx Telemetry bus voltage.
+,,,,,vutotal_curr,uint16,,,,,,,Tx Telemetry total current.
+,,,,,vutx_curr,uint16,,,,,,,Tx Telemetry transmitter current.
+,,,,,vurx_curr,uint16,,,,,,,Tx Telemetry receiver current.
+,,,,,vupa_curr,uint16,,,,,,,Tx Telemetry power amplifier current.
+,,,,,pa_temp,uint16,,,,,,,Tx Telemetry power amplifier temperature.
+,,,,,board_temp,uint16,,,,,,,Tx Telemetry board temperature.
+,ISIStrxvuTxTelemetry_revC,88,66,,tx_reflpwr;,uint16,,,,,,,Tx Telemetry reflected power.
+,,,,,tx_fwrdpwr;,uint16,,,,,,,Tx Telemetry forward power.
+,,,,,bus_volt;,uint16,,,,,,,Tx Telemetry bus voltage.
+,,,,,total_current;,uint16,,,,,,,Tx Telemetry total current.
+,,,,,pa_temp;,uint16,,,,,,,Tx Telemetry power amplifier temperature.
+,,,,,locosc_temp;,uint16,,,,,,,Tx Telemetry local oscillator temperature.
