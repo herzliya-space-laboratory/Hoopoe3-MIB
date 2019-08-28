@@ -537,12 +537,7 @@
 		<Parameter Name="side B" Type="uint16" IsLittleEndian="false" />
 	</ServiceSubtype>
 	
-	   <ServiceSubtype Value="73" Name="SD space A">
 	   </ServiceSubtype>
-	
-	   <ServiceSubtype Value="74" Name="SD space B">
-	   </ServiceSubtype>
-	
 	</ServiceType>
 	  
     <ServiceType Value="13" Name="General">
