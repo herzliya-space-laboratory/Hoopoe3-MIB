@@ -439,6 +439,18 @@
   <Parameter Name="gom_eps_channelstates_t channelStatus" Type="uchar" IsLittleEndian="false" />
 </ServiceSubtype>
 	
+	   <ServiceSubtype Value="63" Name="ISIStrxvuRxTelemetry">
+  <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="pa_temp" Type="int16" IsLittleEndian="false" />
+  <Parameter Name="board_temp" Type="int16" IsLittleEndian="false" />
+</ServiceSubtype>
+	
 	</ServiceType>
 	  
     <ServiceType Value="13" Name="General">
