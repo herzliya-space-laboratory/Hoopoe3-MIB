@@ -504,6 +504,39 @@
   <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
 </ServiceSubtype>
 	   
+	   <ServiceSubtype Value="69" Name="ISISantS_getTemperature_A">
+  <Parameter Name="side A" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="side B" Type="uint16" IsLittleEndian="false" />
+</ServiceSubtype>
+
+       <ServiceSubtype Value="70" Name="ISISantsStatus_B">
+  <Parameter Name="armed" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant4Deploying" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant4Timeout" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant4Undeploying" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant3Deploying" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant3Timeout" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant3Undeploying" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ignoreflag" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant2Deploying" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant2Timeout" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant2Undeploying" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant1Deploying" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant1Timeout" Type="bit" IsLittleEndian="false" />
+  <Parameter Name="ant1Undeploying" Type="bit" IsLittleEndian="false" />
+</ServiceSubtype>
+	   
+	   <ServiceSubtype Value="71" Name="ISISantsTelemetry_B">
+  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
+  <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
+</ServiceSubtype>
+	   
+	   <ServiceSubtype Value="72" Name="ISISantS_getTemperature_B">
+	    <Parameter Name="side A" Type="uint16" IsLittleEndian="false" />
+		<Parameter Name="side B" Type="uint16" IsLittleEndian="false" />
+	</ServiceSubtype>
+	
 	</ServiceType>
 	  
     <ServiceType Value="13" Name="General">
