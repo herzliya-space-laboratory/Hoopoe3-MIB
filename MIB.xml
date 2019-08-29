@@ -20,11 +20,15 @@
         <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="false" />
         <Parameter Name="Txrefl" Type="uint16" Unit="mW" IsLittleEndian="false" />
         <Parameter Name="Txfrow" Type="uint16" Unit="mW" IsLittleEndian="false" />
-        <Parameter Name="DelayST" Type="int24" Unit="sec" Size="3" IsLittleEndian="false" />
+        <Parameter Name="DelayST [1]" Type="byte" Unit="sec" Size="3" IsLittleEndian="false" />
+		<Parameter Name="DelayST [2]" Type="byte" Unit="sec" Size="3" IsLittleEndian="false" />
+		<Parameter Name="DelayST [3]" Type="byte" Unit="sec" Size="3" IsLittleEndian="false" />
         <Parameter Name="ControlmodeST" Type="enum" IsLittleEndian="false" />
         <Parameter Name="PowerST" Type="enum" IsLittleEndian="false" />
         <Parameter Name="EstimationmodeST" Type="enum" IsLittleEndian="false" />
-        <Parameter Name="TLMsaveST" Type="int24" Size="3" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="TLMsaveST [1]" Type="byte" Size="3" Unit="mV" IsLittleEndian="false" />
+		<Parameter Name="TLMsaveST [2]" Type="byte" Size="3" Unit="mV" IsLittleEndian="false" />
+		<Parameter Name="TLMsaveST [3]" Type="byte" Size="3" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsRoll" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsPich" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsYaw" Type="int16" Unit="deg" IsLittleEndian="false" />
@@ -340,15 +344,15 @@
         <Parameter Name="latchup [6]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="wdt_i2c_time_left" Type="uint" IsLittleEndian="true" />
         <Parameter Name="wdt_gnd_time_left" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="wdt_csp_pings_left" Type="uchar" IsLittleEndian="true" />
+        <Parameter Name="wdt_csp_pings_left" Type="byte" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_i2c" Type="uint" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_gnd" Type="uint" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_csp [2]" Type="uint" IsLittleEndian="true" />
         <Parameter Name="counter_boot" Type="uint" IsLittleEndian="true" />
         <Parameter Name="temp[6]" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="bootcause" Type="uchar" IsLittleEndian="true" />
-        <Parameter Name="battmode" Type="uchar" IsLittleEndian="true" />
-        <Parameter Name="pptMode" Type="uchar" />
+        <Parameter Name="bootcause" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="pptMode" Type="byte" />
         <Parameter Name="reserved2" Type="unit16" />
       </ServiceSubtype>
 
@@ -365,7 +369,7 @@
        <ServiceSubtype Value="57" Name="gom_eps_hk_out_t">
         <Parameter Name="commandReply" Type="uint16"  IsLittleEndian="true" />
         <Parameter Name="curout[6]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="output[8]" Type="uchar" IsLittleEndian="true" />
+        <Parameter Name="output[8]" Type="byte" IsLittleEndian="true" />
         <Parameter Name="output_on_delta[8]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="output_off_delta[8]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="latchup[6]" Type="uint16" IsLittleEndian="true" />
@@ -375,7 +379,7 @@
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="wdt_i2c_time_left" Type="uint"  IsLittleEndian="true" />
         <Parameter Name="wdt_gnd_time_left" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="wdt_csp_pings_left[2]" Type="uchar" IsLittleEndian="true" />
+        <Parameter Name="wdt_csp_pings_left[2]" Type="byte" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_i2c" Type="uint" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_gnd" Type="uint" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_csp[2]" Type="uint" IsLittleEndian="true" />
@@ -385,19 +389,19 @@
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="counter_boot" Type="uint" IsLittleEndian="true" />
         <Parameter Name="temp[6]" Type="int16" IsLittleEndian="true" />
-        <Parameter Name="bootcause" Type="uchar"  IsLittleEndian="true" />
-        <Parameter Name="battmode" Type="uchar" IsLittleEndian="true" />
-        <Parameter Name="pptMode" Type="uchar" IsLittleEndian="true" />
+        <Parameter Name="bootcause" Type="byte"  IsLittleEndian="true" />
+        <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="pptMode" Type="byte" IsLittleEndian="true" />
         <Parameter Name="reserved2" Type="uint16" IsLittleEndian="true" />
       </ServiceSubtype>	 
 	
 	   <ServiceSubtype Value="60" Name="eps_config_t">
-  <Parameter Name="pptmode" Type="uchar" IsLittleEndian="false" />
-  <Parameter Name="battheater_mode" Type="uchar" IsLittleEndian="false" />
+  <Parameter Name="pptmode" Type="byte" IsLittleEndian="false" />
+  <Parameter Name="battheater_mode" Type="byte" IsLittleEndian="false" />
   <Parameter Name="char battheater_low" Type="char" Unit="degC" IsLittleEndian="false" />
   <Parameter Name="char battheater_high" Type="char" Unit="degC" IsLittleEndian="false" />
-  <Parameter Name="output_normal_value [8]" Type="uchar" IsLittleEndian="false" />
-  <Parameter Name="output_safe_value [8]" Type="uchar" IsLittleEndian="false" />
+  <Parameter Name="output_normal_value [8]" Type="byte" IsLittleEndian="false" />
+  <Parameter Name="output_safe_value [8]" Type="byte" IsLittleEndian="false" />
   <Parameter Name="output_initial_on_delay [8]" Type="uint16" Unit="s" IsLittleEndian="false" />
   <Parameter Name="output_initial_off_delay [8]" Type="uint16" Unit="s" IsLittleEndian="false" />
   <Parameter Name="vboost [3]" Type="uint16" Unit="mV" IsLittleEndian="false" />
@@ -410,7 +414,7 @@
   <Parameter Name="batt_criticalvoltage" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="batt_normalvoltage" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="spare uint * 2" Type="uint" IsLittleEndian="false" />
-  <Parameter Name="spare uchar * 4" Type="uchar" IsLittleEndian="false" />
+  <Parameter Name="spare byte * 4" Type="byte" IsLittleEndian="false" />
 </ServiceSubtype>
 
 	   <ServiceSubtype Value="62" Name="gom_eps_hkparam_t">
@@ -432,11 +436,11 @@
   <Parameter Name="latchUp5vChannel3" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="latchUp5vChannel2" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="latchUp5vChannel1" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="reset" Type="uchar" IsLittleEndian="false" />
+  <Parameter Name="reset" Type="byte" IsLittleEndian="false" />
   <Parameter Name="bootCount" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="swErrors" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="pptMode" Type="uchar" IsLittleEndian="false" />
-  <Parameter Name="gom_eps_channelstates_t channelStatus" Type="uchar" IsLittleEndian="false" />
+  <Parameter Name="pptMode" Type="byte" IsLittleEndian="false" />
+  <Parameter Name="gom_eps_channelstates_t channelStatus" Type="byte" IsLittleEndian="false" />
 </ServiceSubtype>
 	
 	   <ServiceSubtype Value="63" Name="ISIStrxvuRxTelemetry">
