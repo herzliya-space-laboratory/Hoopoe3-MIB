@@ -1107,7 +1107,7 @@
       </ServiceSubtype>
 	  
   	  <ServiceSubtype Value="42" Name="reset subSystem FRAM">
-        <Parameter Name="subsystem index" Description="enum" Type="byte" IsLittleEndian="false" />
+        <Parameter Name="subsystem index" Description="enum" Type="enum" IsLittleEndian="false" />
   	  </ServiceSubtype>
     </ServiceType>
 	
@@ -1123,12 +1123,16 @@
   	  <ServiceSubtype Value="2" Name="Add item to off line TLM list">
         <Parameter Name="TM index" Description="enum" Type="byte" />
   		  <Parameter Name="Period" Description="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
-  		  <Parameter Name="unix stop saving time" Description="stop time" Type="datetime" Unit="seconds" IsLittleEndian="true" />
+  		  <Parameter Name="unix stop saving time" Description="stop time" Type="unix time" Unit="seconds" IsLittleEndian="true" />
   	  </ServiceSubtype>
   	  
   	  <ServiceSubtype Value="3" Name="Delete item from off line TLM list">
-        <Parameter Name="TM index" Description="enum" Type="byte" IsLittleEndian="false" />
+        <Parameter Name="TM index" Description="enum" Type="enum" IsLittleEndian="false" />
   	  </ServiceSubtype>
+	  
+	   <ServiceSubtype Value="4" Name="get offline list setting">
+      </ServiceSubtype>
+	  
     </ServiceType>	
   </Telecommands>
 
