@@ -561,13 +561,13 @@
         <Parameter Name="Full increasing" Description="volt[3]" Type="uint16" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="Cruise increasing" Description="volt[4]" Type="uint16" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="Safe increasing" Description="volt[5]" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="beacon high delay volt" Description="beacon high dela volt" Type="uint16" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="beacon high delay volt" Description="beacon high dela volt" Type="uint16" IsLittleEndian="false" />
         <Parameter Name="aprs shut volt" Description="aprs shutting volt" Type="uint16" Unit="mV" IsLittleEndian="false" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="0" Name="change heater temp">
-        <Parameter Name="heater low temp" Description="heater low temp" Type="byte" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="heater high temp" Description="heater high temp" Type="byte" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="heater low temp" Description="heater low temp" Type="byte" Unit="C" IsLittleEndian="false" />
+        <Parameter Name="heater high temp" Description="heater high temp" Type="byte" Unit="C" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
 	    <ServiceSubtype Value="99" Name="allow ADCS">
@@ -587,8 +587,8 @@
       </ServiceSubtype>
 	  
       <ServiceSubtype Value="20" Name="update COMM voltages">
-        <Parameter Name="aprs shut volt" Description="heater low temp" Type="uint16" Unit="C" IsLittleEndian="false" />
-        <Parameter Name="beacon high delay volt" Description="heater high temp" Type="uint16" Unit="C" IsLittleEndian="false" />
+        <Parameter Name="aprs shut volt" Description="heater low temp" Type="uint16" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="beacon high delay volt" Description="heater high temp" Type="uint16" IsLittleEndian="false" />
       </ServiceSubtype>
     </ServiceType>
 
@@ -1014,14 +1014,14 @@
 
       <ServiceSubtype Value="1" Name="Send Image chunk range">
         <Parameter Name="id" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="groundFileType" Type="byte" RangeStart="0" RangeEnd="5" IsLittleEndian="true" />
+        <Parameter Name="comptype" Type="enum" RangeStart="0" RangeEnd="5" IsLittleEndian="true" />
         <Parameter Name="start chunk" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="end chunk" Type="uint16" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="2" Name="Send Image bitField">
         <Parameter Name="id" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="groundFileType" Type="byte" RangeStart="0" RangeEnd="5" IsLittleEndian="true" />
+        <Parameter Name="compType" Type="enum" RangeStart="0" RangeEnd="5" IsLittleEndian="true" />
         <Parameter Name="start chunk" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="bitField" Type="string" size="181" IsLittleEndian="true" />
       </ServiceSubtype>
