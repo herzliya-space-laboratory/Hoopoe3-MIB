@@ -606,18 +606,18 @@
       </ServiceSubtype>
 
       <ServiceSubtype Value="24" Name="activate transponder (control GS)">
-        <Parameter Name="number of minutes" Type="byte" IsLittleEndian="false"/>
+        <Parameter Name="duration" Type="unit8" unit="min" IsLittleEndian="false"/>
       </ServiceSubtype>
 
       <ServiceSubtype Value="25" Name="shut transponder">
       </ServiceSubtype>
 
       <ServiceSubtype Value="26" Name="change transponder RSSI">
-        <Parameter Name="RSSI" Description="new value" Type="uint16" Unit="¯\_(ツ)_/¯" IsLittleEndian="false" />
+        <Parameter Name="RSSI" Description="new value" Type="uint16" IsLittleEndian="false" />
       </ServiceSubtype>
     
-      <ServiceSubtype Value="55" Name="change transmition bit rate">
-        <Parameter Name="bit rate" Type="byte" IsLittleEndian="false"/>
+      <ServiceSubtype Value="55" Name="change default transmition bit rate">
+        <Parameter Name="bit rate" Type="enum" IsLittleEndian="false"/>
       </ServiceSubtype>
     
       <ServiceSubtype Value="91" Name="stop dump">
