@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GSCMIB>
   <Telemetry>
 	<ServiceType Value="12" Name="Download ImageDataBase">
@@ -78,9 +78,6 @@
     <ServiceType Value="3" Name="General Beacon">
       <ServiceSubtype Value="25" Name="General Beacon">
         <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="pre vbatt 0" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="pre vbatt 1" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="pre vbatt 2" Type="uint16" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="Batt_Curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="3v3_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="5v_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
@@ -961,6 +958,9 @@
   	  
   	  <ServiceSubtype Value="3" Name="Delete item from off line TLM list">
         <Parameter Name="TM index" Description="enum" Type="byte" IsLittleEndian="false" />
+  	  </ServiceSubtype>
+	  
+	   <ServiceSubtype Value="4" Name="get offline settings">
   	  </ServiceSubtype>
     </ServiceType>	
   </Telecommands>
