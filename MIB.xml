@@ -538,7 +538,6 @@
 	</ServiceSubtype>
 	
 	   </ServiceSubtype>
-	</ServiceType>
 	  
     <ServiceType Value="13" Name="General">
 
@@ -628,59 +627,66 @@
     <ServiceType Value="20" Name="General">
 	
       <ServiceSubtype Value="0" Name="generic I2C">
-        <Parameter Name="I2C adress" Description="I2C adress" Type="byte" Unit="seconds" IsLittleEndian="false" />
+        <Parameter Name="I2C adress" Description="I2C adress" Type="byte" IsLittleEndian="false" />
         <Parameter Name="command length" Description="command length" Type="byte" IsLittleEndian="false" />
         <Parameter Name="command param" Description="command parameter" Type="string" Size="40" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="17" Name="upload time">
-        <Parameter Name="time" Description="time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
+        <Parameter Name="unix time" Description="time" Type="uint" Unit="sec" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
       <ServiceSubtype Value="33" Name="dump">
-        <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [3]" Description="the forth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [4]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="resuloootion" Type="byte" Unit="( ͡° ͜ʖ ͡°)" IsLittleEndian="false" />
-        <Parameter Name="unix start time" Description="start time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
-        <Parameter Name="unix end time" Description="end time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
+        <Parameter Name="file type [0]" Description="the first file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [1]" Description="the second file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [2]" Description="the third file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [3]" Description="the forth file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [4]" Description="the fifth file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="resuloootion" Type="byte" Unit="sec" IsLittleEndian="false" />
+        <Parameter Name="unix start time" Description="start time" Type="uint32" Unit="seconds" IsLittleEndian="false" />
+        <Parameter Name="unix end time" Description="end time" Type="uint32" Unit="seconds" IsLittleEndian="false" />
       </ServiceSubtype>
       
 	    <ServiceSubtype Value="35" Name="delete packets">
-        <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [3]" Description="the forth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [4]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="unix start time" Description="start time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
-        <Parameter Name="unix end time" Description="end time" Type="datetime" Unit="seconds" IsLittleEndian="false" />
+        <Parameter Name="file type [0]" Description="the first file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [1]" Description="the second file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [2]" Description="the third file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [3]" Description="the forth file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [4]" Description="the fifth file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="unix start time" Description="start time" Type="uint32" Unit="seconds" IsLittleEndian="false" />
+        <Parameter Name="unix end time" Description="end time" Type="uint32" Unit="seconds" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
 	    <ServiceSubtype Value="45" Name="reset files">
-        <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [3]" Description="the forth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
-        <Parameter Name="file type [4]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [0]" Description="the first file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [1]" Description="the second file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [2]" Description="the third file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [3]" Description="the forth file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+        <Parameter Name="file type [4]" Description="the fifth file type" Type="enum" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
       </ServiceSubtype>
       
 	    <ServiceSubtype Value="46" Name="restart file system">
       </ServiceSubtype>
 	  
+	  <ServiceSubtype Value="56" Name="redeploy antS">
+      </ServiceSubtype>
+	  
+		  <ServiceSubtype Value="57" Name="ARM/DISARM">
+        <Parameter Name="arm/disarm" Type="enum" IsLittleEndian="false" />
+  	  </ServiceSubtype>  
+	  
   	  <ServiceSubtype Value="66" Name="hard reset">
-        <Parameter Name="subsystem index" Description="enum" Type="byte" IsLittleEndian="false" />
+        <Parameter Name="what subsystem" Type="enum" IsLittleEndian="false" />
   	  </ServiceSubtype>
 	  
   	  <ServiceSubtype Value="67" Name="reset satellite">
   	  </ServiceSubtype>
 	  
   	  <ServiceSubtype Value="68" Name="soft reset">
-        <Parameter Name="subsystem index" Description="enum" Type="byte" IsLittleEndian="false" />
+        <Parameter Name=" what subsystem" Description="enum" Type="enum" IsLittleEndian="false" />
   	  </ServiceSubtype>
 	  
-  	  <ServiceSubtype Value="69" Name="reset satellite">
+  	  <ServiceSubtype Value="69" Name="graceful reset">
   	  </ServiceSubtype>
 	  
       <ServiceSubtype Value="122" Name="DummyFunc">
@@ -695,7 +701,6 @@
 
       <ServiceSubtype Value="99" Name="Run Selected Boot Index">
       </ServiceSubtype>
-
 
       <ServiceSubtype Value="100" Name="Set SGP4 Orbit Pramatars">
         <Parameter Name="Inclination" Type="double" IsLittleEndian="true"/>
