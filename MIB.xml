@@ -310,62 +310,78 @@
 </ServiceSubtype>
 <ServiceSubtype Value="168" Name="ADCS_GET_RAW_CSS_1_6_MEASURMENTS_ST">
 
-  <Parameter Name="css2" Type="byte" Unit="" IsLittleEndian="false" />
+ <Parameter Name="css1" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="css3" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="css2" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="css4" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="css3" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="css5" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="css4" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="css6" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="css5" Type="byte" IsLittleEndian="false" />
+
+  <Parameter Name="css6" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="169" Name="ADCS_GET_RAW_CSS_7_10_MEASURMENTS_ST">
 
-  <Parameter Name="css8" Type="byte" Unit="" IsLittleEndian="false" />
+<Parameter Name="css7" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="css9" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="css8" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="css10" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="css9" Type="byte" IsLittleEndian="false" />
+
+  <Parameter Name="css10" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="170" Name="ADCS_GET_RAW_MAGNETOMETER_MEAS_ST">
 
-  <Parameter Name="magnetic_y" Type="byte" Unit="" IsLittleEndian="false" />
+<Parameter Name="magnetic_x" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="magnetic_z" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="magnetic_y" Type="byte" IsLittleEndian="false" />
+
+  <Parameter Name="magnetic_z" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="171" Name="ADCS_GET_C_SENSE_CURRENT_MEASUREMENTS_ST">
 
-  <Parameter Name="cs_cam2_sram_current" Type="uint16" Unit="[mA]" IsLittleEndian="false" />
+ <Parameter Name="cs_3v3_current" Type="uint16" Unit="[mA]" calibrations="13" IsLittleEndian="false" />
 
-  <Parameter Name="cs_cam1_sram_current" Type="uint16" Unit="[mA]" IsLittleEndian="false" />
+  <Parameter Name="cs_cam2_sram_current" Type="uint16" Unit="[mA]" calibrations="13" IsLittleEndian="false" />
+
+  <Parameter Name="cs_cam1_sram_current" Type="uint16" Unit="[mA]" calibrations="13" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="172" Name="ADCS_GET_C_CONTROL_CURRENT_MEASUREMENTS_ST">
 
-  <Parameter Name="cs_5_current" Type="uint16" Unit="[mA]" IsLittleEndian="false" />
+<Parameter Name="cs_3v3_current" Type="uint16" Unit="[mA]" calibrations="14" IsLittleEndian="false" />
 
-  <Parameter Name="cs_vbatt_current" Type="uint16" Unit="[mA]" IsLittleEndian="false" />
+  <Parameter Name="cs_5_current" Type="uint16" Unit="[mA]" calibrations="14" IsLittleEndian="false" />
+
+  <Parameter Name="cs_vbatt_current" Type="uint16" Unit="[mA]" calibrations="14" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="173" Name="ADCS_GET_WHEEL_CURRENTS_TLM_ST">
 
-  <Parameter Name="current wheel 2" Type="uint16" Unit="[mA]" IsLittleEndian="false" />
+<Parameter Name="current wheel 1" Type="uint16" Unit="[mA]" calibrations="4" IsLittleEndian="false" />
 
-  <Parameter Name="current wheel 3" Type="uint16" Unit="[mA]" IsLittleEndian="false" />
+  <Parameter Name="current wheel 2" Type="uint16" Unit="[mA]" calibrations="4" IsLittleEndian="false" />
+
+  <Parameter Name="current wheel 3" Type="uint16" Unit="[mA]" calibrations="4" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="174" Name="ADCS_GET_ADCS_TEMPERATURE_TLM_ST">
 
-  <Parameter Name="Magnetometer Temperature" Type="int16" Unit="[C]" IsLittleEndian="false" />
+<Parameter Name="MCU Temperature" Type="int16" Unit="[C]" IsLittleEndian="false" />
 
-  <Parameter Name="Redundant Magnetometer Temperature" Type="int16" Unit="[C]" IsLittleEndian="false" />
+  <Parameter Name="Magnetometer Temperature" Type="int16" calibrations="13" Unit="[C]" IsLittleEndian="false" />
+
+  <Parameter Name="Redundant Magnetometer Temperature" Type="int16" Unit="[C]" calibrations="13" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="175" Name="ADCS_GET_RATE_SENSOR_TEMP_TLM_ST">
+
+<Parameter Name="x-rate sensor temp vector" Type="int16" Unit="[C]" IsLittleEndian="false" />
 
   <Parameter Name="y-rate sensor temp vector" Type="int16" Unit="[C]" IsLittleEndian="false" />
 
@@ -374,124 +390,148 @@
 </ServiceSubtype>
 <ServiceSubtype Value="176" Name="ADCS_GET_RAW_GPS_STATUS_ST">
 
-  <Parameter Name="Number of tracked GPS satellites" Type="byte" Unit="" IsLittleEndian="false" />
+<Parameter Name="GPS solutions status" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Number of GPS satellites used in solution" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Number of tracked GPS satellites" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Counter for XYZ Lof from GPS" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Number of GPS satellites used in solution" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Counter for RANGE log from GPS" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Counter for XYZ Lof from GPS" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Response message for GPS log setup" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Counter for RANGE log from GPS" Type="byte" IsLittleEndian="false" />
+
+  <Parameter Name="Response message for GPS log setup" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="177" Name="ADCS_GET_RAW_GPS_TIME_ST">
+
+  <Parameter Name="GPS reference week" Type="uint16" IsLittleEndian="false" />
 
   <Parameter Name="GPS time milliseconds" Type="uint32" Unit="[ms]" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="178" Name="ADCS_GET_RAW_GPS_X_ST">
 
+<Parameter Name="ECEF Position x" Type="int32" Unit="[m]" IsLittleEndian="false" />
+
   <Parameter Name="ECEF Velocity x" Type="int16" Unit="[m/s]" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="179" Name="ADCS_GET_RAW_GPS_Y_ST">
+
+<Parameter Name="ECEF Position y" Type="int32" Unit="[m]" IsLittleEndian="false" />
 
   <Parameter Name="ECEF Velocity y" Type="int16" Unit="[m/s]" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="180" Name="ADCS_GET_RAW_GPS_Z_ST">
 
+<Parameter Name="ECEF Position z" Type="int32" Unit="[m]" IsLittleEndian="false" />
+
   <Parameter Name="ECEF Velocity z" Type="int16" Unit="[m/s]" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="190" Name="ADCS_GET_STATE_TLM_ST">
 
-  <Parameter Name="Estimated angles" Type="struct" Unit="" IsLittleEndian="false" />
+<Parameter Name="current state" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Estimated quaternions" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Estimated angles" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Estimated angular rate" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Estimated quaternions" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="ECI referenced position" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Estimated angular rate" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="ECI referenced velocity" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="ECI referenced position" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="ADS coordinates" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="ECI referenced velocity" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="ECEF position" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="ADS coordinates" Type="struct" IsLittleEndian="false" />
+
+  <Parameter Name="ECEF position" Type="struct" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="191" Name="ADCS_GET_ADCS_MEASUREMENTS_ST">
 
-  <Parameter Name="Coarse sun sensor vector" Type="struct" Unit="" IsLittleEndian="false" />
+<Parameter Name="Magnetic field vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Fine sun sensor vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Coarse sun sensor vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Nadir sensor vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Fine sun sensor vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Angular rate vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Nadir sensor vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Wheel speed vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Angular rate vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Star 1 body vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Wheel speed vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Star 1 orbit vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Star 1 body vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Star 2 body vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Star 1 orbit vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Star 2 orbit vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Star 2 body vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Star 3 body vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Star 2 orbit vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Star 3 orbit vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Star 3 body vector" Type="struct" IsLittleEndian="false" />
+
+  <Parameter Name="Star 3 orbit vector" Type="struct" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="192" Name="ADCS_GET_ACTUATORS_CMDS_ST">
 
-  <Parameter Name="Wheel speed commanded" Type="struct" Unit="" IsLittleEndian="false" />
+<Parameter Name="Magnetorquer commanded" Type="struct" IsLittleEndian="false" />
+
+  <Parameter Name="Wheel speed commanded" Type="struct" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="193" Name="ADCS_GET_ESTIMATION_METADATA_ST">
 
-  <Parameter Name="Modelled sun vector" Type="struct" Unit="" IsLittleEndian="false" />
+<Parameter Name="IGRF Modelled magnetic field" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Estimated gyro bias vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Modelled sun vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Innovation vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Estimated gyro bias vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Quaternion error vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Innovation vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Quaternion covariance vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Quaternion error vector" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Angular rate covariance vector" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Quaternion covariance vector" Type="struct" IsLittleEndian="false" />
+
+  <Parameter Name="Angular rate covariance vector" Type="struct" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="194" Name="ADCS_GET_SENSOR_MEASUREMENTS_ST">
 
-  <Parameter Name="Cam1 sensor raw measurements" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Cam2 sensor raw measurements" Type="struct" IsLittleEndian="false" />	
 
-  <Parameter Name="CSS raw measurements 1 to 6" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Cam1 sensor raw measurements" Type="struct" IsLittleEndian="false" />	
 
-  <Parameter Name="CSS raw measurements 7 to 10" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="CSS raw measurements 1 to 6" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Magnetometer raw measurements" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="CSS raw measurements 7 to 10" Type="struct" IsLittleEndian="false" />
+
+  <Parameter Name="Magnetometer raw measurements" Type="struct" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="195" Name="ADCS_GET_POW_TEMP_MEAS_TLM_ST">
 
-  <Parameter Name="CubeControl current measurements" Type="struct" Unit="" IsLittleEndian="false" />
+<Parameter Name="CubeCSense current measurements" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Wheels current measurements" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="CubeControl current measurements" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Miscellaneous current measurements" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Wheels current measurements" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Temperature telemetry" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Miscellaneous current measurements" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Sensor rate temperature measurements" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Temperature telemetry" Type="struct" IsLittleEndian="false" />
+
+  <Parameter Name="Sensor rate temperature measurements" Type="struct" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="196" Name="ADCS_GET_ADCS_EXC_TIMES_ST">
+
+<Parameter Name="Time to perform complete" Type="int16" Unit="[ms]" IsLittleEndian="false" />
 
   <Parameter Name="Time to perform Sensor/actuator comm" Type="int16" Unit="[ms]" IsLittleEndian="false" />
 
@@ -502,37 +542,43 @@
 </ServiceSubtype>
 <ServiceSubtype Value="197" Name="ADCS_GET_PWR_CTRL_DEVICE_ST">
 
-  <Parameter Name="Power CubeControl Motor" Type="Bits" Unit="" IsLittleEndian="false" />
+ <Parameter Name="Power CubeControl signal" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Power CubeSense" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Power CubeControl Motor" Type="Bits"  IsLittleEndian="false" />
 
-  <Parameter Name="Power CubeStar" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Power CubeSense" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Power CubeWheel 1" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Power CubeStar" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Power CubeWheel 2" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Power CubeWheel 1" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Power CubeWheel 3" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Power CubeWheel 2" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Power Motor" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Power CubeWheel 3" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Power GPS LNA" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Power Motor" Type="Bits" IsLittleEndian="false" />
+
+  <Parameter Name="Power GPS LNA" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="198" Name="ADCS_GET_MISC_CURRENT_MEAS_ST">
 
-  <Parameter Name="Magnetorquer current" Type="uint16" Unit="[mA]" IsLittleEndian="false" />
+<Parameter Name="CubeStar current" Type="uint16" Unit="[mA]" calibrations="4" IsLittleEndian="false" />
+
+  <Parameter Name="Magnetorquer current" Type="uint16" Unit="[mA]" calibrations="13" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="199" Name="ADCS_GET_COMMANDED_ANDEDATTITUDE_ANGLES_ST">
 
-  <Parameter Name="Commanded pitch angle" Type="int16" Unit="[deg]" IsLittleEndian="false" />
+<Parameter Name="Commanded roll angle" Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="false" />
 
-  <Parameter Name="Commanded yaw angle" Type="int16" Unit="[deg]" IsLittleEndian="false" />
+  <Parameter Name="Commanded pitch angle" Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="false" />
+
+  <Parameter Name="Commanded yaw angle" Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="206" Name="ADCS_GET_FULL_CONFIG_ST">
-
+<Parameter Name="ADCS Configuration" Type="string" IsLittleEndian="false" />
 </ServiceSubtype>
 <ServiceSubtype Value="207" Name="ADCS_GET_SGP4_ORBIT_PARAMETERS_ST">
 
@@ -1617,6 +1663,8 @@
     <Calibration Id="10" Name="solar-panels" Type="polynomial" Function="x" Solution="y" A1="0.0009765625" A0="0" />	
    <Calibration Id="11" Name="adcs1 cal" Type="polynomial" Function="x" Solution="y" A1="0.0001" A0="0" />	
    <Calibration Id="12" Name="adcs2 cal" Type="polynomial" Function="x" Solution="y" A1="10" A0="0" />	
+   <Calibration Id="13" Name="adcs3 cal" Type="polynomial" Function="x" Solution="y" A1="0.1" A0="0" />	
+  <Calibration Id="14" Name="adcs4 cal" Type="polynomial" Function="x" Solution="y" A1="0/48828125" A0="0" />	
   </TelemetryCals>
 
   <TelecommandCals>
