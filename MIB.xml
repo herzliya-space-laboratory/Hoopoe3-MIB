@@ -582,6 +582,8 @@
 </ServiceSubtype>
 <ServiceSubtype Value="207" Name="ADCS_GET_SGP4_ORBIT_PARAMETERS_ST">
 
+<Parameter Name="Inclination" Type="double" Unit="[deg]" IsLittleEndian="false" />
+
   <Parameter Name="Eccentricity" Type="double" Unit="[orb/day]" IsLittleEndian="false" />
 
   <Parameter Name="RAAN" Type="double" Unit="[deg]" IsLittleEndian="false" />
@@ -599,70 +601,74 @@
 </ServiceSubtype>
 <ServiceSubtype Value="210" Name="ADCS_GET_ADCS_RAW_GPS_MEAS_ST">
 
-  <Parameter Name="GPS raw time" Type="struct" Unit="" IsLittleEndian="false" />
+<Parameter Name="GPS raw status" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="GPS ECEF x axis" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="GPS raw time" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="GPS ECEF y axis" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="GPS ECEF x axis" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="GPS ECEF z axis" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="GPS ECEF y axis" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Standard deviation position" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="GPS ECEF z axis" Type="struct" IsLittleEndian="false" />
 
-  <Parameter Name="Standard deviation velocity" Type="struct" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Standard deviation position" Type="struct" IsLittleEndian="false" />
+
+  <Parameter Name="Standard deviation velocity" Type="struct" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="211" Name="ADCS_GET_STAR_TRACKER_TLM_ST">
 
-  <Parameter Name="Number of start identified" Type="Bits" Unit="" IsLittleEndian="false" />
+<Parameter Name="Number of start deleted" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Noise level of star image" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Number of start identified" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Attitude success" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Noise level of star image" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Image capture success" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Attitude success" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Detection success" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Image capture success" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Identification success" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Detection success" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Loop time error" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Identification success" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Max stars detected" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Loop time error" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Less than three stars detected in FoV" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Max stars detected" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Comms error" Type="Bits" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Less than three stars detected in FoV" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Confidence factor of star 1" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Comms error" Type="Bits" IsLittleEndian="false" />
 
-  <Parameter Name="Confidence factor of star 2" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Confidence factor of star 1" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Confidence factor of star 3" Type="byte" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Confidence factor of star 2" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Instrument magnitude of star 1" Type="uint16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Confidence factor of star 3" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Instrument magnitude of star 2" Type="uint16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Instrument magnitude of star 1" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="Instrument magnitude of star 3" Type="uint16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Instrument magnitude of star 2" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="Catalog number of star 1" Type="uint16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Instrument magnitude of star 3" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="X centroid of star 1" Type="int16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Catalog number of star 1" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="Y centroid of star 1" Type="int16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="X centroid of star 1" Type="int16" IsLittleEndian="false" />
 
-  <Parameter Name="Catalog number of star 2" Type="uint16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Y centroid of star 1" Type="int16" IsLittleEndian="false" />
 
-  <Parameter Name="X centroid of star 2" Type="int16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Catalog number of star 2" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="Y centroid of star 2" Type="int16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="X centroid of star 2" Type="int16" IsLittleEndian="false" />
 
-  <Parameter Name="Catalog number of star 3" Type="uint16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Y centroid of star 2" Type="int16" IsLittleEndian="false" />
 
-  <Parameter Name="X centroid of star 3" Type="int16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="Catalog number of star 3" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="Y centroid of star 3" Type="int16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="X centroid of star 3" Type="int16" IsLittleEndian="false" />
+
+  <Parameter Name="Y centroid of star 3" Type="int16" IsLittleEndian="false" />
 
   <Parameter Name="Capture time [ms]" Type="uint16" Unit="[ms]" IsLittleEndian="false" />
 
@@ -673,46 +679,37 @@
 </ServiceSubtype>
 <ServiceSubtype Value="215" Name="ADCS_GET_ADC_RAW_RED_MAG_ST">
 
-  <Parameter Name="magnetic_y" Type="int16" Unit="" IsLittleEndian="false" />
+<Parameter Name="magnetic_x" Type="int16" IsLittleEndian="false" />
 
-  <Parameter Name="magnetic_z" Type="int16" Unit="" IsLittleEndian="false" />
+  <Parameter Name="magnetic_y" Type="int16" IsLittleEndian="false" />
+
+  <Parameter Name="magnetic_z" Type="int16" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="220" Name="ADCS_GET_ACP_EXECUTION_STATE_ST">
+
+<Parameter Name="time since the start of the current loop iteration" Type="uint16" Unit="[ms]" IsLittleEndian="false" />
 
   <Parameter Name="Indicates which part of the loop is currently executing" Type="byte" Unit="" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="242" Name="ADCS_GET_TLM_ELEM_AT_INDEX_ST">
 
-  <Parameter Name="Save This TLM flag" Type="byte" Unit="" IsLittleEndian="false" />
+<Parameter Name="index of TLM element" Type="byte" IsLittleEndian="false" />
+
+  <Parameter Name="Save This TLM flag" Type="byte" IsLittleEndian="false" />
 
   <Parameter Name="TLM Save Period" Type="byte" Unit="[sec]" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="243" Name="ADCS_GET_ADCS_CONFIG_PARAM_ST">
 
+<Parameter Name="Parameter Offset" Type="uint16" IsLittleEndian="false" />
+
   <Parameter Name="Parameter Length" Type="byte" Unit="" IsLittleEndian="false" />
 
 </ServiceSubtype>
 <ServiceSubtype Value="255" Name="ADCS_SET_DATA_LOG_ST">
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
-  <Parameter Name="" Type="" Unit="" IsLittleEndian="false" />
-
 </ServiceSubtype>	  
    </ServiceType>
 
