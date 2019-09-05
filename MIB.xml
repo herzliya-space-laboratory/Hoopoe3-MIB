@@ -114,7 +114,7 @@
 
     <ServiceType Value="154" Name="ADCS">
     
-	  <ServiceSubtype Value="128" Name="ADCS_GET_GENERAL_INFO_ST">
+<ServiceSubtype Value="128" Name="ADCS_GET_GENERAL_INFO_ST">
 
   <Parameter Name="Node type identifier" Type="byte" IsLittleEndian="false" />
 	  
@@ -129,9 +129,9 @@
   <Parameter Name="Number of milliseconds since processor start-up" Type="uint16" Unit="[msec]" IsLittleEndian="false" />
 
 </ServiceSubtype>
-	  <ServiceSubtype Value="130" Name="ADCS_GET_BOOT_PROGRAM_INFO_ST">
+ <ServiceSubtype Value="130" Name="ADCS_GET_BOOT_PROGRAM_INFO_ST">
 
-	  <Parameter Name="Reset Cause" Type="uint4" IsLittleEndian="false" />
+	<Parameter Name="Reset Cause" Type="uint4" IsLittleEndian="false" />
 	  
   <Parameter Name="Boot Cause" Type="uint4" IsLittleEndian="false" />
 
@@ -711,7 +711,7 @@
 </ServiceSubtype>
 <ServiceSubtype Value="255" Name="ADCS_SET_DATA_LOG_ST">
 </ServiceSubtype>	  
-   </ServiceType>
+ </ServiceType>
 
     <ServiceType Value="88" Name="TLM- eps,comm,file systems">
 
@@ -1200,11 +1200,11 @@
     <ServiceType Value="154" Name="ADCS">
 <ServiceSubtype Value="0" Name="ADCS_I2C_GENRIC_ST">
 
-  <Parameter Name="Command ID" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Command ID" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Command data length" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Command data length" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Data" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Data" Size="170" IsLittleEndian="true" />
 
 </ServiceSubtype>
 
@@ -1227,7 +1227,7 @@
 
 <ServiceSubtype Value="3" Name="ADCS_CACHE_ENABLE_ST">
 
-  <Parameter Name="cache state" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="cache state" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 
@@ -1241,7 +1241,7 @@
 
 <ServiceSubtype Value="7" Name="ADCS_DEPLOY_MAG_BOOM_ST">
 
-  <Parameter Name="timeout" Type="uint8" Unit="[sec]" IsLittleEndian="false" />
+  <Parameter Name="timeout" Type="byte" Unit="[sec]" IsLittleEndian="false" />
 
 </ServiceSubtype>
 
@@ -1273,20 +1273,18 @@
 
   <Parameter Name="Power Motor" Type="uint2" IsLittleEndian="false" />
 
-  <Parameter Name="Power GPS LNA" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Power GPS LNA" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 
 
 
 <ServiceSubtype Value="12" Name="ADCS_CLEAR_ERRORS_ST">
-  
-  <parameter id="7" name="ADCS_CLEAR_ERRORS_ST_PARAM" type="bitmap" islittleendian="false">
-          <bitfield size="1" isnull="false" name="ADCS Error Flags" calibration="15" />
-          <bitfield size="1" isnull="false" name="HK Error Flags" calibration="19" />
-		  <bitfield size="6" isnull="false" name="not used" calibration="18" />
-        </parameter>
-
+  <parameter name="ADCS_CLEAR_ERRORS_ST_PARAM" type="bitmap" islittleendian="false">
+    <bitfield size="1" isnull="false" name="ADCS Error Flags" calibration="15" />
+    <bitfield size="1" isnull="false" name="HK Error Flags" calibration="19" />
+	<bitfield size="6" isnull="false" name="not used" calibration="18" />
+   </parameter>
 </ServiceSubtype>
 
 
@@ -1295,7 +1293,7 @@
 
   <Parameter Name="ctrl mode" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="override flag" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="override flag" Type="byte" IsLittleEndian="false" />
 
   <Parameter Name="timeout" Type="uint16" Unit="[sec]" IsLittleEndian="false" />
 
@@ -1399,27 +1397,27 @@
 
 <ServiceSubtype Value="25" Name="ADCS_CSS_RELATIVE_SCALE_ST">
 
-  <Parameter Name="Css 1 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 1 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 2 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 2 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 3 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 3 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 4 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 4 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 5 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 5 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 6 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 6 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 7 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 7 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 8 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 8 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 9 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 9 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css 10 Relative Scale" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css 10 Relative Scale" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Css Threshold" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Css Threshold" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 
@@ -1481,7 +1479,7 @@
 
   <Parameter Name="rate sensor offset z" Type="int16" IsLittleEndian="false" />
 
-  <Parameter Name="rate sensor multiplier" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="rate sensor multiplier" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 
@@ -1497,19 +1495,19 @@
 
   <Parameter Name="Exposure time register value" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="Detection Threshold" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Detection Threshold" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Star Threshold" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Star Threshold" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Maximum stars that the star tracker will match" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Maximum stars that the star tracker will match" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Maximum pixels in a star" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Maximum pixels in a star" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Maximum noise" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Maximum noise" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="Minimum pixels in a star" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Minimum pixels in a star" Type="byte" IsLittleEndian="false" />
 
-  <Parameter Name="% Error margin of the star id" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="% Error margin of the star id" Type="byte" IsLittleEndian="false" />
 
   <Parameter Name="Pixel centroid X" Type="float" IsLittleEndian="false" />
 
@@ -1517,7 +1515,7 @@
 
   <Parameter Name="Star Tracker Focal Length" Type="uint16" IsLittleEndian="false" />
 
-  <Parameter Name="Synchronization delay within star Tracker" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="Synchronization delay within star Tracker" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
 
@@ -1747,11 +1745,11 @@
 
 <ServiceSubtype Value="241" Name="ADCS_UPDATE_TLM_ELEMENT_AT_INDEX_ST">
 
-  <Parameter Name="index" Type="uint8" IsLittleEndian="false" />
+  <Parameter Name="index" Type="byte" IsLittleEndian="false" />
 
   <Parameter Name="Save Telemetry flag at index" Type="Bool8Bit" IsLittleEndian="false" />
 
-  <Parameter Name="Save Time Period" Type="uint8" Unit="[sec]" IsLittleEndian="false" />
+  <Parameter Name="Save Time Period" Type="byte" Unit="[sec]" IsLittleEndian="false" />
 
 </ServiceSubtype>
 
