@@ -93,11 +93,6 @@
         <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="false" />
         <Parameter Name="Txrefl" Type="uint16" Unit="mW" IsLittleEndian="false" />
         <Parameter Name="Txfrow" Type="uint16" Unit="mW" IsLittleEndian="false" />
-        <Parameter Name="DelayST" Type="string" Size="3" IsLittleEndian="false" />
-        <Parameter Name="ControlmodeST" Type="byte" IsLittleEndian="false" />
-        <Parameter Name="PowerST" Type="byte" IsLittleEndian="false" />
-        <Parameter Name="EstimationmodeST" Type="byte" IsLittleEndian="false" />
-        <Parameter Name="TLMsaveST" Type="string" Size="3" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsRoll" Type="uint16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsPich" Type="uint16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsYaw" Type="uint16" Unit="deg" IsLittleEndian="false" />
