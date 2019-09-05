@@ -105,107 +105,6 @@
       </ServiceSubtype>
     </ServiceType>
 
-    <ServiceType Name="ADCS" Value="42">
-      <ServiceSubtype Name="Estimated Attitude Angles" Value="136">
-        <Parameter Name="Roll" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="Pitch" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="Yaw" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Satellite Position (ECI)" Value="138">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="km" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="km" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="km" IsLittleEndian="false" />
-      </ServiceSubtype>
-      7<ServiceSubtype Name="Estimated Angular Rates" Value="137">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Satellite Velocity (ECI)" Value="139">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="m/s" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="m/s" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="m/s" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Satellite Position (LLH)" Value="141">
-        <Parameter Name="Latitude" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="Longitude" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="Altitude" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Magnetic Field Vector" Value="123">
-        <Parameter Name="X" Type="uint16" Unit="uT" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" Unit="uT" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Coarse Sun Vector" Value="124">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Rate Sensor Rates" Value="126">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Wheel Speed" Value="128">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="rpm" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="rpm" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="rpm" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="IGRF Modelled Magnetic Field Vector" Value="130">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="uT" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="uT" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="uT" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Estimated Gyro Bias" Value="131">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="deg/s" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Estimation Innovation Vector" Value="132">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Quaternion Error Vector" Value="133">
-        <Parameter Name="Q1" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Q2" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Q3" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Quaternion Covariance" Value="134">
-        <Parameter Name="Q1 - RMS" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Q2 - RMS" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Q3 - RMS" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Angular Rate Covariance" Value="135">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Raw CSS 1 to 6" Value="122">
-        <Parameter Name="CSS1" Type="byte" RangeStart="‎0" RangeEnd="255" Unit="Sampled A/D Value" IsLittleEndian="false" />
-        <Parameter Name="CSS2" Type="byte" RangeStart="‎0" RangeEnd="255" Unit="Sampled A/D Value" IsLittleEndian="false" />
-        <Parameter Name="CSS3" Type="byte" RangeStart="‎0" RangeEnd="255" Unit="Sampled A/D Value" IsLittleEndian="false" />
-        <Parameter Name="CSS4" Type="byte" RangeStart="‎0" RangeEnd="255" Unit="Sampled A/D Value" IsLittleEndian="false" />
-        <Parameter Name="CSS5" Type="byte" RangeStart="‎0" RangeEnd="255" Unit="Sampled A/D Value" IsLittleEndian="false" />
-        <Parameter Name="CSS6" Type="byte" RangeStart="‎0" RangeEnd="255" Unit="Sampled A/D Value" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Raw Magnetometer" Value="129">
-        <Parameter Name="MagX" Type="uint16" Unit="Sampled A/D Value" IsLittleEndian="false" />
-        <Parameter Name="MagY" Type="uint16" Unit="Sampled A/D Value" IsLittleEndian="false" />
-        <Parameter Name="MagZ" Type="uint16" Unit="Sampled A/D Value" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="Estimated Quaternion" Value="142">
-        <Parameter Name="Q1" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Q2" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-        <Parameter Name="Q3" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="" IsLittleEndian="false" />
-      </ServiceSubtype>
-      <ServiceSubtype Name="ECEF Position" Value="140">
-        <Parameter Name="X" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="m" IsLittleEndian="false" />
-        <Parameter Name="Y" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="m" IsLittleEndian="false" />
-        <Parameter Name="Z" Type="uint16" RangeStart="‎-32768" RangeEnd="32767" Unit="m" IsLittleEndian="false" />
-      </ServiceSubtype>
-    </ServiceType>
-
     <ServiceType Value="88" Name="TLM">
       <ServiceSubtype Value="50" Name="EPS">
         <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="true" />
@@ -372,7 +271,23 @@
         <Parameter Name="period" Type="uint32" Unit="seconds" IsLittleEndian="true" />
       </ServiceSubtype>
     </ServiceType>
-
+	<ServiceType Value="154" Name="ADCS">
+	
+		<ServiceSubtype Value="0" Name="Generic I2C">
+			<Parameter Name="Data" Type="string" Size="150" IsLittleEndian="true" />
+		</ServiceSubtype>
+		
+		<ServiceSubtype Value="140" Name="Get ADCS unix time">
+			<Parameter Name="unix time" Description="time" Type="datetime" IsLittleEndian="true" />
+			<Parameter Name="mili second" Description="time" Type="uint16" IsLittleEndian="true" />
+		</ServiceSubtype>
+		
+		<ServiceSubtype Value="145" Name="ADCS_GET_CURRENT_STATE_ST">
+		  <Parameter Name="Wheel 1 Current" Type="uint16" IsLittleEndian="true" />
+		  <Parameter Name="Wheel 2 Current" Type="uint16" IsLittleEndian="true" />
+		  <Parameter Name="Wheel 3 Current" Type="uint16" IsLittleEndian="true" />
+		</ServiceSubtype>
+	</ServiceType>
     <ServiceType Value="13" Name="General">
 
       <ServiceSubtype Value="90" Name="Ack">
@@ -518,323 +433,307 @@
       <ServiceSubtype Value="122" Name="DummyFunc">
       </ServiceSubtype>
     </ServiceType>
+	
+	<ServiceType Value="154" Name="ADCS">
+		<ServiceSubtype Value="0" Name="ADCS_I2C_GENRIC_ST">
+		  <Parameter Name="Command ID" Type="byte" IsLittleEndian="true" />
+		  <Parameter Name="Command data length" Type="uint16" IsLittleEndian="true" />
+		  <Parameter Name="Command ack" Type="byte" IsLittleEndian="true" />
+		  <Parameter Name="Data" Type="string" Size="180" IsLittleEndian="true" />
+		</ServiceSubtype>
 
-    <ServiceType Value="154" Name="ADCS">
+		<ServiceSubtype Value="1" Name="ADCS_COMPONENT_RESET_ST">
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="98" Name="Set Boot Index">
-        <Parameter Name="boot index" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="2" Name="ADCS_SET_CURR_UNIX_TIME_ST">
+		  <Parameter Name="unix_time_sec" Type="datetime" Unit="[sec]" IsLittleEndian="true" />
+		  <Parameter Name="unix_time_milli_sec" Type="uint16" Unit="[milli-sec]" IsLittleEndian="true" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="99" Name="Run Selected Boot Index">
-      </ServiceSubtype>
+		<ServiceSubtype Value="3" Name="ADCS_CACHE_ENABLE_ST">
+		  <Parameter Name="cache state" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
+		<ServiceSubtype Value="6" Name="ADCS_RESET_BOOT_REGISTER_ST">
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="100" Name="Set SGP4 Orbit Pramatars">
-        <Parameter Name="Inclination" Type="double" IsLittleEndian="true"/>
-        <Parameter Name="Eccentricity" Type="double" IsLittleEndian="true"/>
-        <Parameter Name="Epoch" Type="double" IsLittleEndian="true"/>
-        <Parameter Name="RAAN" Type="double" IsLittleEndian="true"/>
-        <Parameter Name="Argument of Perigee" Type="double" IsLittleEndian="true"/>
-        <Parameter Name="B-Star Drag term" Type="double" IsLittleEndian="true"/>
-        <Parameter Name="Mean Motion" Type="double" IsLittleEndian="true"/>
-        <Parameter Name="Mean Anomaly" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="7" Name="ADCS_DEPLOY_MAG_BOOM_ST">
+		  <Parameter Name="timeout" Type="byte" Unit="[sec]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="101" Name="Set SGP4 Orbit Inclination">
-        <Parameter Name="Inclination" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="10" Name="ADCS_RUN_MODE_ST">
+		  <Parameter Name="runmode" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="102" Name="Set SGP4 Orbit Eccentricity">
-        <Parameter Name="Eccentricity" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="11" Name="ADCS_SET_PWR_CTRL_DEVICE_ST">
+			<Parameter name="Power" description="Random Booleans" type="bitmap">
+			  <bitfield size="2" isnull="false" name="Power CubeControl Signal" calibration="11" />
+			  <bitfield size="2" isnull="false" name="Power CubeControl Motor" calibration="11" />
+			  <bitfield size="2" isnull="false" name="Power CubeSense" calibration="11" />
+			  <bitfield size="2" isnull="false" name="Power CubeStar" calibration="11" />
+			 </Parameter>
+		  	<Parameter name="Power 2" description="Random Booleans 2" type="bitmap">
+			  <bitfield size="2" isnull="false" name="Power CubeWheel 1" calibration="11" />
+			  <bitfield size="2" isnull="false" name="Power CubeWheel 2" calibration="11" />
+			  <bitfield size="2" isnull="false" name="Power CubeWheel 3" calibration="11" />
+			  <bitfield size="2" isnull="false" name="Power Motor" calibration="11" />
+			 </Parameter>
+		  <Parameter Name="Power GPS LNA" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
+		
+		<ServiceSubtype Value="12" Name="ADCS_CLEAR_ERRORS_ST">
+		  <parameter name="ADCS_CLEAR_ERRORS_ST_PARAM" type="bitmap">
+			<bitfield size="1" isnull="false" name="ADCS Error Flags" calibration="15" />
+			<bitfield size="1" isnull="false" name="HK Error Flags" calibration="19" />
+			<bitfield size="6" isnull="false" name="not used" calibration="18" />
+		   </parameter>
+		</ServiceSubtype>
+		
+		<ServiceSubtype Value="13" Name="ADCS_SET_ATT_CTRL_MODE_ST">
+		  <Parameter Name="ctrl mode" Type="byte" IsLittleEndian="true" />
+		  <Parameter Name="override flag" Type="byte" IsLittleEndian="true" />
+		  <Parameter Name="timeout" Type="uint16" Unit="[sec]" IsLittleEndian="true" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="103" Name="Set SGP4 Orbit Epoch">
-        <Parameter Name="Epoch" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="14" Name="ADCS_SET_EST_MODE_ST">
+		  <Parameter Name="estimation mode" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="104" Name="Set SGP4 Orbit RAAN">
-        <Parameter Name="RAAN" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="16" Name="ADCS_SET_MAG_OUTPUT_ST">
+		  <Parameter Name="magduty_x" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="magduty_y" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="magduty_z" Type="int16" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="105" Name="Set SGP4 Orbit Argument of Perigee">
-        <Parameter Name="Argument of Perigee" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="17" Name="ADCS_SET_WHEEL_SPEED_ST">
+		  <Parameter Name="speed_x" Type="int16" Unit="[RPM]" IsLittleEndian="false" />
+		  <Parameter Name="speed_y" Type="int16" Unit="[RPM]" IsLittleEndian="false" />
+		  <Parameter Name="speed_z" Type="int16" Unit="[RPM]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="106" Name="Set SGP4 Orbit B-Star Drag term">
-        <Parameter Name="B-Star Drag term" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="21" Name="ADCS_SET_MTQ_CONFIG_ST">
+		  <Parameter Name="MTQ Config 1" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="MTQ Config 2" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="MTQ Config 3" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="107" Name="Set SGP4 Orbit Mean Motion">
-        <Parameter Name="Mean Motion" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="22" Name="ADCS_RW_CONFIG_ST">
+		  <Parameter Name="RW 1 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="RW 2 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="RW 3 Config" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="108" Name="Set SGP4 Orbit Mean Anomaly">
-        <Parameter Name="Mean Anomaly" Type="double" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="23" Name="ADCS_GYRO_CONFIG_ST">
+		  <Parameter Name="Gyro 1 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Gyro 2 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Gyro 3 Config" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="109" Name="Reset Boot Registers">
-      </ServiceSubtype>
+		<ServiceSubtype Value="24" Name="ADCS_CSS_CONFIG_ST">
+		  <Parameter Name="Css 1 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 2 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 3 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 4 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 5 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 6 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 7 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 8 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 9 Config" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 10 Config" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="110" Name="Save Configuration">
-      </ServiceSubtype>
+		<ServiceSubtype Value="25" Name="ADCS_CSS_RELATIVE_SCALE_ST">
+		  <Parameter Name="Css 1 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 2 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 3 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 4 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 5 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 6 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 7 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 8 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 9 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css 10 Relative Scale" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Css Threshold" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="111" Name="Save Orbit Parameters">
-      </ServiceSubtype>
+		<ServiceSubtype Value="33" Name="ADCS_SET_MAGNETMTR_MOUNT_ST">
+		  <Parameter Name="mounttrans_alpha_ang" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="mounttrans_beta_ang" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="mounttrans_gamma_ang" Type="int16" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="112" Name="Current Unix Time">
-        <Parameter Name="Current Unix Time" Type="uint32" Unit="seconds" IsLittleEndian="true"/>
-        <Parameter Name="Milliseconds" Type="uint16" Unit="milliseconds" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="34" Name="ADCS_SET_MAGNETMTR_OFFSET_ST">
+		  <Parameter Name="magnetometer channel 1 offset" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="magnetometer channel 2 offset" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="magnetometer channel 3 offset" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="magnetometer sensitivity matrix 11" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="magnetometer sensitivity matrix 22" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="magnetometer sensitivity matrix 33" Type="int16" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="113" Name="Cache enabled state">
-        <Parameter Name="Enabled State" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="35" Name="ADCS_SET_MAGNETMTR_SENSTVTY_ST">
+		  <Parameter Name="mag_sensmatrix_s12" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="mag_sensmatrix_s13" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="mag_sensmatrix_s21" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="mag_sensmatrix_s23" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="mag_sensmatrix_s31" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="mag_sensmatrix_s32" Type="int16" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="114" Name="Deploy Magnetometer Boom">
-        <Parameter Name="Timeout" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="36" Name="ADCS_RATE_SENSOR_OFFSET_ST">
+		  <Parameter Name="rate sensor offset x" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="rate sensor offset y" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="rate sensor offset z" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="rate sensor multiplier" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="115" Name="ADCS Run Mode">
-        <Parameter Name="Enabled" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="37" Name="ADCS_SET_STAR_TRACKER_CONFIG_ST">
+		  <Parameter Name="Mounting Transform Alpha Angle" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="Mounting Transform Beta Angle" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="Mounting Transform Gamma Angle" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="Exposure time register value" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="Detection Threshold" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Star Threshold" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Maximum stars that the star tracker will match" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Maximum pixels in a star" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Maximum noise" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Minimum pixels in a star" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="% Error margin of the star id" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Pixel centroid X" Type="float" IsLittleEndian="false" />
+		  <Parameter Name="Pixel centroid Y" Type="float" IsLittleEndian="false" />
+		  <Parameter Name="Star Tracker Focal Length" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="Synchronization delay within star Tracker" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="117" Name="Set Magnetorquer Configuration">
-        <Parameter Name="Magnetorquer Configuration 1" Type="byte" Unit="ENUM" IsLittleEndian="true"/>
-        <Parameter Name="Magnetorquer Configuration 2" Type="byte" Unit="ENUM" IsLittleEndian="true"/>
-        <Parameter Name="Magnetorquer Configuration 3" Type="byte" Unit="ENUM" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="38" Name="ADCS_SET_DETUMB_CTRL_PARAM_ST">
+		  <Parameter Name="Detumbling Spin Gain" Type="float" IsLittleEndian="false" />
+		  <Parameter Name="Detumbling Damping Gain" Type="float" IsLittleEndian="false" />
+		  <Parameter Name="Reference Spin Rate" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="Fast B-Dot Detubmling Gain" Type="float" IsLittleEndian="false" />
+		  <Parameter Name="Y-Momentum Control Gain" Type="float" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="118" Name="Set Magnetometer Mounting">
-        <Parameter Name="Magnetometer Mounting Transform Alpha Angle" Type="uint32" Unit="deg" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Mounting Transform Beta Angle" Type="uint32" Unit="deg" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Mounting Transform Gamma Angle" Type="uint32" Unit="deg" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="39" Name="ADCS_SET_YWHEEL_CTRL_PARAM_ST">
+		  <Parameter Name="Y-Momentum Control Nutation Damping Gain" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="Y-Momentum Proportional Gain" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="Y-Momentum Derivative Gain" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="Reference Wheel Momentum" Type="Float" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="119" Name="Set Magnetometer Offset and Scaling Configuration">
-        <Parameter Name="Magnetometer Channel 1 Offset" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Channel 2 Offset" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Channel 3 Offset" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix s11" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix S22" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix s33" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="40" Name="ADCS_SET_RWHEEL_CTRL_PARAM_ST">
+		  <Parameter Name="RWheel Proportional Gain" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="RWheel Derivative Gain" Type="Float" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="120" Name="Set Magnetometer Sensitivity Configuration">
-        <Parameter Name="Magnetometer Sensitivity Matrix S12" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix S13" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix S21" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix S23" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix S31" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Sensitivity Matrix S32" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="41" Name="ADCS_SET_MOMENT_INTERTIA_ST">
+		  <Parameter Name="Moment Of Inertia Ixx" Type="Float" Unit="[kg*m^2]" IsLittleEndian="false" />
+		  <Parameter Name="Moment Of Inertia Iyy" Type="Float" Unit="[kg*m^2]" IsLittleEndian="false" />
+		  <Parameter Name="Moment Of Inertia Izz" Type="Float" Unit="[kg*m^2]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="121" Name="Set Detumbling Control Parameters">
-        <Parameter Name="Detumbling Spin Gain" Type="float" Unit="deg/s" IsLittleEndian="true"/>
-        <Parameter Name="Detumbling Damping Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Reference spin rate" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Fast BDot Detumbling Gain" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="42" Name="ADCS_PROD_INERTIA_ST">
+		  <Parameter Name="Moment Of Inertia Ixy" Type="Float" Unit="[kg*m^2]" IsLittleEndian="false" />
+		  <Parameter Name="Moment Of Inertia Ixz" Type="Float" Unit="[kg*m^2]" IsLittleEndian="false" />
+		  <Parameter Name="Moment Of Inertia Iyz" Type="Float" Unit="[kg*m^2]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="122" Name="Set Y-Wheel Control Parameters">
-        <Parameter Name="" Description="Y-Momentum Control Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="" Description="Y-momentum Nutation Damping Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="" Description="Y-momentum Proportional Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="" Description="Y-momentum Derivative Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="" Description="Reference Wheel Momentum" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="43" Name="ADCS_ESTIMATION_PARAM1_ST">
+		  <Parameter Name="Magnetometer rate filter system noise" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="EKF system noise" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="CSS measurement noise" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="Sun sensor measurement noise" Type="Float" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="123" Name="Set Reaction Wheel Control Parameters">
-        <Parameter Name="RWheel Proportional Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="RWheel Derivative Gain" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="44" Name="ADCS_ESTIMATION_PARAM2_ST">
+		  <Parameter Name="Magnetometer rate filter system noise" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="EKF system noise" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="CSS measurement noise" Type="Float" IsLittleEndian="false" />
+		  <Parameter Name="Sun sensor measurement noise" Type="uint16" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="124" Name="Set Moments of Inertia">
-        <Parameter Name="Moment Of Inertia - Ixx" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Iyy" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Izz" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="45" Name="ADCS_SET_SGP4_ORBIT_PARAMS_ST">
+		  <Parameter Name="Inclination" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		  <Parameter Name="Eccentricity" Type="double" Unit="[orb/day]" IsLittleEndian="false" />
+		  <Parameter Name="RAAN" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		  <Parameter Name="Argument of perigee" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		  <Parameter Name="B-star drag" Type="double" IsLittleEndian="false" />
+		  <Parameter Name="Mean motion" Type="double" IsLittleEndian="false" />
+		  <Parameter Name="Mean anomaly" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		  <Parameter Name="Epoch" Type="double" Unit="[year.day]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="125" Name="Set Products of Inertia ">
-        <Parameter Name="Moment Of Inertia - Ixy" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Ixz" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Iyz" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="46" Name="ADCS_SET_SGP4_ORBIT_INC_ST">
+		  <Parameter Name="Inclination" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="126" Name="Set Estimation Parameters 1">
-        <Parameter Name="Magnetometer Rate Filter System Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="EKF System Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="CSS Measurement Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Sun Sensor Measurement Noise" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="47" Name="ADCS_SET_SGP4_ORBIT_ECC_ST">
+		  <Parameter Name="Eccentricity" Type="double" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="127" Name="Set Estimation Parameters 2">
-        <Parameter Name="Nadir Sensor Measurement Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Measurement Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Star Tracker Measurement Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Use Sun Sensor" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Use Nadir Sensor" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Use CSS" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Use Star Tracker" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Mode" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Cam1 and Cam2 Sampling Period" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="48" Name="ADCS_SET_SGP4_ORBIT_RAAN_ST">
+		  <Parameter Name="RAAN" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="128" Name="Stage Table Full">
-        <Parameter Name="Delay1" Type="byte"/>
-        <Parameter Name="Delay2" Type="byte"/>
-        <Parameter Name="Delay3" Type="byte"/>
-        <Parameter Name="control mode" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="power" Type="byte" Calibration="3"/>
-        <Parameter Name="estimation mode" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="telemetry1" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="telemetry2" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="telemetry3" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="49" Name="ADCS_SET_SGP4_ORBIT_ARG_OF_PER_ST">
+		  <Parameter Name="Argument of perigee" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="129" Name="Stage Table Delay">
-        <Parameter Name="int delay : 24 bit" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="50" Name="ADCS_SET_SGP4_ORBIT_BSTAR_DRAG_ST">
+		  <Parameter Name="B-star drag" Type="double" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="130" Name="Stage control mode">
-        <Parameter Name="control mode :enum(Byte)" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="51" Name="ADCS_SET_SGP4_ORBIT_MEAN_MOT_ST">
+		  <Parameter Name="Mean motion" Type="double" Unit="[orb/day]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="131" Name="Stage power">
-        <Parameter Name="Power 2 bit * 4 (signal_cubecontrol : 2, motor_cubecontrol:2, pwr_motor:2, pwr_cubewheel :2;)" Type="string" Size="5" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="52" Name="ADCS_SET_SGP4_ORBIT_MEAN_ANOM_ST">
+		  <Parameter Name="Mean anomaly" Type="double" Unit="[deg]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="132" Name="Stage estimation mode">
-        <Parameter Name="Estimation mode()enum" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="53" Name="ADCS_SET_SGP4_ORBIT_EPOCH_ST">
+		  <Parameter Name="Epoch" Type="double" Unit="[year.day]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="133" Name="Stage telemetry">
-        <Parameter Name="control mode :enum(Byte)" Type="string" Size="21" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="56" Name="ADCS_SET_MAGNETOMETER_MODE_ST">
+		  <Parameter Name="Magnetometer Mode" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="134" Name="Upload Configuration">
-      </ServiceSubtype>
+		<ServiceSubtype Value="63" Name="ADCS_SAVE_CONFIG_ST">
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="135" Name="Magnetorquer Configuration">
-        <Parameter Name="Magnetorquer Configuration 1" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Magnetorquer Configuration 2" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Magnetorquer Configuration 3" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="64" Name="ADCS_SAVE_ORBIT_PARAM_ST">
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="136" Name="RW Configuration">
-        <Parameter Name="RW1 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="RW2 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="RW3 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="RW4 Configuration" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="80" Name="ADCS_SAVE_IMAGE_ST">
+		  <Parameter Name="Camera selection" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Image size selection" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="137" Name="Gyro Configuration">
-        <Parameter Name="Gyro1 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Gyro2 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Gyro3 Configuration" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="100" Name="ADCS_SET_BOOT_INDEX_ST">
+		  <Parameter Name="Boot Program" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="138" Name="CSS Configuration">
-        <Parameter Name="CSS 1 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 2 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 3 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 4 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 5 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 6 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 7 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 8 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 9 Configuration" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="CSS 10 Configuration" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="101" Name="ADCS_RUN_BOOT_PROGRAM_ST">
+		</ServiceSubtype>
+		
+		<ServiceSubtype Value="140" Name="ADCS_">
+		</ServiceSubtype>
+		
+		<ServiceSubtype Value="145" Name="ADCS_GET_CURRENT_STATE_ST">
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="139" Name="CSS Relative Scale">
-        <Parameter Name="CSS 1 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 2 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 3 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 4 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 5 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 6 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 7 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 8 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 9 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="CSS 10 Relative Scale" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="240" Name="ADCS_RESET_TLM_ELEMENTS_ST">
+		</ServiceSubtype>
+		
+		<ServiceSubtype Value="241" Name="ADCS_UPDATE_TLM_ELEMENT_AT_INDEX_ST">
+		  <Parameter Name="index" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Save Telemetry flag at index" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="Save Time Period" Type="byte" Unit="[sec]" IsLittleEndian="false" />
+		</ServiceSubtype>
 
-      <ServiceSubtype Value="140" Name="CSS Threshold">
-        <Parameter Name="CSS Threshold" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="141" Name="Magnetometer Mounting Transform Angles">
-        <Parameter Name="Magnetometer Mounting Transform Alpha Angle" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Mounting Transform Beta Angle" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Mounting Transform Gamma Angle" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="142" Name="Magnetometer Channel 1-3 Offset">
-        <Parameter Name="Magnetometer Channel 1 Offset" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Channel 2 Offset" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Channel 3 Offset" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="143" Name="Magnetometer Sensitivity Matrix">
-        <Parameter Name="" Description="Magnetometer Sensitivity Matrix 11, 22, 33, 12, 13, 21, 23, 31, 32" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="144" Name="Rate Sensor Offset ">
-        <Parameter Name="X-Rate Sensor offset" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Y-Rate Sensor offset" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Z-Rate Sensor offset" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="145" Name="Rate Sensor Mult">
-        <Parameter Name="Rate Sensor Mult" Type="uint32" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="146" Name="Detumbling Gain Config">
-        <Parameter Name="Detumbling Spin Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Detumbling Damping Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Reference Spin Rate" Type="uint32" IsLittleEndian="true"/>
-        <Parameter Name="Fast BDot Detumbling Gain" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="147" Name="Y-Momentum Gain Config">
-        <Parameter Name="Y-Momentum Control Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Y-momentum Nutation Damping Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Y-momentum Proportional Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Y-momentum Derivative Gain" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="148" Name="Reference Wheel Momentum">
-        <Parameter Name="Reference Wheel Momentum" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="149" Name="RWheel Gain">
-        <Parameter Name="RWheel Proportional Gain" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="RWheel Derivative Gain" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="150" Name="Moment of Inertia">
-        <Parameter Name="Moment Of Inertia - Ixx" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Iyy" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Izz" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Ixy" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Ixz" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-        <Parameter Name="Moment Of Inertia - Iyz" Type="float" Unit="kg*m^2" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="151" Name="Noise Configuration">
-        <Parameter Name="Magnetometer Rate Filter System Noise" Type="float" IsLittleEndian="true"/>
-      </ServiceSubtype>
-
-      <ServiceSubtype Value="152" Name="Use in EKF">
-        <Parameter Name="EKF System Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="CSS Measurement Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Measurement Noise" Type="float" IsLittleEndian="true"/>
-        <Parameter Name="Use Sun Sensor" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Use Nadir Sensor" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Use CSS" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Use Star Tracker" Type="byte" IsLittleEndian="true"/>
-        <Parameter Name="Magnetometer Mode" Type="byte" IsLittleEndian="true"/>
-      </ServiceSubtype>
+		<ServiceSubtype Value="244" Name="ADCS_SET_TLM_OVERRIDE_FLAG_ST">
+		  <Parameter Name="override flag" Type="uint32" Unit="[Bool]" IsLittleEndian="false" />
+		</ServiceSubtype>
     </ServiceType>
 
     <ServiceType Value="251" Name="Imaging">
@@ -981,6 +880,12 @@
   <TelecommandCals>
     <!-- telecommands calibrations -->
     <!-- in the telecommands' calibrations are *only linear functions*!!! -->
+	 <Calibration Id="11" Name="mode" Type="options">
+      <Option Value="0" Name="error" />
+      <Option Value="1" Name="val1" />
+      <Option Value="2" Name="val2" />
+      <Option Value="3" Name="val3" />
+    </Calibration>
     <Calibration Id="3" Name="basiccal_telecommands" Type="polynomial" Function="x" Solution="y" A1="1" A0="0" />
   </TelecommandCals>
 </GSCMIB>
