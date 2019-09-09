@@ -846,13 +846,13 @@
         <Parameter Name="output_on_delta[8]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="output_off_delta[8]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="latchup [6]" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="wdt_i2c_time_left" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="wdt_gnd_time_left" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="wdt_i2c_time_left" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="wdt_gnd_time_left" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="wdt_csp_pings_left" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_i2c" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_gnd" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_csp [2]" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="counter_boot" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_i2c" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_gnd" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_csp [2]" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_boot" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="temp[6]" Type="int16" Unit="deg" IsLittleEndian="true" />
         <Parameter Name="bootcause" Type="byte" IsLittleEndian="true" />
         <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
@@ -881,17 +881,17 @@
 	    
 	   <ServiceSubtype Value="58" Name="gom_eps_hk_wdt_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="wdt_i2c_time_left" Type="uint"  IsLittleEndian="true" />
-        <Parameter Name="wdt_gnd_time_left" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="wdt_i2c_time_left" Type="uint32"  IsLittleEndian="true" />
+        <Parameter Name="wdt_gnd_time_left" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="wdt_csp_pings_left[2]" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_i2c" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_gnd" Type="uint" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_csp[2]" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_i2c" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_gnd" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_csp[2]" Type="uint32" IsLittleEndian="true" />
       </ServiceSubtype>	 
 	   
 	   <ServiceSubtype Value="59" Name="gom_eps_hk_basic_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="counter_boot" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_boot" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="temp[6]" Type="int16" IsLittleEndian="true" />
         <Parameter Name="bootcause" Type="byte"  IsLittleEndian="true" />
         <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
@@ -917,7 +917,7 @@
   <Parameter Name="batt_safevoltage" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="batt_criticalvoltage" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="batt_normalvoltage" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="spare uint * 2" Type="uint" IsLittleEndian="false" />
+  <Parameter Name="spare uint * 2" Type="uint32" IsLittleEndian="false" />
   <Parameter Name="spare byte * 4" Type="byte" IsLittleEndian="false" />
 </ServiceSubtype>
 
@@ -1009,7 +1009,7 @@
 	   <ServiceSubtype Value="68" Name="ISISantsTelemetry_A">
   <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
+  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="false" />
 </ServiceSubtype>
 	   
 	   <ServiceSubtype Value="69" Name="ISISantS_getTemperature_A">
@@ -1037,7 +1037,7 @@
 	   <ServiceSubtype Value="71" Name="ISISantsTelemetry_B">
   <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
+  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="false" />
 </ServiceSubtype>
 	   
 	   <ServiceSubtype Value="72" Name="ISISantS_getTemperature_B">
@@ -1141,7 +1141,7 @@
       </ServiceSubtype>
 
       <ServiceSubtype Value="17" Name="upload time">
-        <Parameter Name="unix time" Description="time" Type="uint" Unit="sec" IsLittleEndian="false" />
+        <Parameter Name="unix time" Description="time" Type="uint32" Unit="sec" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
       <ServiceSubtype Value="33" Name="dump">
