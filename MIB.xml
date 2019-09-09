@@ -904,140 +904,148 @@
 </ServiceSubtype>
 
 	   <ServiceSubtype Value="61" Name="eps_config2_t">
-  <Parameter Name="commandReply" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="batt_maxvoltage" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="batt_safevoltage" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="batt_criticalvoltage" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="batt_normalvoltage" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="spare uint * 2" Type="uint" IsLittleEndian="false" />
-  <Parameter Name="spare byte * 4" Type="byte" IsLittleEndian="false" />
-</ServiceSubtype>
+		  <Parameter Name="commandReply" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="batt_maxvoltage" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="batt_safevoltage" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="batt_criticalvoltage" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="batt_normalvoltage" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="spare uint * 2" Type="uint" IsLittleEndian="false" />
+		  <Parameter Name="spare byte * 4" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 
 	   <ServiceSubtype Value="62" Name="gom_eps_hkparam_t">
-  <Parameter Name="commandReply" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="false" />
-  <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="false" />
-  <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="false" />
-  <Parameter Name="pc" Type="uint16" Unit="mA" IsLittleEndian="false" />
-  <Parameter Name="bv" Type="uint16" Unit="mV" IsLittleEndian="false" />
-  <Parameter Name="sc" Type="uint16" Unit="mA" IsLittleEndian="false" />
-  <Parameter Name="tempConverter1" Type="int16" Unit="degC" IsLittleEndian="false" />
-  <Parameter Name="tempConverter2" Type="int16" Unit="degC" IsLittleEndian="false" />
-  <Parameter Name="tempConverter3" Type="int16" Unit="degC" IsLittleEndian="false" />
-  <Parameter Name="tempBattery" Type="int16" Unit="degC" IsLittleEndian="false" />
-  <Parameter Name="batteryBoardTemp [2]" Type="int16" Unit="degC" IsLittleEndian="false" />
-  <Parameter Name="latchUp3v3Channel3" Type="uint16"  IsLittleEndian="false" />
-  <Parameter Name="latchUp3v3Channel2" Type="uint16"  IsLittleEndian="false" />
-  <Parameter Name="latchUp3v3Channel1" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="latchUp5vChannel3" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="latchUp5vChannel2" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="latchUp5vChannel1" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="reset" Type="byte" IsLittleEndian="false" />
-  <Parameter Name="bootCount" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="swErrors" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="pptMode" Type="byte" IsLittleEndian="false" />
-  <Parameter Name="gom_eps_channelstates_t channelStatus" Type="byte" IsLittleEndian="false" />
-</ServiceSubtype>
+		  <Parameter Name="commandReply" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="false" />
+		  <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="false" />
+		  <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="false" />
+		  <Parameter Name="pc" Type="uint16" Unit="mA" IsLittleEndian="false" />
+		  <Parameter Name="bv" Type="uint16" Unit="mV" IsLittleEndian="false" />
+		  <Parameter Name="sc" Type="uint16" Unit="mA" IsLittleEndian="false" />
+		  <Parameter Name="tempConverter1" Type="int16" Unit="degC" IsLittleEndian="false" />
+		  <Parameter Name="tempConverter2" Type="int16" Unit="degC" IsLittleEndian="false" />
+		  <Parameter Name="tempConverter3" Type="int16" Unit="degC" IsLittleEndian="false" />
+		  <Parameter Name="tempBattery" Type="int16" Unit="degC" IsLittleEndian="false" />
+		  <Parameter Name="batteryBoardTemp [2]" Type="int16" Unit="degC" IsLittleEndian="false" />
+		  <Parameter Name="latchUp3v3Channel3" Type="uint16"  IsLittleEndian="false" />
+		  <Parameter Name="latchUp3v3Channel2" Type="uint16"  IsLittleEndian="false" />
+		  <Parameter Name="latchUp3v3Channel1" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="latchUp5vChannel3" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="latchUp5vChannel2" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="latchUp5vChannel1" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="reset" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="bootCount" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="swErrors" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="pptMode" Type="byte" IsLittleEndian="false" />
+		  <Parameter Name="gom_eps_channelstates_t channelStatus" Type="byte" IsLittleEndian="false" />
+		</ServiceSubtype>
 	
 	   <ServiceSubtype Value="63" Name="ISIStrxvuRxTelemetry">
-  <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="pa_temp" Type="int16" IsLittleEndian="false" />
-  <Parameter Name="board_temp" Type="int16" IsLittleEndian="false" />
-</ServiceSubtype>
+		  <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="pa_temp" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="board_temp" Type="int16" IsLittleEndian="false" />
+		</ServiceSubtype>
 	
 	   <ServiceSubtype Value="64" Name="ISIStrxvuRxTelemetry_revC">
-  <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="total_current" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="false" />
-</ServiceSubtype>
+		  <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="total_current" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="false" />
+		</ServiceSubtype>
 
 	   <ServiceSubtype Value="65" Name="ISIStrxvuTxTelemetry">
-  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="pa_temp" Type="int16" IsLittleEndian="false" />
-  <Parameter Name="board_temp" Type="int16" IsLittleEndian="false" />
-</ServiceSubtype>
+		  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="pa_temp" Type="int16" IsLittleEndian="false" />
+		  <Parameter Name="board_temp" Type="int16" IsLittleEndian="false" />
+		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="66" Name="ISIStrxvuTxTelemetry">
-  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="total_current" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="false" />
-  </ServiceSubtype>
+		  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="total_current" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="false" />
+		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="67" Name="ISISantsStatus_A">
-  <Parameter Name="armed" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant4Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant4timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant4undeploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant3Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant3timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant3undeploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ignoreflag" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant2Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant2timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant2undeploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant1Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant1timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant1undeploying" Type="bit" IsLittleEndian="false" />
-</ServiceSubtype>
+		   <Parameter Name="Ants 4-3" description="every bit" type="bitmap">
+			<bitfield size="1" isnull="false" Name="armed" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant4Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant4timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant4undeploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant3Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant3timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant3undeploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ignoreflag" calibration="17"/>
+		   </Parameter>
+		   <Parameter Name="Ants 1-2" description="every bit" type="bitmap">
+			<bitfield size="1" isnull="false" Name="ant2Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant2timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant2undeploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant1Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant1timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant1undeploying" calibration="17"/>
+			<bitfield size="2" isnull="false" Name="empty" calibration="17"/>
+		   </Parameter>
+		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="68" Name="ISISantsTelemetry_A">
-  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
-</ServiceSubtype>
+		  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" calibration="19"/>
+		  <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="false" />
+		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="69" Name="ISISantS_getTemperature_A">
-  <Parameter Name="side A" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="side B" Type="uint16" IsLittleEndian="false" />
-</ServiceSubtype>
+			<Parameter Name="temprature" Type="uint16" IsLittleEndian="false" calibration="19"/>
+		</ServiceSubtype>
 
-       <ServiceSubtype Value="70" Name="ISISantsStatus_B">
-  <Parameter Name="armed" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant4Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant4Timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant4Undeploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant3Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant3Timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant3Undeploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ignoreflag" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant2Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant2Timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant2Undeploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant1Deploying" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant1Timeout" Type="bit" IsLittleEndian="false" />
-  <Parameter Name="ant1Undeploying" Type="bit" IsLittleEndian="false" />
-</ServiceSubtype>
+	   <ServiceSubtype Value="70" Name="ISISantsStatus_A">
+		   <Parameter Name="Ants 4-3" description="every bit" type="bitmap">
+			<bitfield size="1" isnull="false" Name="armed" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant4Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant4timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant4undeploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant3Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant3timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant3undeploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ignoreflag" calibration="17"/>
+		   </Parameter>
+		   <Parameter Name="Ants 1-2" description="every bit" type="bitmap">
+			<bitfield size="1" isnull="false" Name="ant2Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant2timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant2undeploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant1Deploying" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant1timeout" calibration="17"/>
+			<bitfield size="1" isnull="false" Name="ant1undeploying" calibration="17"/>
+			<bitfield size="2" isnull="false" Name="empty" calibration="17"/>
+		   </Parameter>
+		</ServiceSubtype>
 	   
-	   <ServiceSubtype Value="71" Name="ISISantsTelemetry_B">
-  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
-</ServiceSubtype>
+	   <ServiceSubtype Value="71" Name="ISISantsTelemetry_A">
+		  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" calibration="19"/>
+		  <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
+		  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="false" />
+		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="72" Name="ISISantS_getTemperature_B">
-	    <Parameter Name="side A" Type="uint16" IsLittleEndian="false" />
-		<Parameter Name="side B" Type="uint16" IsLittleEndian="false" />
-	</ServiceSubtype>
+			<Parameter Name="temprature" Type="uint16" IsLittleEndian="false" calibration="19"/>
+		</ServiceSubtype>
 	
-	   </ServiceSubtype>
+	</ServiceSubtype>
 	  
     <ServiceType Value="13" Name="General">
 
@@ -1133,7 +1141,7 @@
       </ServiceSubtype>
 
       <ServiceSubtype Value="17" Name="upload time">
-        <Parameter Name="unix time" Description="time" Type="uint" Unit="sec" IsLittleEndian="false" />
+        <Parameter Name="unix time" Description="time" Type="" Unit="sec" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
       <ServiceSubtype Value="33" Name="dump">
@@ -1194,7 +1202,7 @@
     </ServiceType>
 
     <ServiceType Value="154" Name="ADCS">
-<ServiceSubtype Value="0" Name="ADCS_I2C_GENRIC_ST">
+	<ServiceSubtype Value="0" Name="ADCS_I2C_GENRIC_ST">
 
   <Parameter Name="Command ID" Type="byte" IsLittleEndian="false" />
 
@@ -1955,6 +1963,8 @@
       <Option Value="5" Name="ranparameter1" />
       <Option Value="6" Name="ranparameter2" />
       <Option Value="7" Name="ranparameter3" />
+	 </Calibration>
+	 <Calibration Id="19" Name="Ants-temp" Type="polynomial" Function="x" Solution="y" A1="-0.2922" A0="190.65" />
   </TelemetryCals>
 
   <TelecommandCals>
