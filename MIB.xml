@@ -131,6 +131,10 @@
 </ServiceSubtype>
  <ServiceSubtype Value="130" Name="ADCS_GET_BOOT_PROGRAM_INFO_ST">
 
+	<parameter name="ADCS_CLEAR_ERRORS_ST_PARAM" type="bitmap" islittleendian="false">
+    <bitfield size="4" isnull="false" name="ADCS Error Flags" calibration="" />
+    <bitfield size="4" isnull="false" name="HK Error Flags" calibration="" />
+	
 	<Parameter Name="Reset Cause" Type="uint4" IsLittleEndian="false" />
 	  
   <Parameter Name="Boot Cause" Type="uint4" IsLittleEndian="false" />
@@ -1957,30 +1961,63 @@
       <Option Value="5" Name="not used5" />
       <Option Value="6" Name="not used6" />
       <Option Value="7" Name="not used7" />
-	  <Option Value="8" Name="ranparameter0" />
-      <Option Value="9" Name="ranparameter1" />
-      <Option Value="10" Name="ranparameter2" />
-      <Option Value="11" Name="ranparameter3" />
-      <Option Value="12" Name="ranparameter4" />
-      <Option Value="13" Name="ranparameter5" />
-      <Option Value="14" Name="ranparameter6" />
-      <Option Value="15" Name="ranparameter7" />
-	  <Option Value="16" Name="ranparameter0" />
-      <Option Value="17" Name="ranparameter1" />
-      <Option Value="18" Name="ranparameter2" />
-      <Option Value="19" Name="ranparameter3" />
-      <Option Value="20" Name="ranparameter4" />
-      <Option Value="21" Name="ranparameter5" />
-      <Option Value="22" Name="ranparameter6" />
-      <Option Value="23" Name="ranparameter7" />
-	  <Option Value="24" Name="ranparameter0" />
-      <Option Value="25" Name="ranparameter1" />
-      <Option Value="26" Name="ranparameter2" />
-      <Option Value="27" Name="ranparameter3" />
-      <Option Value="28" Name="ranparameter4" />
-      <Option Value="29" Name="ranparameter5" />
-      <Option Value="30" Name="ranparameter6" />
-      <Option Value="31" Name="ranparameter7" />
+	  <Option Value="8" Name="not used8" />
+      <Option Value="9" Name="not used9" />
+      <Option Value="10" Name="not used10" />
+      <Option Value="11" Name=" not used11" />
+      <Option Value="12" Name="not used12" />
+      <Option Value="13" Name="not used13" />
+      <Option Value="14" Name="not used14" />
+      <Option Value="15" Name="not used15" />
+	  <Option Value="16" Name="not used16" />
+      <Option Value="17" Name="not used17" />
+      <Option Value="18" Name="not used18" />
+      <Option Value="19" Name="not used19" />
+      <Option Value="20" Name="not used20" />
+      <Option Value="21" Name="not used21" />
+      <Option Value="22" Name="not used22" />
+      <Option Value="23" Name="not used23" />
+	  <Option Value="24" Name="not used24" />
+      <Option Value="25" Name="not used25" />
+      <Option Value="26" Name="not used26" />
+      <Option Value="27" Name="not used27" />
+      <Option Value="28" Name="not used28" />
+      <Option Value="29" Name="not used29" />
+      <Option Value="30" Name="not used30" />
+      <Option Value="31" Name="not used31" />
+	  <Option Value="0" Name="not used32" />
+      <Option Value="1" Name="not used33" />
+      <Option Value="2" Name="not used34" />
+      <Option Value="3" Name="not used35" />
+      <Option Value="4" Name="not used36" />
+      <Option Value="5" Name="not used37" />
+      <Option Value="6" Name="not used38" />
+      <Option Value="7" Name="not used39" />
+	  <Option Value="8" Name="not used40" />
+      <Option Value="9" Name="not used41" />
+      <Option Value="10" Name="not used42" />
+      <Option Value="11" Name=" not used43" />
+      <Option Value="12" Name="not used144" />
+      <Option Value="13" Name="not used45" />
+      <Option Value="14" Name="not used46" />
+      <Option Value="15" Name="not used47" />
+	  <Option Value="16" Name="not used48" />
+      <Option Value="17" Name="not used49" />
+      <Option Value="18" Name="not used50" />
+      <Option Value="19" Name="not used51" />
+      <Option Value="20" Name="not used52" />
+      <Option Value="21" Name="not used53" />
+      <Option Value="22" Name="not used54" />
+      <Option Value="23" Name="not used55" />
+	  <Option Value="24" Name="not used56" />
+      <Option Value="25" Name="not used57" />
+      <Option Value="26" Name="not used58" />
+      <Option Value="59" Name="not used59" />
+      <Option Value="60" Name="not used60" />
+      <Option Value="61" Name="not used61" />
+      <Option Value="62" Name="not used62" />
+      <Option Value="63" Name="not used63" />
+	    <Option Value="64" Name="not used64" />
    </Calibration>
     <Calibration Id="19" Name="1bit" Type="options">
       <Option Value="0" Name="ADCS Error Flags0" />
