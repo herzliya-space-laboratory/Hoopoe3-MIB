@@ -131,10 +131,10 @@
 </ServiceSubtype>
  <ServiceSubtype Value="130" Name="ADCS_GET_BOOT_PROGRAM_INFO_ST">
 
-	<parameter name="ADCS_CLEAR_ERRORS_ST_PARAM" type="bitmap" islittleendian="false">
+	<parameter name="" type="bitmap" islittleendian="false">
     <bitfield size="4" isnull="false" name="ADCS Error Flags" calibration="" />
     <bitfield size="4" isnull="false" name="HK Error Flags" calibration="" />
-	
+	</ServiceSubtype>
 	<Parameter Name="Reset Cause" Type="uint4" IsLittleEndian="false" />
 	  
   <Parameter Name="Boot Cause" Type="uint4" IsLittleEndian="false" />
