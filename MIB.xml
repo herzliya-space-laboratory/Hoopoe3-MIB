@@ -152,36 +152,82 @@
 
 	   <ServiceSubtype Value="56" Name="gom_eps_hk_t">
         <Parameter Name="commandReply" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="vboost[3]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="vboost[0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="vboost[1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="vboost[2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
         <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="curin[3]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="curin[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curin[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curin[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
         <Parameter Name="cursun" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="cursys" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="reserved1" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="curout[6]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="output[8]" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="output_on_delta[8]" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="output_off_delta[8]" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="latchup [6]" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="curout[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[3]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[4]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[5]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="output[0]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output[1]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output[2]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output[3]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output[4]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output[5]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output[6]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output[7]" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="output_on_delta[0]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[1]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[2]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[3]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[4]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[5]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[6]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[7]" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="output_off_delta[0]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_off_delta[1]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_off_delta[2]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_off_delta[3]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_off_delta[4]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_off_delta[5]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_off_delta[6]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_off_delta[7]" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="latchup [0]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="latchup [1]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="latchup [2]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="latchup [3]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="latchup [4]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="latchup [5]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="wdt_i2c_time_left" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="wdt_gnd_time_left" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="wdt_csp_pings_left [2]" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="wdt_csp_pings_left [0]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="wdt_csp_pings_left [1]" Type="byte" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_i2c" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_gnd" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_csp [2]" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_csp [0]" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="counter_wdt_csp [1]" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="counter_boot" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="temp[6]" Type="int16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="temp[0]" Type="int16" Unit="deg" IsLittleEndian="true" />
+		<Parameter Name="temp[1]" Type="int16" Unit="deg" IsLittleEndian="true" />
+		<Parameter Name="temp[2]" Type="int16" Unit="deg" IsLittleEndian="true" />
+		<Parameter Name="temp[3]" Type="int16" Unit="deg" IsLittleEndian="true" />
+		<Parameter Name="temp[4]" Type="int16" Unit="deg" IsLittleEndian="true" />
+		<Parameter Name="temp[5]" Type="int16" Unit="deg" IsLittleEndian="true" />
         <Parameter Name="bootcause" Type="byte" IsLittleEndian="true" />
         <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
         <Parameter Name="pptMode" Type="byte" />
-        <Parameter Name="reserved2" Type="unit16" />
+        <Parameter Name="reserved2" Type="uint16" />
       </ServiceSubtype>
 
        <ServiceSubtype Value="57" Name="gom_eps_hk_vi_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="vboost[3]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="vboost[0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="vboost[1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="vboost[2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
         <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="curin[3]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="curin[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curin[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curin[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
         <Parameter Name="cursun" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="cursys" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="reserved1" Type="uint16" IsLittleEndian="true" />
@@ -189,10 +235,20 @@
 
        <ServiceSubtype Value="58" Name="gom_eps_hk_out_t">
         <Parameter Name="commandReply" Type="uint16"  IsLittleEndian="true" />
-        <Parameter Name="curout[6]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="output[8]" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="output_on_delta[8]" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="output_off_delta[8]" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="curout[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[3]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[4]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+		<Parameter Name="curout[5]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="output_on_delta[0]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[1]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[2]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[3]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[4]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[5]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[6]" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="output_on_delta[7]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="latchup[6]" Type="uint16" IsLittleEndian="true" />
       </ServiceSubtype>
 	    
@@ -200,16 +256,23 @@
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="wdt_i2c_time_left" Type="uint32"  IsLittleEndian="true" />
         <Parameter Name="wdt_gnd_time_left" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="wdt_csp_pings_left[2]" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="wdt_csp_pings_left[0]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="wdt_csp_pings_left[1]" Type="byte" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_i2c" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="counter_wdt_gnd" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_csp[2]" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_csp[0]" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="counter_wdt_csp[1]" Type="uint32" IsLittleEndian="true" />
       </ServiceSubtype>	 
 	   
 	   <ServiceSubtype Value="60" Name="gom_eps_hk_basic_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="counter_boot" Type="int32" IsLittleEndian="true" />
-        <Parameter Name="temp[6]" Type="int16" IsLittleEndian="true" />
+        <Parameter Name="temp[0]" Type="int16" IsLittleEndian="true" />
+		<Parameter Name="temp[1]" Type="int16" IsLittleEndian="true" />
+		<Parameter Name="temp[2]" Type="int16" IsLittleEndian="true" />
+		<Parameter Name="temp[3]" Type="int16" IsLittleEndian="true" />
+		<Parameter Name="temp[4]" Type="int16" IsLittleEndian="true" />
+		<Parameter Name="temp[5]" Type="int16" IsLittleEndian="true" />
         <Parameter Name="bootcause" Type="byte"  IsLittleEndian="true" />
         <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
         <Parameter Name="pptMode" Type="byte" IsLittleEndian="true" />
@@ -222,11 +285,41 @@
         <Parameter Name="battheater_mode" Type="byte" IsLittleEndian="true" />
         <Parameter Name="char battheater_low" Type="byte" Unit="degC" IsLittleEndian="true" />
         <Parameter Name="char battheater_high" Type="byte" Unit="degC" IsLittleEndian="true" />
-        <Parameter Name="output_normal_value [8]" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="output_safe_value [8]" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="output_initial_on_delay [8]" Type="uint16" Unit="s" IsLittleEndian="true" />
-        <Parameter Name="output_initial_off_delay [8]" Type="uint16" Unit="s" IsLittleEndian="true" />
-        <Parameter Name="vboost [3]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="output_normal_value [0]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_normal_value [1]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_normal_value [2]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_normal_value [3]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_normal_value [4]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_normal_value [5]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_normal_value [6]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_normal_value [7]" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="output_safe_value [0]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_safe_value [1]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_safe_value [2]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_safe_value [3]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_safe_value [4]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_safe_value [5]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_safe_value [6]" Type="byte" IsLittleEndian="true" />
+		<Parameter Name="output_safe_value [7]" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="output_initial_on_delay [0]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_on_delay [1]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_on_delay [2]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_on_delay [3]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_on_delay [4]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_on_delay [5]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_on_delay [6]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_on_delay [7]" Type="uint16" Unit="s" IsLittleEndian="true" />
+        <Parameter Name="output_initial_off_delay [0]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_off_delay [1]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_off_delay [2]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_off_delay [3]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_off_delay [4]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_off_delay [5]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_off_delay [6]" Type="uint16" Unit="s" IsLittleEndian="true" />
+		<Parameter Name="output_initial_off_delay [7]" Type="uint16" Unit="s" IsLittleEndian="true" />
+        <Parameter Name="vboost [0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="vboost [1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="vboost [2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
 	   </ServiceSubtype>
 
 	   <ServiceSubtype Value="62" Name="eps_config2_t">
@@ -251,7 +344,8 @@
         <Parameter Name="tempConverter2" Type="int16" Unit="degC" IsLittleEndian="true" />
         <Parameter Name="tempConverter3" Type="int16" Unit="degC" IsLittleEndian="true" />
         <Parameter Name="tempBattery" Type="int16" Unit="degC" IsLittleEndian="true" />
-        <Parameter Name="batteryBoardTemp [2]" Type="int16" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="batteryBoardTemp [0]" Type="int16" Unit="degC" IsLittleEndian="true" />
+		<Parameter Name="batteryBoardTemp [1]" Type="int16" Unit="degC" IsLittleEndian="true" />
         <Parameter Name="latchUp3v3Channel3" Type="uint16"  IsLittleEndian="true" />
         <Parameter Name="latchUp3v3Channel2" Type="uint16"  IsLittleEndian="true" />
         <Parameter Name="latchUp3v3Channel1" Type="uint16" IsLittleEndian="true" />
@@ -266,45 +360,45 @@
 	  </ServiceSubtype>
 	
 	   <ServiceSubtype Value="63" Name="ISIStrxvuRxTelemetry">
-        <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true"/>
-        <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="true" calibration="6"/>
+        <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="true" calibration="5"/>
+        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
+        <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+        <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+        <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+        <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+        <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
        </ServiceSubtype>
 	
 	   <ServiceSubtype Value="64" Name="ISIStrxvuRxTelemetry_revC">
-        <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="true" calibration="6"/>
+        <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" calibration="9"/>
+        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
+        <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+        <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="true" calibration="5"/>
        </ServiceSubtype>
 
 	   <ServiceSubtype Value="65" Name="ISIStrxvuTxTelemetry">
 		  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="true" />
 		  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" />
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
+		  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+		  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+		  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+		  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+		  <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
 		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="66" Name="ISIStrxvuTxTelemetry">
 		  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="true" />
 		  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" />
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
+		  <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" calibration="9"/>
+		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+		  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
 		  </ServiceSubtype>
 	   
 	   <ServiceSubtype Value="67" Name="ISISantsStatus_A">
@@ -371,7 +465,7 @@
 			<Parameter Name="temprature" Type="uint16" IsLittleEndian="true" calibration="19"/>
 		</ServiceSubtype>
 	
-	</ServiceSubtype>
+	</ServiceType>
 	  
     <ServiceType Value="13" Name="General">
 
@@ -379,6 +473,16 @@
         <Parameter Name="CommandId" Description="ID of relevant command" Type="uint32" RangeStart="0" RangeEnd="999999" Unit="mV" IsLittleEndian="false" />
         <Parameter Name="AckType" Description="Type of ack" Type="byte" Unit="x" IsLittleEndian="false" />
         <Parameter Name="ErrorType" Description="Type of error (if there is)" Type="byte" Unit="x" IsLittleEndian="false" />
+      </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="49" Name="Log events">
+        <Parameter Name="log num" Type="int32" Unit="x" IsLittleEndian="true" />
+        <Parameter Name="info" Type="int32" Unit="x" IsLittleEndian="true" />
+      </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="50" Name="Log errors">
+        <Parameter Name="log num" Type="int32" Unit="x" IsLittleEndian="true" />
+        <Parameter Name="info" Type="int32" Unit="x" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
     </ServiceType>
@@ -507,8 +611,8 @@
 	  <ServiceSubtype Value="56" Name="redeploy antS">
       </ServiceSubtype>
 	  
-		  <ServiceSubtype Value="57" Name="ARM/DISARM">
-        <Parameter Name="arm/disarm" Type="byte" IsLittleEndian="false" />
+		  <ServiceSubtype Value="57" Name="ARM DISARM">
+        <Parameter Name="arm disarm" Type="byte" IsLittleEndian="false" />
   	  </ServiceSubtype>  
 	  
   	  <ServiceSubtype Value="66" Name="hard reset">
