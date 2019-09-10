@@ -429,21 +429,64 @@
 </ServiceSubtype>
 <ServiceSubtype Value="190" Name="ADCS_GET_STATE_TLM_ST">
 
-<Parameter Name="current state" Type="struct" IsLittleEndian="false" />
-
-  <Parameter Name="Estimated angles" Type="struct" IsLittleEndian="false" />
-
-  <Parameter Name="Estimated quaternions" Type="struct" IsLittleEndian="false" />
-
-  <Parameter Name="Estimated angular rate" Type="struct" IsLittleEndian="false" />
-
-  <Parameter Name="ECI referenced position" Type="struct" IsLittleEndian="false" />
-
-  <Parameter Name="ECI referenced velocity" Type="struct" IsLittleEndian="false" />
-
-  <Parameter Name="ADS coordinates" Type="struct" IsLittleEndian="false" />
-
-  <Parameter Name="ECEF position" Type="struct" IsLittleEndian="false" />
+    <parameter name="ADCS_GET_STATE_TLM_ST 1" type="bitmap" islittleendian="false">
+    <bitfield size="4" isnull="false" name="Current attitude estimation mode" calibration="14" />
+    <bitfield size="4" isnull="false" name="Current attitude control mode" calibration="14" />
+	</parameter>
+	
+	<parameter name="ADCS_GET_STATE_TLM_ST 2" type="bitmap" islittleendian="false">
+    <bitfield size="2" isnull="false" name="Current ADCS runing mode" calibration="16" />
+    <bitfield size="1" isnull="false" name="CubeControl signal enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeControl Motor enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeCSense enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 1 enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeWheel 2 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 3 enable status" calibration="17" />
+	</parameter>
+	
+	<parameter name="ADCS_GET_STATE_TLM_ST 3" type="bitmap" islittleendian="false">
+    <bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeControl signal enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeControl Motor enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeCSense enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 1 enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeWheel 2 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 3 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+	</parameter>
+	
+    <parameter name="ADCS_GET_STATE_TLM_ST 4" type="bitmap" islittleendian="false">
+    <bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeControl signal enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeControl Motor enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeCSense enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 1 enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeWheel 2 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 3 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+	</parameter>
+	
+	<parameter name="ADCS_GET_STATE_TLM_ST 5" type="bitmap" islittleendian="false">
+    <bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeControl signal enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeControl Motor enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeCSense enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 1 enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeWheel 2 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 3 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+	</parameter>
+	
+	<parameter name="ADCS_GET_STATE_TLM_ST 6" type="bitmap" islittleendian="false">
+    <bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeControl signal enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeControl Motor enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeCSense enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 1 enable status" calibration="17" />
+    <bitfield size="1" isnull="false" name="CubeWheel 2 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="CubeWheel 3 enable status" calibration="17" />
+	<bitfield size="1" isnull="false" name="Current ADCS runing mode" calibration="17" />
+	</parameter>
 
 </ServiceSubtype>
 <ServiceSubtype Value="191" Name="ADCS_GET_ADCS_MEASUREMENTS_ST">
@@ -1955,8 +1998,75 @@
       <Option Value="5" Name="ranparameter1" />
       <Option Value="6" Name="ranparameter2" />
       <Option Value="7" Name="ranparameter3" />
-  </TelemetryCals>
-
+  </calibration>
+   <Calibration Id="19" Name="6bit" Type="options">
+      <Option Value="0" Name="not used0" />
+      <Option Value="1" Name="not used1" />
+      <Option Value="2" Name="not used2" />
+      <Option Value="3" Name="not used3" />
+      <Option Value="4" Name="not used4" />
+      <Option Value="5" Name="not used5" />
+      <Option Value="6" Name="not used6" />
+      <Option Value="7" Name="not used7" />
+	  <Option Value="8" Name="not used8" />
+      <Option Value="9" Name="not used9" />
+      <Option Value="10" Name="not used10" />
+      <Option Value="11" Name=" not used11" />
+      <Option Value="12" Name="not used12" />
+      <Option Value="13" Name="not used13" />
+      <Option Value="14" Name="not used14" />
+      <Option Value="15" Name="not used15" />
+	  <Option Value="16" Name="not used16" />
+      <Option Value="17" Name="not used17" />
+      <Option Value="18" Name="not used18" />
+      <Option Value="19" Name="not used19" />
+      <Option Value="20" Name="not used20" />
+      <Option Value="21" Name="not used21" />
+      <Option Value="22" Name="not used22" />
+      <Option Value="23" Name="not used23" />
+	  <Option Value="24" Name="not used24" />
+      <Option Value="25" Name="not used25" />
+      <Option Value="26" Name="not used26" />
+      <Option Value="27" Name="not used27" />
+      <Option Value="28" Name="not used28" />
+      <Option Value="29" Name="not used29" />
+      <Option Value="30" Name="not used30" />
+      <Option Value="31" Name="not used31" />
+	  <Option Value="32" Name="not used32" />
+      <Option Value="33" Name="not used33" />
+      <Option Value="34" Name="not used34" />
+      <Option Value="35" Name="not used35" />
+      <Option Value="36" Name="not used36" />
+      <Option Value="37" Name="not used37" />
+      <Option Value="38" Name="not used38" />
+      <Option Value="39" Name="not used39" />
+	  <Option Value="40" Name="not used40" />
+      <Option Value="41" Name="not used41" />
+      <Option Value="42" Name="not used42" />
+      <Option Value="43" Name=" not used43" />
+      <Option Value="44" Name="not used144" />
+      <Option Value="45" Name="not used45" />
+      <Option Value="46" Name="not used46" />
+      <Option Value="47" Name="not used47" />
+	  <Option Value="48" Name="not used48" />
+      <Option Value="49" Name="not used49" />
+      <Option Value="50" Name="not used50" />
+      <Option Value="51" Name="not used51" />
+      <Option Value="52" Name="not used52" />
+      <Option Value="53" Name="not used53" />
+      <Option Value="54" Name="not used54" />
+      <Option Value="55" Name="not used55" />
+	  <Option Value="56" Name="not used56" />
+      <Option Value="57" Name="not used57" />
+      <Option Value="58" Name="not used58" />
+      <Option Value="59" Name="not used59" />
+      <Option Value="60" Name="not used60" />
+      <Option Value="61" Name="not used61" />
+      <Option Value="62" Name="not used62" />
+      <Option Value="63" Name="not used63" />
+	    <Option Value="64" Name="not used64" />
+   </Calibration>
+</TelemetryCals>
   <TelecommandCals>
     <!-- telecommands calibrations -->
     <!-- in the telecommands' calibrations are *only linear functions*!!! -->
@@ -2014,33 +2124,33 @@
       <Option Value="29" Name="not used29" />
       <Option Value="30" Name="not used30" />
       <Option Value="31" Name="not used31" />
-	  <Option Value="0" Name="not used32" />
-      <Option Value="1" Name="not used33" />
-      <Option Value="2" Name="not used34" />
-      <Option Value="3" Name="not used35" />
-      <Option Value="4" Name="not used36" />
-      <Option Value="5" Name="not used37" />
-      <Option Value="6" Name="not used38" />
-      <Option Value="7" Name="not used39" />
-	  <Option Value="8" Name="not used40" />
-      <Option Value="9" Name="not used41" />
-      <Option Value="10" Name="not used42" />
-      <Option Value="11" Name=" not used43" />
-      <Option Value="12" Name="not used144" />
-      <Option Value="13" Name="not used45" />
-      <Option Value="14" Name="not used46" />
-      <Option Value="15" Name="not used47" />
-	  <Option Value="16" Name="not used48" />
-      <Option Value="17" Name="not used49" />
-      <Option Value="18" Name="not used50" />
-      <Option Value="19" Name="not used51" />
-      <Option Value="20" Name="not used52" />
-      <Option Value="21" Name="not used53" />
-      <Option Value="22" Name="not used54" />
-      <Option Value="23" Name="not used55" />
-	  <Option Value="24" Name="not used56" />
-      <Option Value="25" Name="not used57" />
-      <Option Value="26" Name="not used58" />
+	  <Option Value="32" Name="not used32" />
+      <Option Value="33" Name="not used33" />
+      <Option Value="34" Name="not used34" />
+      <Option Value="35" Name="not used35" />
+      <Option Value="36" Name="not used36" />
+      <Option Value="37" Name="not used37" />
+      <Option Value="38" Name="not used38" />
+      <Option Value="39" Name="not used39" />
+	  <Option Value="40" Name="not used40" />
+      <Option Value="41" Name="not used41" />
+      <Option Value="42" Name="not used42" />
+      <Option Value="43" Name=" not used43" />
+      <Option Value="44" Name="not used144" />
+      <Option Value="45" Name="not used45" />
+      <Option Value="46" Name="not used46" />
+      <Option Value="47" Name="not used47" />
+	  <Option Value="48" Name="not used48" />
+      <Option Value="49" Name="not used49" />
+      <Option Value="50" Name="not used50" />
+      <Option Value="51" Name="not used51" />
+      <Option Value="52" Name="not used52" />
+      <Option Value="53" Name="not used53" />
+      <Option Value="54" Name="not used54" />
+      <Option Value="55" Name="not used55" />
+	  <Option Value="56" Name="not used56" />
+      <Option Value="57" Name="not used57" />
+      <Option Value="58" Name="not used58" />
       <Option Value="59" Name="not used59" />
       <Option Value="60" Name="not used60" />
       <Option Value="61" Name="not used61" />
