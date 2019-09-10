@@ -113,7 +113,7 @@
     </ServiceType>
 
     <ServiceType Value="154" Name="ADCS">
-    
+   
 <ServiceSubtype Value="128" Name="ADCS_GET_GENERAL_INFO_ST">
 
   <Parameter Name="Node type identifier" Type="byte" IsLittleEndian="false" />
@@ -131,13 +131,10 @@
 </ServiceSubtype>
  <ServiceSubtype Value="130" Name="ADCS_GET_BOOT_PROGRAM_INFO_ST">
 
-	<parameter name="" type="bitmap" islittleendian="false">
-    <bitfield size="4" isnull="false" name="ADCS Error Flags" calibration="" />
-    <bitfield size="4" isnull="false" name="HK Error Flags" calibration="" />
-	</ServiceSubtype>
-	<Parameter Name="Reset Cause" Type="uint4" IsLittleEndian="false" />
-	  
-  <Parameter Name="Boot Cause" Type="uint4" IsLittleEndian="false" />
+	<parameter name="ADCS_GET_BOOT_PROGRAM_INFO_ST 1" type="bitmap" islittleendian="false">
+    <bitfield size="4" isnull="false" name="Reset Cause" calibration="15" />
+    <bitfield size="4" isnull="false" name="Boot Cause" calibration="15" />
+	</parameter>
 
   <Parameter Name="Boot Counter" Type="uint16" IsLittleEndian="false" />
 
@@ -150,22 +147,20 @@
 </ServiceSubtype>
 <ServiceSubtype Value="140" Name="ADCS_GET_CURR_UNIX_TIME_ST">
 
-  <Parameter Name="Power CubeControl Signal" Type="uint2" IsLittleEndian="false" />
-
-  <Parameter Name="Power CubeControl Motor" Type="uint2" IsLittleEndian="false" />
-
-  <Parameter Name="Power CubeSense" Type="uint2" IsLittleEndian="false" />
-
-  <Parameter Name="Power CubeStar" Type="uint2" IsLittleEndian="false" />
-
-  <Parameter Name="Power CubeWheel 1" Type="uint2" IsLittleEndian="false" />
-
-  <Parameter Name="Power CubeWheel 2" Type="uint2" IsLittleEndian="false" />
-
-  <Parameter Name="Power CubeWheel 3" Type="uint2" IsLittleEndian="false" />
-
-  <Parameter Name="Power Motor" Type="uint2" IsLittleEndian="false" />
-
+<parameter name="ADCS_GET_CURR_UNIX_TIME_ST 1" type="bitmap" islittleendian="false">
+    <bitfield size="2" isnull="false" name="Power CubeControl Signal" calibration="16" />
+    <bitfield size="2" isnull="false" name="Power CubeControl Motor" calibration="16" />
+	<bitfield size="2" isnull="false" name="Power CubeSense" calibration="16" />
+    <bitfield size="2" isnull="false" name="Power CubeStar" calibration="16" />
+	</parameter>
+	
+<parameter name="ADCS_GET_CURR_UNIX_TIME_ST 2" type="bitmap" islittleendian="false">
+    <bitfield size="2" isnull="false" name="Power CubeWheel 1" calibration="16" />
+    <bitfield size="2" isnull="false" name="Power CubeWheel 2" calibration="16" />
+	<bitfield size="2" isnull="false" name="Power CubeWheel 3" calibration="16" />
+    <bitfield size="2" isnull="false" name="Power Motor" calibration="16" />
+	</parameter>
+	
   <Parameter Name="Power GPS LNA" Type="byte" IsLittleEndian="false" />
 
 </ServiceSubtype>
@@ -185,21 +180,18 @@
 </ServiceSubtype>
 <ServiceSubtype Value="144" Name="ADCS_GET_COMM_STATUS_ST">
 
+<parameter name="ADCS_GET_COMM_STATUS_ST 1" type="bitmap" islittleendian="false">
+    <bitfield size="1" isnull="false" name="TC buffer was overrun flag" calibration="17" />
+    <bitfield size="1" isnull="false" name="UART protocol error occurred" calibration="17" />
+	<bitfield size="1" isnull="false" name="UART start-of-message identifier received" calibration="17" />
+    <bitfield size="1" isnull="false" name="i2cTLM_readerr" calibration="17" />
+	 <bitfield size="1" isnull="false" name="i2cTC_bufferr" calibration="17" />
+	  <bitfield size="3" isnull="false" name="canTC_bufferr" calibration="18" />
+	</parameter>
+
   <Parameter Name="No. of telecommands received" Type="uint16" IsLittleEndian="false" />
 
   <Parameter Name="No. of telemetry requests received" Type="uint16" IsLittleEndian="false" />
-
-  <Parameter Name="TC buffer was overrun flag" Type="Bit" IsLittleEndian="false" />
-
-  <Parameter Name="UART protocol error occurred" Type="Bit" IsLittleEndian="false" />
-
-  <Parameter Name="UART start-of-message identifier received" Type="Bit" IsLittleEndian="false" />
-
-  <Parameter Name="i2cTLM_readerr" Type="Bit" IsLittleEndian="false" />
-
-  <Parameter Name="i2cTC_bufferr" Type="Bit" IsLittleEndian="false" />
-
-  <Parameter Name="canTC_bufferr" Type="Bit" IsLittleEndian="false" />
 
   <Parameter Name="reserved" Type="byte" IsLittleEndian="false" />
 
@@ -846,13 +838,13 @@
         <Parameter Name="output_on_delta[8]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="output_off_delta[8]" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="latchup [6]" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="wdt_i2c_time_left" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="wdt_gnd_time_left" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="wdt_i2c_time_left" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="wdt_gnd_time_left" Type="uint" IsLittleEndian="true" />
         <Parameter Name="wdt_csp_pings_left" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_i2c" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_gnd" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_csp [2]" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="counter_boot" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_i2c" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_gnd" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_csp [2]" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_boot" Type="uint" IsLittleEndian="true" />
         <Parameter Name="temp[6]" Type="int16" Unit="deg" IsLittleEndian="true" />
         <Parameter Name="bootcause" Type="byte" IsLittleEndian="true" />
         <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
@@ -881,17 +873,17 @@
 	    
 	   <ServiceSubtype Value="58" Name="gom_eps_hk_wdt_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="wdt_i2c_time_left" Type="uint32"  IsLittleEndian="true" />
-        <Parameter Name="wdt_gnd_time_left" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="wdt_i2c_time_left" Type="uint"  IsLittleEndian="true" />
+        <Parameter Name="wdt_gnd_time_left" Type="uint" IsLittleEndian="true" />
         <Parameter Name="wdt_csp_pings_left[2]" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_i2c" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_gnd" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="counter_wdt_csp[2]" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_i2c" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_gnd" Type="uint" IsLittleEndian="true" />
+        <Parameter Name="counter_wdt_csp[2]" Type="uint" IsLittleEndian="true" />
       </ServiceSubtype>	 
 	   
 	   <ServiceSubtype Value="59" Name="gom_eps_hk_basic_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="counter_boot" Type="uint32" IsLittleEndian="true" />
+        <Parameter Name="counter_boot" Type="uint" IsLittleEndian="true" />
         <Parameter Name="temp[6]" Type="int16" IsLittleEndian="true" />
         <Parameter Name="bootcause" Type="byte"  IsLittleEndian="true" />
         <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
@@ -917,7 +909,7 @@
   <Parameter Name="batt_safevoltage" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="batt_criticalvoltage" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="batt_normalvoltage" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="spare uint * 2" Type="uint32" IsLittleEndian="false" />
+  <Parameter Name="spare uint * 2" Type="uint" IsLittleEndian="false" />
   <Parameter Name="spare byte * 4" Type="byte" IsLittleEndian="false" />
 </ServiceSubtype>
 
@@ -1009,7 +1001,7 @@
 	   <ServiceSubtype Value="68" Name="ISISantsTelemetry_A">
   <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="false" />
+  <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
 </ServiceSubtype>
 	   
 	   <ServiceSubtype Value="69" Name="ISISantS_getTemperature_A">
@@ -1037,7 +1029,7 @@
 	   <ServiceSubtype Value="71" Name="ISISantsTelemetry_B">
   <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" />
   <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
-  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="false" />
+  <Parameter Name="ants_uptime" Type="uint" IsLittleEndian="false" />
 </ServiceSubtype>
 	   
 	   <ServiceSubtype Value="72" Name="ISISantS_getTemperature_B">
@@ -1141,7 +1133,7 @@
       </ServiceSubtype>
 
       <ServiceSubtype Value="17" Name="upload time">
-        <Parameter Name="unix time" Description="time" Type="uint32" Unit="sec" IsLittleEndian="false" />
+        <Parameter Name="unix time" Description="time" Type="uint" Unit="sec" IsLittleEndian="false" />
       </ServiceSubtype>
 	  
       <ServiceSubtype Value="33" Name="dump">
@@ -1926,23 +1918,60 @@
    <Calibration Id="12" Name="adcs2 cal" Type="polynomial" Function="x" Solution="y" A1="10" A0="0" />	
    <Calibration Id="13" Name="adcs3 cal" Type="polynomial" Function="x" Solution="y" A1="0.1" A0="0" />	
   <Calibration Id="14" Name="adcs4 cal" Type="polynomial" Function="x" Solution="y" A1="0/48828125" A0="0" />	
+  <Calibration Id="15" Name="4bit" Type="options">
+      <Option Value="0" Name="ranparameter0" />
+      <Option Value="1" Name="ranparameter1" />
+      <Option Value="2" Name="ranparameter2" />
+      <Option Value="3" Name="ranparameter3" />
+     <Option Value="4" Name="ranparameter0" />
+      <Option Value="5" Name="ranparameter1" />
+      <Option Value="6" Name="ranparameter2" />
+      <Option Value="7" Name="ranparameter3" />
+	   <Option Value="8" Name="ranparameter0" />
+      <Option Value="9" Name="ranparameter1" />
+      <Option Value="10" Name="ranparameter2" />
+      <Option Value="11" Name="ranparameter3" />
+	   <Option Value="12" Name="ranparameter0" />
+      <Option Value="13" Name="ranparameter1" />
+      <Option Value="14" Name="ranparameter2" />
+      <Option Value="15" Name="ranparameter3" />
+	</Calibration>
+	 <Calibration Id="16" Name="2bit" Type="options">
+      <Option Value="0" Name="ranparameter0" />
+      <Option Value="1" Name="ranparameter1" />
+      <Option Value="2" Name="ranparameter2" />
+      <Option Value="3" Name="ranparameter3" />
+    </Calibration>
+   <Calibration Id="17" Name="1bit" Type="options">
+      <Option Value="0" Name="ADCS Error Flags0" />
+      <Option Value="1" Name="ADCS Error Flags1" />
+    </Calibration>
+   <Calibration Id="18" Name="3bit" Type="options">
+      <Option Value="0" Name="ranparameter0" />
+      <Option Value="1" Name="ranparameter1" />
+      <Option Value="2" Name="ranparameter2" />
+      <Option Value="3" Name="ranparameter3" />
+     <Option Value="4" Name="ranparameter0" />
+      <Option Value="5" Name="ranparameter1" />
+      <Option Value="6" Name="ranparameter2" />
+      <Option Value="7" Name="ranparameter3" />
   </TelemetryCals>
 
   <TelecommandCals>
     <!-- telecommands calibrations -->
     <!-- in the telecommands' calibrations are *only linear functions*!!! -->
     <Calibration Id="3" Name="basiccal_telecommands" Type="polynomial" Function="x" Solution="y" A1="1" A0="0" />
-    <Calibration Id="15" Name="1bit" Type="options">
+    <Calibration Id="52" Name="1bit" Type="options">
       <Option Value="0" Name="ADCS Error Flags0" />
       <Option Value="1" Name="ADCS Error Flags1" />
     </Calibration>
-    <Calibration Id="16" Name="2bit" Type="options">
+    <Calibration Id="53" Name="2bit" Type="options">
       <Option Value="0" Name="ranparameter0" />
       <Option Value="1" Name="ranparameter1" />
       <Option Value="2" Name="ranparameter2" />
       <Option Value="3" Name="ranparameter3" />
     </Calibration>
-    <Calibration Id="17" Name="3bit" Type="options">
+    <Calibration Id="54" Name="3bit" Type="options">
       <Option Value="0" Name="ranparameter0" />
       <Option Value="1" Name="ranparameter1" />
       <Option Value="2" Name="ranparameter2" />
@@ -1952,7 +1981,7 @@
       <Option Value="6" Name="ranparameter6" />
       <Option Value="7" Name="ranparameter7" />
    </Calibration>
-    <Calibration Id="18" Name="6bit" Type="options">
+    <Calibration Id="55" Name="6bit" Type="options">
       <Option Value="0" Name="not used0" />
       <Option Value="1" Name="not used1" />
       <Option Value="2" Name="not used2" />
@@ -2019,10 +2048,7 @@
       <Option Value="63" Name="not used63" />
 	    <Option Value="64" Name="not used64" />
    </Calibration>
-    <Calibration Id="19" Name="1bit" Type="options">
-      <Option Value="0" Name="ADCS Error Flags0" />
-      <Option Value="1" Name="ADCS Error Flags1" />
-	 </Calibration>
+ 
   </TelecommandCals>
 
   </GSCMIB>
