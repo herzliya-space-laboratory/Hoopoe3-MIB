@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GSCMIB>
   <Telemetry>
   
@@ -904,7 +904,9 @@
    <Calibration Id="11" Name="adcs1 cal" Type="polynomial" Function="x" Solution="y" A1="0.0001" A0="0" />	
    <Calibration Id="12" Name="adcs2 cal" Type="polynomial" Function="x" Solution="y" A1="10" A0="0" />	
    <Calibration Id="13" Name="adcs3 cal" Type="polynomial" Function="x" Solution="y" A1="0.1" A0="0" />	
-  <Calibration Id="14" Name="adcs4 cal" Type="polynomial" Function="x" Solution="y" A1="0/48828125" A0="0" />	
+  <Calibration Id="14" Name="adcs4 cal" Type="polynomial" Function="x" Solution="y" A1="0.48828125" A0="0" />	
+  <Calibration Id="98" Name="adcs5 cal" Type="polynomial" Function="x" Solution="y" A1="0.001" A0="0" />   
+  <Calibration Id="99" Name="adcs6 cal" Type="polynomial" Function="x" Solution="y" A1="0.25" A0="0" />   
   <Calibration Id="15" Name="4bit" Type="options">
       <Option Value="0" Name="ranparameter0" />
       <Option Value="1" Name="ranparameter1" />
