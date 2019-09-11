@@ -190,26 +190,6 @@
 		<Parameter Name="SP temp5" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
       </ServiceSubtype>
 
-	   <ServiceSubtype Value="54" Name="ADCS">
-        <Parameter Name="CubeSense 3V3 current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="CubeSense Nadir SRAM current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="CubeSense Sun SRAM current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="CubeControl 3V3 current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="CubeControl 5V current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="CubeControl Vbat current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="Wheel 1 Current " Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="Wheel 2 Current " Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="Wheel 3 Current " Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="CubeStar current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="Mag current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="MCU Temperature" Type="uint16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="Magnetometer Temperature" Type="uint16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="Redundant Magnetometer Temperature" Type="uint16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="x-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="y-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="z-rate sensor temp vector" Type="uint16" Unit="deg" IsLittleEndian="true" />
-      </ServiceSubtype>
-
 	   <ServiceSubtype Value="73" Name="File system space A">
         <Parameter Name="total" Type="uint32" Unit="byte" IsLittleEndian="true" />
         <Parameter Name="free" Type="uint32" Unit="byte" IsLittleEndian="true" />
