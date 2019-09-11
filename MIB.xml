@@ -664,7 +664,7 @@
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeWheel 2"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeWheel 3"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeStar"	/>
-				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Magnetometer measured magnetic field with size < 100 nT or > 100,000 nT"	/>
+				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Magnetometer measured magnetic field with size 100 nT or 100,000 nT"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Cam1 sensor overcurrent detected"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Cam1 sensor was not idle at the start of ADCS loop"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Cam1 sensor was unable to compute angles (could be not in FOV)"	/>
@@ -832,7 +832,7 @@
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeWheel 2" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeWheel 3" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeStar" calibration="1"	/>	
-				<bitfield size="1" isnull="false" Name = "Magnetometer measured magnetic field with size < 100 nT or > 100,000 nT" calibration="1"	/>	
+				<bitfield size="1" isnull="false" Name = "Magnetometer measured magnetic field with size  100 nT or  100,000 nT" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Cam1 sensor overcurrent detected" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Cam1 sensor was not idle at the start of ADCS loop" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Cam1 sensor was unable to compute angles (could be not in FOV)" calibration="1"	/>	
@@ -1002,7 +1002,7 @@
 				<bitfield size="2" Name ="Power CubeWheel 2" 		isnull="false"	calibration="1"/>
 				<bitfield size="2" Name ="Power CubeWheel 3" 		isnull="false"	calibration="1"/>
 				<bitfield size="2" Name ="Power Motor" 				isnull="false"	calibration="1"/>
-			</Parameters>
+			</Parameter>
 			<Parameter Name="Power GPS LNA" Type="byte" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="198" Name="ADCS_GET_MISC_CURRENT_MEAS_ST">
@@ -1067,7 +1067,7 @@
 			</Parameter>
 			<Parameter Name="Confidence factor of star 1" 			Type="byte" IsLittleEndian="true"  calibration ="1"/>
 			<Parameter Name="Confidence factor of star 2" 			Type="byte" IsLittleEndian="true"  calibration ="1"/>
-			<Parameter Name="Confidence factor of star 3" 			Type="byte" IsLittleEndian="true" c alibration ="1"/>
+			<Parameter Name="Confidence factor of star 3" 			Type="byte" IsLittleEndian="true" calibration ="1"/>
 			<Parameter Name="Instrument magnitude of star 1" 		Type="uint16" IsLittleEndian="true" calibration ="1"/>
 			<Parameter Name="Instrument magnitude of star 2" 		Type="uint16" IsLittleEndian="true" calibration ="1"/>
 			<Parameter Name="Instrument magnitude of star 3" 		Type="uint16" IsLittleEndian="true" calibration ="1"/>
@@ -1664,7 +1664,7 @@
 
 			<ServiceSubtype Value="90" Name="ADCS_UPDATE_TLM_ELEMENT_AT_INDEX_ST">
 				<Parameter Name="index" Type="byte" IsLittleEndian="true" />
-				<Parameter Name="Save Telemetry flag at index" Type="Bool8Bit" IsLittleEndian="true" />
+				<Parameter Name="Save Telemetry flag at index" Type="byte" IsLittleEndian="true" />
 				<Parameter Name="Save Time Period" Type="byte" Unit="[sec]" IsLittleEndian="true" />
 			</ServiceSubtype>
 
