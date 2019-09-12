@@ -1109,7 +1109,7 @@
 			<Parameter Name="Telemtry Save Process is Corrupted" 	Type="byte" 			IsLittleEndian="true" />
 		</ServiceSubtype>			
 		<ServiceSubtype Value="251" Name="ADCS_GET_ADCS_CONFIG_PARAM_ST">
-			<Parameter Name="Parameter Data" Type="string" size="150"  IsLittleEndian="true"/> 
+			<Parameter Name="Parameter Data" Type="string" size="64"  IsLittleEndian="true"/> 
 		</ServiceSubtype>			
 		<ServiceSubtype Value="252" Name="ADCS_GET_TLM_OVERRIDE_FLAG_ST">
 			<Parameter Name="Override Flag" Type="uint32"  IsLittleEndian="true" />
