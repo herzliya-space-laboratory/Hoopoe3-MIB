@@ -642,10 +642,12 @@
 			<Parameter Name="reserved" 									Type="byte" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="145" Name="ADCS_GET_CURRENT_STATE_ST">
-			<Parameter Name="ADCS Current State" Type="bitmap" IsLittleEndian="true" >
+			<Parameter Name="ADCS Operation Modes" Type="bitmap" IsLittleEndian="true" >
 				<bitfield isnull = "false" calibration ="1" size = "4" Name = "Current attitude estimation mode"	/>
 				<bitfield isnull = "false" calibration ="1" size = "4" Name = "Current attitude control mode"	/>
 				<bitfield isnull = "false" calibration ="1" size = "2" Name = "Current ADCS running mode"	/>
+			</Parameter>
+			<Parameter Name="ADCS Enabled Components" Type="bitmap" IsLittleEndian="true" >
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeControl Signal enable status"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeControl Motor enable status"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeSense enable status"	/>
@@ -657,6 +659,8 @@
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "GPS antenna LNA enable status"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Motor driver enable status"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Sun is above the local horizon enable status"	/>
+			</Parameter>
+			<Parameter Name="ADCS Error Occured" Type="bitmap" IsLittleEndian="true" >
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeSense"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeControl Signal MCU"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeControl Motor MCU"	/>
@@ -664,6 +668,8 @@
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeWheel 2"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeWheel 3"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Comm error occurred with the CubeStar"	/>
+			</Parameter>
+			<Parameter Name="ADCS Misc Operation Flags" Type="bitmap" IsLittleEndian="true" >
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Magnetometer measured magnetic field with size 100 nT or 100,000 nT"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Cam1 sensor overcurrent detected"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "Cam1 sensor was not idle at the start of ADCS loop"	/>
@@ -1015,7 +1021,7 @@
 			<Parameter Name="Commanded yaw angle" 	Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="206" Name="ADCS_GET_FULL_CONFIG_ST">
-			<Parameter Name="ADCS Configuration" Type="string" Size="272" IsLittleEndian="true" />
+			<Parameter Name="ADCS Configuration" Type="string" Size="150" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="207" Name="ADCS_GET_SGP4_ORBIT_PARAMETERS_ST">
 			<Parameter Name="Inclination" 			Type="double" Unit="[deg]" 		IsLittleEndian="true" />
