@@ -616,7 +616,7 @@
 			<Parameter Name="Firmware version (minor)" 			Type="byte" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="140" Name="Get ADCS unix time">
-			<Parameter Name="unix time" 	Description="time" 		Type="uint32" IsLittleEndian="true" />
+			<Parameter Name="unix time" 	Description="time" 		Type="dateTime" IsLittleEndian="true" />
 			<Parameter Name="mili second" 	Description="time" 		Type="uint16" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="142" Name="ADCS_GET_SRAM_LATCHUP_COUNTERS_ST">
