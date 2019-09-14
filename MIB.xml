@@ -6,13 +6,13 @@
 	
 	  <ServiceSubtype Value="97" Name="ImageDataBase packet">
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
 	  <ServiceSubtype Value="96" Name="first ImageDataBase packet">
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="size" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
 	</ServiceType>
@@ -23,55 +23,55 @@
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="file size" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 	
       <ServiceSubtype Value="105" Name="jpeg">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="104" Name="raw">
 		<Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="223" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="103" Name="thumbnail1">
 		<Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="102" Name="thumbnail2">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="101" Name="thumbnail3">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="100" Name="thumbnail4">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="99" Name="thumbnail5">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="98" Name="thumbnail6">
         <Parameter Name="image id" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="chunk data" Type="string" Size="128" IsLittleEndian="true" />
+        <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
 	</ServiceType>
@@ -1273,14 +1273,14 @@
 
       <ServiceSubtype Value="1" Name="Send Image chunk range">
         <Parameter Name="id" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="groundFileType" Type="byte" RangeStart="0" RangeEnd="5" IsLittleEndian="true" />
+        <Parameter Name="groundFileType" Type="byte" RangeStart="0" RangeEnd="7" IsLittleEndian="true" />
         <Parameter Name="start chunk" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="end chunk" Type="uint16" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="2" Name="Send Image bitField">
         <Parameter Name="id" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="groundFileType" Type="byte" RangeStart="0" RangeEnd="5" IsLittleEndian="true" />
+        <Parameter Name="groundFileType" Type="byte" RangeStart="0" RangeEnd="7" IsLittleEndian="true" />
         <Parameter Name="start chunk" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="bitField" Type="string" size="181" IsLittleEndian="true" />
       </ServiceSubtype>
@@ -1295,7 +1295,8 @@
         <Parameter Name="frameRate" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="adcGain" Type="byte" IsLittleEndian="true" />
         <Parameter Name="pgaGain" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="exposureTime" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="sensorOffset" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="exposureValue" Type="uint32" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="5" Name="take pictures with time in between">
@@ -1308,7 +1309,8 @@
         <Parameter Name="frameRate" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="adcGain" Type="byte" IsLittleEndian="true" />
         <Parameter Name="pgaGain" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="exposureTime" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="sensorOffset" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="exposureValue" Type="uint32" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="7" Name="Delete Image File">
@@ -1356,6 +1358,14 @@
 		<Parameter Name="Chunk Width" Type="uint16" Unit="" IsLittleEndian="true" />
 		<Parameter Name="Chunk Height" Type="uint16" Unit="" IsLittleEndian="true" />
       </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="18" Name="Turn Off Auto Thumbnail Creation">
+      </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="19" Name="Turn On Auto Thumbnail Creation">
+      </ServiceSubtype>
+	  
+	</ServiceType>
 	  
 	</ServiceType>
 
