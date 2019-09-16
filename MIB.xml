@@ -1691,9 +1691,17 @@
 				<Parameter Name="Override Flag" Type="uint32" IsLittleEndian="true" />
 			</ServiceSubtype>
 
-			<ServiceSubtype Value="93" Name="ADCS_SET_ADCS_LOOP_PARAMETERS">
-				<Parameter Name="ADCS Parameter Index" 	Type="byte"  IsLittleEndian="true" />
-				<Parameter Name="Parameter Data"			Type="uint32" 		IsLittleEndian="true" />
+			<ServiceSubtype Value="93" Name="ADCS_SET_ADCS_LOOP_PARAMETERS_ST">
+				<Parameter Name="ADCS Parameter Index" 	Type="byte" 		IsLittleEndian="true" />
+				<Parameter Name="Parameter Data"		Type="uint32" 		IsLittleEndian="true" />
+			</ServiceSubtype>
+
+			<ServiceSubtype Value="94" Name="ADCS_UPDATE_TLM_PERIOD_VEC_ST">
+				<Parameter Name="TLM Periods Array" 	Type="string" size ="18"	IsLittleEndian="true" />
+			</ServiceSubtype>
+
+			<ServiceSubtype Value="95" Name="ADCS_UPDATE_TLM_SAVE_VEC_ST">
+				<Parameter Name="TLM Save Flag Array" 	Type="string" size ="18"	IsLittleEndian="true" />
 			</ServiceSubtype>
 
 			<ServiceSubtype Value="100" Name="ADCS_SET_BOOT_INDEX_ST">
