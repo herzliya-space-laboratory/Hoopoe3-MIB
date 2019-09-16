@@ -1116,8 +1116,8 @@
 		</ServiceSubtype>			
 		<ServiceSubtype Value="254" Name="ADCS_ACK_DATA_ST">
 			<Parameter Name="Command Subtype" 		Type="uint32" IsLittleEndian="true" />
-			<Parameter Name="Command Return Value" 	Type="uint32" IsLittleEndian="true" />
-			<Parameter Name="I2C ACK Value" 		Type="uint32" IsLittleEndian="true" />
+			<Parameter Name="Command Return Value" 	Type="int32" IsLittleEndian="true" />
+			<Parameter Name="I2C ACK Value" 		Type="int32" IsLittleEndian="true" />
 		</ServiceSubtype>					
 		<ServiceSubtype Value="255" Name="ADCS_SET_DATA_LOG_ST">
 			</ServiceSubtype>	  
