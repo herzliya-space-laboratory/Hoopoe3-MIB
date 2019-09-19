@@ -1285,11 +1285,11 @@
         <Parameter Name="bitField" Type="string" size="181" IsLittleEndian="true" />
       </ServiceSubtype>
 
-      <ServiceSubtype Value="3" Name="Take Image">
+      <ServiceSubtype Value="3" Name="Take Photograph">
         <Parameter Name="testPattern" Type="byte" IsLittleEndian="true" />
       </ServiceSubtype>
 
-      <ServiceSubtype Value="4" Name="Take Image with Special Values">
+      <ServiceSubtype Value="4" Name="Take Photograph with Special Values">
         <Parameter Name="testPattern" Type="byte" IsLittleEndian="true" />
         <Parameter Name="frameAmount" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="frameRate" Type="uint32" IsLittleEndian="true" />
@@ -1299,7 +1299,7 @@
         <Parameter Name="exposureValue" Type="uint32" IsLittleEndian="true" />
       </ServiceSubtype>
 
-      <ServiceSubtype Value="5" Name="take pictures with time in between">
+      <ServiceSubtype Value="5" Name="Take Photographs with Time Intervals">
         <Parameter Name="number of pictures" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="time between pictures" Type="uint32" Unit="unix" IsLittleEndian="true" />
       </ServiceSubtype>
@@ -1347,25 +1347,32 @@
       <ServiceSubtype Value="14" Name="update duration">
         <Parameter Name="new duration" Type="uint32" Unit="unix" IsLittleEndian="true" />
       </ServiceSubtype>
-
-	  <ServiceSubtype Value="15" Name="Turn Off Gecko">
-      </ServiceSubtype>
-
-	  <ServiceSubtype Value="16" Name="Turn On Gecko">
-      </ServiceSubtype>
-
-	  <ServiceSubtype Value="17" Name="Set Chunk Size">
+	  
+	  <ServiceSubtype Value="15" Name="Set Chunk Size">
 		<Parameter Name="Chunk Width" Type="uint16" Unit="" IsLittleEndian="true" />
 		<Parameter Name="Chunk Height" Type="uint16" Unit="" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="18" Name="Turn Off Auto Thumbnail Creation">
+	  <ServiceSubtype Value="16" Name="Stop Taking Photographs with Time Intervals">
+      </ServiceSubtype>
+
+	  <ServiceSubtype Value="17" Name="Turn Off Gecko">
+      </ServiceSubtype>
+
+	  <ServiceSubtype Value="18" Name="Turn On Gecko">
       </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="19" Name="Turn On Auto Thumbnail Creation">
+	  <ServiceSubtype Value="19" Name="Turn Off Auto Thumbnail Creation for Future Images">
       </ServiceSubtype>
 	  
-	</ServiceType>
+	  <ServiceSubtype Value="20" Name="Turn On Auto Thumbnail Creation for Future Images">
+      </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="21" Name="Turn Off Auto Thumbnail Creation">
+      </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="22" Name="Turn On Auto Thumbnail Creation">
+      </ServiceSubtype>
 	  
 	</ServiceType>
 
