@@ -1381,6 +1381,8 @@
 	  <ServiceSubtype Value="22" Name="Turn On Auto Thumbnail Creation">
       </ServiceSubtype>
 	  
+	</ServiceType>
+	  
     <ServiceType Value="42" Name="SW-GST">
       <ServiceSubtype Value="32" Name="reset delayed command list">
       </ServiceSubtype>
