@@ -1289,7 +1289,7 @@
         <Parameter Name="id" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="groundFileType" Type="byte" RangeStart="0" RangeEnd="7" IsLittleEndian="true" />
         <Parameter Name="start chunk" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="bitField" Type="string" size="181" IsLittleEndian="true" />
+        <Parameter Name="bitField" Type="string" size="183" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="3" Name="Take Photograph">
