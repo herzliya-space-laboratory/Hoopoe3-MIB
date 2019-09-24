@@ -148,8 +148,8 @@
         <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="true" />
         <Parameter Name="pa_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" />
         <Parameter Name="locosc_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="ant_temp_A" Type="uint16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="ant_temp_B" Type="uint16" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="ant_temp_A" Type="uint16" Calibration="19" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="ant_temp_B" Type="uint16" Calibration="19" Unit="deg" IsLittleEndian="true" />
       </ServiceSubtype>
 
        <ServiceSubtype Value="52" Name="Cam">
@@ -1354,7 +1354,7 @@
 	  <ServiceSubtype Value="14" Name="Image FileType Dump">
         <Parameter Name="startTime" Type="uint32" Unit="unix" IsLittleEndian="true" />
         <Parameter Name="endTime" Type="uint32" Unit="unix" IsLittleEndian="true" />
-		<Parameter Name="file type" Type="uint8" RangeStart="0" RangeEnd="7" IsLittleEndian="true" />
+		<Parameter Name="file type" Type="byte" RangeStart="0" RangeEnd="7" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="15" Name="update duration">
