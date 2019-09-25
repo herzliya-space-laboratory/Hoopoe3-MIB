@@ -1224,6 +1224,8 @@
         <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [3]" Description="the forth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [4]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+		<Parameter Name="file type [5]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
+		<Parameter Name="file type [6]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="resolution" Type="byte" Unit="sec" IsLittleEndian="false" />
         <Parameter Name="unix start time" Description="start time" Type="dateTime" Unit="seconds" IsLittleEndian="false" />
         <Parameter Name="unix end time" Description="end time" Type="dateTime" Unit="seconds" IsLittleEndian="false" />
