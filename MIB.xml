@@ -592,7 +592,13 @@
       </ServiceSubtype>
 	  
     </ServiceType>
-  
+	
+	<ServiceType Value="42" Name="FRAM">
+		 <ServiceSubtype Value="44" Name="read data">
+			<Parameter Name="data" Type="string" size="227"	IsLittleEndian="true"/>
+		</ServiceSubtype>
+	</ServiceType>
+	
 	<ServiceType Value="154" Name="ADCS">
 		<ServiceSubtype Value="0" Name="ADCS_I2C_GENRIC_ST">
 			<Parameter Name="Data" Type="string" Size="150" IsLittleEndian="true" />
@@ -1395,6 +1401,17 @@
 	  
   	  <ServiceSubtype Value="42" Name="reset subSystem FRAM">
         <Parameter Name="subsystem index" Description="byte" Type="byte" IsLittleEndian="false" />
+  	  </ServiceSubtype>
+	  
+	   <ServiceSubtype Value="43" Name="FRAM write">
+        <Parameter Name="size" Description="data size to write" Type="byte" IsLittleEndian="false" />
+		<Parameter Name="address" Description="FRAM address" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="data" Description="data to write to FRAM" Type="string" Size="183" IsLittleEndian="true" />
+  	  </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="44" Name="FRAM read">
+        <Parameter Name="size" Description="data size to read" Type="byte" IsLittleEndian="false" />
+		<Parameter Name="address" Description="FRAM address" Type="uint32" IsLittleEndian="true" />
   	  </ServiceSubtype>
     </ServiceType>
 	
