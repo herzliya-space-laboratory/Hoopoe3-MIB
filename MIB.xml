@@ -4,12 +4,12 @@
   
   	<ServiceType Value="12" Name="Download ImageDataBase">
 	
-	  <ServiceSubtype Value="97" Name="ImageDataBase packet">
+	  <ServiceSubtype Value="96" Name="ImageDataBase packet">
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
-	  <ServiceSubtype Value="96" Name="first ImageDataBase packet">
+	  <ServiceSubtype Value="97" Name="first ImageDataBase packet">
 		<Parameter Name="index" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="size" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="chunk data" Type="string" Size="208" IsLittleEndian="true" />
@@ -99,7 +99,7 @@
         <Parameter Name="AltitudeAngelsPich" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsYaw" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="NumberofPics" Type="byte" IsLittleEndian="false" />
-        <Parameter Name="NumberAPRS_packets" Type="byte" IsLittleEndian="false" />
+        <Parameter Name="EPS battery state" Type="byte" IsLittleEndian="false" />
         <Parameter Name="NumberDelayd_comms" Type="byte" IsLittleEndian="false" />
         <Parameter Name="Number_Resets" Type="uint32" IsLittleEndian="false" />
         <Parameter Name="Last_Resets" Type="dateTime" Unit="sec" IsLittleEndian="false" />
@@ -1353,8 +1353,8 @@
       </ServiceSubtype>
 
       <ServiceSubtype Value="13" Name="Download ImageDataBase">
-        <Parameter Name="startTime" Type="uint32" Unit="unix" IsLittleEndian="true" />
-        <Parameter Name="endTime" Type="uint32" Unit="unix" IsLittleEndian="true" />
+        <Parameter Name="startTime" Type="dateTime" Unit="seconds" IsLittleEndian="true" />
+        <Parameter Name="endTime" Type="dateTime" Unit="seconds" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
 	  <ServiceSubtype Value="14" Name="Image FileType Dump">
@@ -1396,23 +1396,23 @@
 	</ServiceType>
 	  
     <ServiceType Value="42" Name="SW-GST">
-      <ServiceSubtype Value="32" Name="reset delayed command list">
-      </ServiceSubtype>
+	<ServiceSubtype Value="32" Name="reset delayed command list">
+	</ServiceSubtype>
 	  
-  	  <ServiceSubtype Value="42" Name="reset subSystem FRAM">
-        <Parameter Name="subsystem index" Description="byte" Type="byte" IsLittleEndian="false" />
-  	  </ServiceSubtype>
+	<ServiceSubtype Value="42" Name="reset subSystem FRAM">
+		<Parameter Name="subsystem index" Description="byte" Type="byte" IsLittleEndian="false" />
+	</ServiceSubtype>
 	  
-	   <ServiceSubtype Value="43" Name="FRAM write">
-        <Parameter Name="size" Description="data size to write" Type="byte" IsLittleEndian="false" />
+	<ServiceSubtype Value="43" Name="FRAM write">
+		<Parameter Name="size" Description="data size to write" Type="byte" IsLittleEndian="false" />
 		<Parameter Name="address" Description="FRAM address" Type="uint32" IsLittleEndian="true" />
 		<Parameter Name="data" Description="data to write to FRAM" Type="string" Size="183" IsLittleEndian="true" />
-  	  </ServiceSubtype>
+	</ServiceSubtype>
 	  
-	  <ServiceSubtype Value="44" Name="FRAM read">
-        <Parameter Name="size" Description="data size to read" Type="byte" IsLittleEndian="false" />
+	<ServiceSubtype Value="44" Name="FRAM read">
+		<Parameter Name="size" Description="data size to read" Type="byte" IsLittleEndian="false" />
 		<Parameter Name="address" Description="FRAM address" Type="uint32" IsLittleEndian="true" />
-  	  </ServiceSubtype>
+	</ServiceSubtype>
     </ServiceType>
 	
     <ServiceType Value="88" Name="online TM">
