@@ -1971,6 +1971,18 @@
 			<ServiceSubtype Value="220" Name="ADCS_GET_ACP_EXECUTION_STATE_ST">
 			</ServiceSubtype>
 				
+			<ServiceSubtype Value="246" Name="ADCS_GET_TLM_SAVE_VECTOR_ST">
+			</ServiceSubtype>
+
+			<ServiceSubtype Value="247" Name="ADCS_GET_PERIOD_VECTOR_ST">
+			</ServiceSubtype>
+
+			<ServiceSubtype Value="248" Name="ADCS_GET_LAST_SAVE_TIMES_ST">
+			</ServiceSubtype>
+
+			<ServiceSubtype Value="249" Name="ADCS_GET_OPERATING_FLAGS_ST">
+			</ServiceSubtype>
+			
 			<ServiceSubtype Value="250" Name="ADCS_GET_TLM_ELEM_AT_INDEX_ST">
 				<Parameter	Name="Index Of Parameter" Type="byte" IsLittleEndian="true"	/>		
 			</ServiceSubtype>
