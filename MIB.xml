@@ -1105,6 +1105,86 @@
 			<Parameter Name="time since the start of the current loop iteration"		Type="uint16" Unit="[ms]" IsLittleEndian="true" />
 			<Parameter Name="Indicates which part of the loop is currently executing" 	Type="byte" 			  IsLittleEndian="true" />
 		</ServiceSubtype>		
+		<ServiceSubtype Value="246" Name="ADCS_GET_TLM_SAVE_VECTOR_ST">
+			<Parameter Name="TLM 1 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 2 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 3 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 4 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 5 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 6 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 7 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 8 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 9 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 10 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 11 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 12 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 13 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 14 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 15 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 16 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 17 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 18 Save Flag"	Type="byte"  IsLittleEndian="true"/>
+		</ServiceSubtype>
+		<ServiceSubtype Value="247" Name="ADCS_GET_PERIOD_VECTOR_ST">
+			<Parameter Name="TLM 1 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 2 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 3 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 4 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 5 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 6 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 7 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 8 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 9 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 10 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 11 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 12 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 13 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 14 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 15 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 16 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 17 Save Period"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 18 Save Period"	Type="byte"  IsLittleEndian="true"/>
+		</ServiceSubtype>
+		<ServiceSubtype Value="248" Name="ADCS_GET_LAST_SAVE_TIMES_ST">
+			<Parameter Name="TLM 1 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 2 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 3 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 4 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 5 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 6 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 7 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 8 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 9 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 10 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 11 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 12 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 13 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 14 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 15 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 16 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 17 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 18 Last save time"	Type="dateTime"  IsLittleEndian="true"/>
+		</ServiceSubtype>
+		<ServiceSubtype Value="249" Name="ADCS_GET_OPERATING_FLAGS_ST">
+			<Parameter Name="TLM 1 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 2 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 3 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 4 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 5 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 6 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 7 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 8 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 9 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 10 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 11 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 12 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 13 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 14 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 15 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 16 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 17 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+			<Parameter Name="TLM 18 Operating Flag"	Type="byte"  IsLittleEndian="true"/>
+		</ServiceSubtype>		
 		<ServiceSubtype Value="250" Name="ADCS_GET_TLM_ELEM_AT_INDEX_ST">
 			<Parameter Name="Save This TLM Flag"		 			Type="byte"  			IsLittleEndian="true"/>
 			<Parameter Name="Telemetry Size"		 				Type="byte"				IsLittleEndian="true" />
