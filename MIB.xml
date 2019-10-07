@@ -591,6 +591,12 @@
         <Parameter Name="info" Type="int32" Unit="x" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
+	  <ServiceSubtype Value="8" Name="Downloaded File Chunk">
+		<Parameter Name="file size" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="chunk index" Type="uint16" IsLittleEndian="true" />
+		<Parameter Name="chunk data" Type="string" Size="200" IsLittleEndian="true" />
+	  </ServiceSubtype>
+	  
     </ServiceType>
 	
 	<ServiceType Value="42" Name="FRAM">
@@ -1361,6 +1367,12 @@
 	  
 	  <ServiceSubtype Value="201" Name="resume TM">
       </ServiceSubtype>
+	  
+	  <ServiceSubtype Value="8" Name="Download File by Name">
+		<Parameter Name="file chunk size" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="file name size" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="file name" Type="string" IsLittleEndian="true" />
+	  </ServiceSubtype>
 	  
     </ServiceType>
 	
