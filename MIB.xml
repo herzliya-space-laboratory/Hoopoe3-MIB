@@ -75,6 +75,28 @@
       </ServiceSubtype>
 	  
 	</ServiceType>
+
+  	<ServiceType Value="10" Name="Gecko Registers">
+	
+	  <ServiceSubtype Value="107" Name="Gecko Registers">
+		<Parameter Name="Register 0" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 1" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 2" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 3" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 4" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 5" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 6" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 7" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 8" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 9" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 10" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 11" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 12" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 13" Type="uint32" IsLittleEndian="true" />
+		<Parameter Name="Register 14" Type="uint32" IsLittleEndian="true" />
+      </ServiceSubtype>
+	  
+	</ServiceType>
   
 	<ServiceType Value="3" Name="Global Param">
 	
@@ -1474,6 +1496,13 @@
 	  
 	  <ServiceSubtype Value="23" Name="Turn On Auto Thumbnail Creation">
       </ServiceSubtype>
+
+	  <ServiceSubtype Value="24" Name="Get Gecko Registers">
+      </ServiceSubtype>
+
+	  <ServiceSubtype Value="25" Name="Set Gecko Registers">
+		<Parameter Name="Register Index" Type="uint8" Unit="" IsLittleEndian="true" />
+      </ServiceSubtype>	  
 	  
 	</ServiceType>
 	  
