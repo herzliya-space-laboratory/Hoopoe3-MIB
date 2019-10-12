@@ -1503,6 +1503,9 @@
 	  <ServiceSubtype Value="25" Name="Set Gecko Registers">
 		<Parameter Name="Register Index" Type="uint8" Unit="" IsLittleEndian="true" />
       </ServiceSubtype>	  
+
+	  <ServiceSubtype Value="26" Name="Re Init Cam Manager">
+      </ServiceSubtype>
 	  
 	</ServiceType>
 	  
