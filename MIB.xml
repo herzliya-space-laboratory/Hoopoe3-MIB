@@ -888,7 +888,7 @@
 			</Parameter>
 			<Parameter Type="int16" Name="Failed to Recover an ADCS Node by successive resets"	calibration="1" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="Roll angle"						Unit ="[deg]" 		calibration="1" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Pitch angle"					Unit ="[deg]" 			calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Pitch angle"						Unit ="[deg]" 			calibration="4" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="Yaw angle"						Unit ="[deg]" 		calibration="4" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="quaternion error q1 component"						calibration="11" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="quaternion error q2 component"	 					calibration="11" IsLittleEndian="true" />
@@ -896,18 +896,18 @@
 			<Parameter Type="int16" Name="X Angular Rate"					Unit ="[deg/sec]" 	calibration="4" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="Y Angular Rate"					Unit ="[deg/sec]" 	calibration="4" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="Z Angular Rate"					Unit ="[deg/sec]" 	calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced x-pos vector"	Unit ="[km]"			calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced y-pos vector"	Unit ="[km]" 			calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced z-pos vector"	Unit ="[km]" 			calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced x-pos vector"		Unit ="[km]"			calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced y-pos vector"		Unit ="[km]" 			calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced z-pos vector"		Unit ="[km]" 			calibration="99" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="ECI referenced x-velocity"		Unit ="[m/sec]"		calibration="99" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="ECI referenced y-velocity"		Unit ="[m/sec]" 	calibration="99" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="ECI referenced z-velocity"		Unit ="[m/sec]"		calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Latitude angle" 				Unit ="[deg]"	 		calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Longitude angle"				Unit ="[deg]"	 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Latitude angle" 					Unit ="[deg]"	 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Longitude angle"					Unit ="[deg]"	 		calibration="4" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="Altitude angle"					Unit ="[deg]"		calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECEF x position"				Unit ="[m]"				calibration="1" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECEF y position"				Unit ="[m]"	 			calibration="1" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECEF z position"				Unit ="[m]"	 			calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECEF x position"					Unit ="[m]"				calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECEF y position"					Unit ="[m]"	 			calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECEF z position"					Unit ="[m]"	 			calibration="1" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="191" Name="ADCS_GET_ADCS_MEASUREMENTS_ST">
 			<Parameter Name="magfield_x" 			Type="int16" IsLittleEndian="true"	calibration="4"	Unit="[uT]" />
@@ -1462,13 +1462,13 @@
       </ServiceSubtype>
 	  
 	  <ServiceSubtype Value="14" Name="Image FileType Dump">
-        <Parameter Name="startTime" Type="uint32" Unit="unix" IsLittleEndian="true" />
-        <Parameter Name="endTime" Type="uint32" Unit="unix" IsLittleEndian="true" />
+        <Parameter Name="startTime" Type="dateTime" Unit="seconds" IsLittleEndian="true" />
+        <Parameter Name="endTime" Type="dateTime" Unit="seconds" IsLittleEndian="true" />
 		<Parameter Name="file type" Type="byte" RangeStart="0" RangeEnd="7" IsLittleEndian="true" />
       </ServiceSubtype>
 
       <ServiceSubtype Value="15" Name="update duration">
-        <Parameter Name="new duration" Type="uint32" Unit="unix" IsLittleEndian="true" />
+        <Parameter Name="new duration" Type="uint32" Unit="seconds" IsLittleEndian="true" />
       </ServiceSubtype>
 	  
 	  <ServiceSubtype Value="16" Name="Set Chunk Size">
@@ -1501,7 +1501,8 @@
       </ServiceSubtype>
 
 	  <ServiceSubtype Value="25" Name="Set Gecko Registers">
-		<Parameter Name="Register Index" Type="uint8" Unit="" IsLittleEndian="true" />
+		<Parameter Name="Register Index" Type="byte" Unit="" IsLittleEndian="true" />
+		<Parameter Name="Register Value" Type="uint32" Unit="" IsLittleEndian="true" />
       </ServiceSubtype>	  
 
 	  <ServiceSubtype Value="26" Name="Re Init Cam Manager">
