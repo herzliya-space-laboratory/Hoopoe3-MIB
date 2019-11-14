@@ -120,7 +120,7 @@
         <Parameter Name="AltitudeAngelsRoll" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsPich" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="AltitudeAngelsYaw" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="NumberofPics" Type="byte" IsLittleEndian="false" />
+        <Parameter Name="FileSystem last error" Type="byte" IsLittleEndian="false" />
         <Parameter Name="EPS battery state" Type="byte" IsLittleEndian="false" />
         <Parameter Name="NumberDelayd_comms" Type="byte" IsLittleEndian="false" />
         <Parameter Name="Number_Resets" Type="uint32" IsLittleEndian="false" />
@@ -1334,7 +1334,7 @@
         <Parameter Name="unix end time" Description="end time" Type="dateTime" Unit="seconds" IsLittleEndian="false" />
       </ServiceSubtype>
       
-	    <ServiceSubtype Value="35" Name="delete packets">
+	  <ServiceSubtype Value="35" Name="delete packets">
         <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
@@ -1343,8 +1343,12 @@
         <Parameter Name="unix start time" Description="start time" Type="dateTime" Unit="seconds" IsLittleEndian="false" />
         <Parameter Name="unix end time" Description="end time" Type="dateTime" Unit="seconds" IsLittleEndian="false" />
       </ServiceSubtype>
+
+	  <ServiceSubtype Value="36" Name="format sd">
+        <Parameter Name="sd" Type="byte" RangeStart="0" RangeEnd="1" IsLittleEndian="false" />
+      </ServiceSubtype>
 	  
-	    <ServiceSubtype Value="45" Name="reset files">
+	  <ServiceSubtype Value="45" Name="reset files">
         <Parameter Name="file type [0]" Description="the first file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [1]" Description="the second file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
         <Parameter Name="file type [2]" Description="the third file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
@@ -1352,13 +1356,13 @@
         <Parameter Name="file type [4]" Description="the fifth file type" Type="byte" RangeStart="0" RangeEnd="255" IsLittleEndian="false" />
       </ServiceSubtype>
       
-	    <ServiceSubtype Value="46" Name="restart file system">
+	  <ServiceSubtype Value="46" Name="restart file system">
       </ServiceSubtype>
 	  
 	  <ServiceSubtype Value="56" Name="redeploy antS">
       </ServiceSubtype>
 	  
-		  <ServiceSubtype Value="57" Name="ARM DISARM">
+	  <ServiceSubtype Value="57" Name="ARM DISARM">
         <Parameter Name="arm disarm" Type="byte" IsLittleEndian="false" />
   	  </ServiceSubtype>  
 	  
