@@ -671,13 +671,13 @@
 		</ServiceSubtype>
 		<ServiceSubtype Value="145" Name="ADCS_GET_CURRENT_STATE_ST">
 			<Parameter Name="ADCS Operation Modes" Type="bitmap" IsLittleEndian="true" >
-				<bitfield isnull = "false" calibration ="1" size = "4" Name = "Current attitude estimation mode"	/>
-				<bitfield isnull = "false" calibration ="1" size = "4" Name = "Current attitude control mode"	/>
-				<bitfield isnull = "false" calibration ="1" size = "2" Name = "Current ADCS running mode"	/>
+				<bitfield isnull = "false" calibration ="1" size = "4" Name = "Current attitude estimation mode" RangeStart = "0" RangeEnd = "6"	/>
+				<bitfield isnull = "false" calibration ="1" size = "4" Name = "Current attitude control mode" RangeStart = "0" RangeEnd = "12"	/>
+				<bitfield isnull = "false" calibration ="1" size = "2" Name = "Current ADCS running mode"/>
 			</Parameter>
 			<Parameter Name="ADCS Enabled Components" Type="bitmap" IsLittleEndian="true" >
-				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeControl Signal enable status"	/>
-				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeControl Motor enable status"	/>
+				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeControl Signal enable status" />
+				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeControl Motor enable status"   />
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeSense enable status"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeWheel 1 enable status"	/>
 				<bitfield isnull = "false" calibration ="1" size = "1" Name = "CubeWheel 2 enable status"	/>
@@ -721,34 +721,34 @@
 			</Parameter>
 		</ServiceSubtype>
 		<ServiceSubtype Value="146" Name="ADCS_GET_EST_ANG_ST">
-			<Parameter Name="Estimated Roll angle" 	Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Estimated Pitch angle" Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Estimated Yaw angle" 	Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Estimated Roll angle" 	Type="int16" Unit="[deg]" Description = "Received value*0.01 = real value in deg" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Estimated Pitch angle" Type="int16" Unit="[deg]" Description = "Received value*0.01 = real value in deg" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Estimated Yaw angle" 	Type="int16" Unit="[deg]" Description = "Received value*0.01 = real value in deg" calibrations="4" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="147" Name="ADCS_GET_EST_ANG_RATE_ST">
-			<Parameter Name="Estimated x Ang Rate" Type="int16" Unit="[deg/sec]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Estimated Y Ang Rate" Type="int16" Unit="[deg/sec]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Estimated Z Ang Rate" Type="int16" Unit="[deg/sec]" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Estimated x Ang Rate" Type="int16" Unit="[deg/sec]" RangeStart = "-3500" RangeEnd = "3500" Description = "Received value*0.01 = real value in deg/s" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Estimated Y Ang Rate" Type="int16" Unit="[deg/sec]" RangeStart = "-3500" RangeEnd = "3500" Description = "Received value*0.01 = real value in deg/s" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Estimated Z Ang Rate" Type="int16" Unit="[deg/sec]" RangeStart = "-3500" RangeEnd = "3500" Description = "Received value*0.01 = real value in deg/s" calibrations="4" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="150" Name="ADCS_GET_SATELLITE_POSITION_ST">
-			<Parameter Name="Latitude" 	Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Longitude" Type="int16" Unit="[deg]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Altitude" 	Type="int16" Unit="[km]" IsLittleEndian="true" />
+			<Parameter Name="Latitude" 	Type="int16" Unit="[deg]" Description = "LLH Position Received value*0.01 = real value in deg" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Longitude" Type="int16" Unit="[deg]" Description = "LLH Position Received value*0.01 = real value in deg" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Altitude" 	Type="int16" Unit="[km]"  Description = "LLH Position Received value*0.01 = real value in km" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="151" Name="ADCS_GET_MAGNETIC_FIELD_VEC_ST">
-			<Parameter Name="Magnetic Field X" Type="int16" Unit="[uT]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Magnetic Field Y" Type="int16" Unit="[uT]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Magnetic Field Z" Type="int16" Unit="[uT]" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Magnetic Field X" Type="int16" Unit="[uT]" Description = "Received value*0.01 = real value in uT" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Magnetic Field Y" Type="int16" Unit="[uT]" Description = "Received value*0.01 = real value in uT" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Magnetic Field Z" Type="int16" Unit="[uT]" Description = "Received value*0.01 = real value in uT" calibrations="4" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="152" Name="ADCS_GET_COARSE_SUN_VEC_ST">
-			<Parameter Name="Coarse Sun X" Type="int16" calibrations="11" IsLittleEndian="true" />
-			<Parameter Name="Coarse Sun Y" Type="int16" calibrations="11" IsLittleEndian="true" />
-			<Parameter Name="Coarse Sun Z" Type="int16" calibrations="11" IsLittleEndian="true" />
+			<Parameter Name="Coarse Sun X" Type="int16" Description = "Received value/10000 = real value" calibrations="11" IsLittleEndian="true" />
+			<Parameter Name="Coarse Sun Y" Type="int16" Description = "Received value/10000 = real value" calibrations="11" IsLittleEndian="true" />
+			<Parameter Name="Coarse Sun Z" Type="int16" Description = "Received value/10000 = real value" calibrations="11" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="153" Name="ADCS_GET_FINE_SUN_VEC_ST">
-			<Parameter Name="Fine Sun X" Type="int16" calibrations="11" IsLittleEndian="true" />
-			<Parameter Name="Fine Sun Y" Type="int16" calibrations="11" IsLittleEndian="true" />
-			<Parameter Name="Fine Sun Z" Type="int16" calibrations="11" IsLittleEndian="true" />
+			<Parameter Name="Fine Sun X" Type="int16" Description = "Received value/10000 = real value" calibrations="11" IsLittleEndian="true" />
+			<Parameter Name="Fine Sun Y" Type="int16" Description = "Received value/10000 = real value" calibrations="11" IsLittleEndian="true" />
+			<Parameter Name="Fine Sun Z" Type="int16" Description = "Received value/10000 = real value" calibrations="11" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="154" Name="ADCS_GET_NADIR_VECTOR_ST">
 			<Parameter Name="Nadir X" Type="int16" calibrations="11" IsLittleEndian="true" />
@@ -756,9 +756,9 @@
 			<Parameter Name="Nadir Z" Type="int16" calibrations="11" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="155" Name="ADCS_GET_SENSOR_RATES_ST">
-			<Parameter Name="X Angular Rate" Type="int16" Unit="[deg/s]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Y Angular Rate" Type="int16" Unit="[deg/s]" calibrations="4" IsLittleEndian="true" />
-			<Parameter Name="Z Angular Rate" Type="int16" Unit="[deg/s]" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="X Angular Rate" Type="int16" Unit="[deg/s]" RangeStart = "-3500" RangeEnd = "3500" Description = "Received value*0.01 = real value in deg/s" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Y Angular Rate" Type="int16" Unit="[deg/s]" RangeStart = "-3500" RangeEnd = "3500" Description = "Received value*0.01 = real value in deg/s" calibrations="4" IsLittleEndian="true" />
+			<Parameter Name="Z Angular Rate" Type="int16" Unit="[deg/s]" RangeStart = "-3500" RangeEnd = "3500" Description = "Received value*0.01 = real value in deg/s" calibrations="4" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="156" Name="ADCS_GET_WHEEL_SPEED_ST">
 			<Parameter Name="X Wheel Speed" Type="int16" Unit="[rpm]" IsLittleEndian="true" />
