@@ -105,8 +105,8 @@
         <Parameter Name="Batt_Curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="3v3_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
         <Parameter Name="5v_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="LOtrxvu_temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" />
-        <Parameter Name="PAtrxvu_temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" />
+        <Parameter Name="LOtrxvu_temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" RangeStart="-40" RangeEnd="60" />
+        <Parameter Name="PAtrxvu_temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" RangeStart="-40" RangeEnd="95" />
         <Parameter Name="Eps_temp[0]" Type="int16" Unit="deg c" IsLittleEndian="false" />
         <Parameter Name="Eps_temp[1]" Type="int16" Unit="deg c" IsLittleEndian="false" />
         <Parameter Name="Eps_temp[2]" Type="int16" Unit="deg c" IsLittleEndian="false" />
@@ -163,15 +163,15 @@
       </ServiceSubtype>
 
        <ServiceSubtype Value="51" Name="Comm">
-        <Parameter Name="bus_volt" Type="uint16" Calibration="8" Unit="V" IsLittleEndian="true" />
-        <Parameter Name="total_current" Type="uint16" Calibration="9" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="bus_volt" Type="uint16" Calibration="8" Unit="V" IsLittleEndian="true" RangeStart="6" RangeEnd="20"/>
+        <Parameter Name="total_current" Type="uint16" Calibration="9" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="600"/>
         <Parameter Name="Txrefl" Type="uint16" Unit="mW" IsLittleEndian="true" />
         <Parameter Name="Txfrow" Type="uint16" Unit="mW" IsLittleEndian="true" />
         <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="true" />
-        <Parameter Name="pa_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="locosc_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="ant_temp_A" Type="uint16" Calibration="19" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="ant_temp_B" Type="uint16" Calibration="19" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="pa_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" RangeStart="-40" RangeEnd="95"/>
+        <Parameter Name="locosc_temp" Type="uint16" Calibration="7" Unit="deg" IsLittleEndian="true" RangeStart="-40" RangeEnd="60"/>
+        <Parameter Name="ant_temp_A" Type="uint16" Calibration="19" Unit="deg" IsLittleEndian="true" RangeStart="-20" RangeEnd="60"/>
+        <Parameter Name="ant_temp_B" Type="uint16" Calibration="19" Unit="deg" IsLittleEndian="true" RangeStart="-20" RangeEnd="60"/>
       </ServiceSubtype>
 
        <ServiceSubtype Value="52" Name="Cam">
@@ -438,43 +438,43 @@
 	   <ServiceSubtype Value="63" Name="ISIStrxvuRxTelemetry">
         <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="true" calibration="6"/>
         <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="true" calibration="5"/>
-        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
-        <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8" RangeStart="6" RangeEnd="20"/>
+        <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true" calibration="9" RangeStart="0" RangeEnd="600"/>
         <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
         <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
         <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
-        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
-        <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="95"/>
+        <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="60"/>
        </ServiceSubtype>
 	
 	   <ServiceSubtype Value="64" Name="ISIStrxvuRxTelemetry_revC">
         <Parameter Name="rx_doppler" Type="uint16" IsLittleEndian="true" calibration="6"/>
-        <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" calibration="9"/>
-        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
-        <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
-        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+        <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" calibration="9" RangeStart="0" RangeEnd="600"/>
+        <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8" RangeStart="6" RangeEnd="20"/>
+        <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="60"/>
+        <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="95"/>
         <Parameter Name="rx_rssi" Type="uint16" IsLittleEndian="true" calibration="5"/>
        </ServiceSubtype>
 
 	   <ServiceSubtype Value="65" Name="ISIStrxvuTxTelemetry">
 		  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="true" />
 		  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
-		  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8" RangeStart="6" RangeEnd="20"/>
+		  <Parameter Name="vutotal_curr" Type="uint16" IsLittleEndian="true" calibration="9" RangeStart="0" RangeEnd="600"/>
 		  <Parameter Name="vutx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
 		  <Parameter Name="vurx_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
 		  <Parameter Name="vupa_curr" Type="uint16" IsLittleEndian="true" calibration="9"/>
-		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
-		  <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="95"/>
+		  <Parameter Name="board_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="60"/>
 		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="66" Name="ISIStrxvuTxTelemetry">
 		  <Parameter Name="tx_reflpwr" Type="uint16" IsLittleEndian="true" />
 		  <Parameter Name="tx_fwrdpwr" Type="uint16" IsLittleEndian="true" />
-		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8"/>
-		  <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" calibration="9"/>
-		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
-		  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" calibration="7"/>
+		  <Parameter Name="bus_volt" Type="uint16" IsLittleEndian="true" calibration="8" RangeStart="6" RangeEnd="20"/>
+		  <Parameter Name="total_current" Type="uint16" IsLittleEndian="true" calibration="9" RangeStart="0" RangeEnd="600"/>
+		  <Parameter Name="pa_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="95"/>
+		  <Parameter Name="locosc_temp" Type="uint16" IsLittleEndian="true" calibration="7" RangeStart="-40" RangeEnd="60"/>
 		  </ServiceSubtype>
 	   
 	   <ServiceSubtype Value="67" Name="ISISantsStatus_A">
@@ -500,13 +500,13 @@
 		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="68" Name="ISISantsTelemetry_A">
-		  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="true" calibration="19"/>
+		  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="true" calibration="19" RangeStart="-20" RangeEnd="60"/>
 		  <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="false" />
 		  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="false" />
 		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="69" Name="ISISantS_getTemperature_A">
-			<Parameter Name="temprature" Type="uint16" IsLittleEndian="true" calibration="19"/>
+			<Parameter Name="temprature" Type="uint16" IsLittleEndian="true" calibration="19" RangeStart="-20" RangeEnd="60"/>
 		</ServiceSubtype>
 
 	   <ServiceSubtype Value="70" Name="ISISantsStatus_A">
@@ -532,13 +532,13 @@
 		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="71" Name="ISISantsTelemetry_A">
-		  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" calibration="19"/>
+		  <Parameter Name="ants_temperature" Type="uint16" IsLittleEndian="false" calibration="19" RangeStart="-20" RangeEnd="60"/>
 		  <Parameter Name="ISISantsStatus ants_deployment" Type="uint16" IsLittleEndian="true" />
 		  <Parameter Name="ants_uptime" Type="uint32" IsLittleEndian="true" />
 		</ServiceSubtype>
 	   
 	   <ServiceSubtype Value="72" Name="ISISantS_getTemperature_B">
-			<Parameter Name="temprature" Type="uint16" IsLittleEndian="true" calibration="19"/>
+			<Parameter Name="temprature" Type="uint16" IsLittleEndian="true" calibration="19" RangeStart="-20" RangeEnd="60"/>
 		</ServiceSubtype>
 		
 		<ServiceSubtype Value="255" Name="File system space B">
