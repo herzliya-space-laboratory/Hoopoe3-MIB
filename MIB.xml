@@ -133,33 +133,33 @@
     <ServiceType Value="88" Name="TLM- eps,comm,file systems">
 	
 	   <ServiceSubtype Value="50" Name="EPS">
-        <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="photoCurrent3" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="photoCurrent2" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="photoCurrent1" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="Total photo current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="Battery voltage" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="Total system current" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="currentChanel1" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="currentChanel2" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="currentChanel3" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="currentChanel4" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="currentChanel5" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="currentChanel6" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="temp1" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="temp2" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="temp3" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="temp4" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="batt temp 1" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="batt temp 2" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="Number of EPS reboots" Type="uint32" Unit="counter" IsLittleEndian="true" />
-        <Parameter Name="Cause of last reset" Type="byte" RangeStart="255" RangeEnd="255" />
-        <Parameter Name="pptMode" Type="byte" Unit="can be 1/2/3" />
+        <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="0" RangeEnd="20328"/>
+        <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="0" RangeEnd="18392 "/>
+        <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="0" RangeEnd="6776"/>
+        <Parameter Name="photoCurrent3" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="712"/>
+        <Parameter Name="photoCurrent2" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="712"/>
+        <Parameter Name="photoCurrent1" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="712"/>
+        <Parameter Name="total photoCurrent" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2000" />
+        <Parameter Name="battery voltage" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="6000" RangeEnd="16800" />
+        <Parameter Name="systemCurrent0" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel1" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+        <Parameter Name="currentChanel2" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+        <Parameter Name="currentChanel3" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+        <Parameter Name="currentChanel4" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+        <Parameter Name="currentChanel5" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+        <Parameter Name="currentChanel6" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+        <Parameter Name="P31uBoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+        <Parameter Name="P31uBoardTemp2" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+        <Parameter Name="P31uBoardTemp3" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+        <Parameter Name="P31uBoardTemp4" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+        <Parameter Name="BP4BoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+        <Parameter Name="BP4BoardTemp2" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+        <Parameter Name="number of EPS reboots" Type="uint32" Unit="counter" IsLittleEndian="true" />
+        <Parameter Name="cause of last reset" Type="byte" RangeStart="255" RangeEnd="255" />
+        <Parameter Name="ppt_mode" Type="byte" Unit="can be 1/2/3" RangeStart="1" RangeEnd="3"/>
         <Parameter Name="channelStatus" Type="byte" Unit="every bit" IsLittleEndian="true" />
-        <Parameter Name="system state" Type="byte" Unit="ԅ(≖‿≖ԅ)" IsLittleEndian="true" />
-        <Parameter Name="EPS state numnber" Type="byte" Unit="every bit" IsLittleEndian="true" />
+        <Parameter Name="systemState" Type="byte" Unit="ԅ(≖‿≖ԅ)" IsLittleEndian="true" />
+        <Parameter Name="EPS state number" Type="byte" Unit="every bit" IsLittleEndian="true" />
       </ServiceSubtype>
 
        <ServiceSubtype Value="51" Name="Comm">
@@ -196,20 +196,20 @@
         <Parameter Name="VoltageSNSRVDDPIX" Type="uint16" Unit="mV" IsLittleEndian="true" />
         <Parameter Name="CurrentSNSRVDDPIX" Type="uint16" Unit="mA" IsLittleEndian="true" />
         <Parameter Name="VoltageFlashVTT09" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="TempSMU3AB" Type="float" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="TempSMU3BC" Type="float" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="TempREGU6" Type="float" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="TempREGU8" Type="float" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="TempFlash" Type="float" Unit="deg" IsLittleEndian="true" />
+        <Parameter Name="TempSMU3AB" Type="float" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="TempSMU3BC" Type="float" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="TempREGU6" Type="float" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="TempREGU8" Type="float" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="TempFlash" Type="float" Unit="degC" IsLittleEndian="true" />
       </ServiceSubtype>
 
 	   <ServiceSubtype Value="53" Name="SolarPanels">
-        <Parameter Name="SP temp0" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
-		<Parameter Name="SP temp1" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
-		<Parameter Name="SP temp2" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
-		<Parameter Name="SP temp3" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
-		<Parameter Name="SP temp4" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
-		<Parameter Name="SP temp5" Type="int32" Unit="deg" Calibration="10" IsLittleEndian="true" />
+        <Parameter Name="solarPanel0Temp" Type="int32" Unit="degC" Calibration="10" IsLittleEndian="true" RangeStart="-40" RangeEnd="85" />
+		<Parameter Name="solarPanel1Temp" Type="int32" Unit="degC" Calibration="10" IsLittleEndian="true" RangeStart="-40" RangeEnd="85" />
+		<Parameter Name="solarPanel2Temp" Type="int32" Unit="degC" Calibration="10" IsLittleEndian="true" RangeStart="-40" RangeEnd="85" />
+		<Parameter Name="solarPanel3Temp" Type="int32" Unit="degC" Calibration="10" IsLittleEndian="true" RangeStart="-40" RangeEnd="85" />
+		<Parameter Name="solarPanel4Temp" Type="int32" Unit="degC" Calibration="10" IsLittleEndian="true" RangeStart="-40" RangeEnd="85" />
+		<Parameter Name="solarPanel5Temp" Type="int32" Unit="degC" Calibration="10" IsLittleEndian="true" RangeStart="-40" RangeEnd="85" />
       </ServiceSubtype>
 
 	   <ServiceSubtype Value="73" Name="File system space A">
@@ -227,23 +227,23 @@
       </ServiceSubtype>
 
 	   <ServiceSubtype Value="56" Name="gom_eps_hk_t">
-        <Parameter Name="commandReply" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="vboost[0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-		<Parameter Name="vboost[1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-		<Parameter Name="vboost[2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="curin[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curin[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curin[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="cursun" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="cursys" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="boostConverterCurrent[0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="boostConverterCurrent[1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="boostConverterCurrent[2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="battery voltage" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="6000" RangeEnd="16800" />
+        <Parameter Name="photoCurrentIn[0]" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="508"/>
+		<Parameter Name="photoCurrentIn[1]" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="508"/>
+		<Parameter Name="photoCurrentIn[2]" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="508"/>
+        <Parameter Name="boostConverterCurrent" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="systemCurrent" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="reserved1" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="curout[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[3]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[4]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[5]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel0" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel1" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel2" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel3" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel4" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel5" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
         <Parameter Name="output[0]" Type="byte" IsLittleEndian="true" />
 		<Parameter Name="output[1]" Type="byte" IsLittleEndian="true" />
 		<Parameter Name="output[2]" Type="byte" IsLittleEndian="true" />
@@ -283,40 +283,40 @@
         <Parameter Name="counter_wdt_csp [0]" Type="uint32" IsLittleEndian="true" />
 		<Parameter Name="counter_wdt_csp [1]" Type="uint32" IsLittleEndian="true" />
         <Parameter Name="counter_boot" Type="uint32" IsLittleEndian="true" />
-        <Parameter Name="temp[0]" Type="int16" Unit="deg" IsLittleEndian="true" />
-		<Parameter Name="temp[1]" Type="int16" Unit="deg" IsLittleEndian="true" />
-		<Parameter Name="temp[2]" Type="int16" Unit="deg" IsLittleEndian="true" />
-		<Parameter Name="temp[3]" Type="int16" Unit="deg" IsLittleEndian="true" />
-		<Parameter Name="temp[4]" Type="int16" Unit="deg" IsLittleEndian="true" />
-		<Parameter Name="temp[5]" Type="int16" Unit="deg" IsLittleEndian="true" />
-        <Parameter Name="bootcause" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="pptMode" Type="byte" />
+        <Parameter Name="P31uBoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+		<Parameter Name="P31uBoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+		<Parameter Name="P31uBoardTemp2" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+		<Parameter Name="P31uBoardTemp3" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+		<Parameter Name="BP4BoardTemp0" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+		<Parameter Name="BP4BoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+        <Parameter Name="bootCause" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="battery_mode" Type="byte" IsLittleEndian="true" RangeStart="0" RangeEnd="0" />
+        <Parameter Name="ppt_mode" Type="byte" />
         <Parameter Name="reserved2" Type="uint16" />
       </ServiceSubtype>
 
        <ServiceSubtype Value="57" Name="gom_eps_hk_vi_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="vboost[0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-		<Parameter Name="vboost[1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-		<Parameter Name="vboost[2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="curin[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curin[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curin[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="cursun" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="cursys" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="boostConverterCurrent0" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="boostConverterCurrent1" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="boostConverterCurrent2" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="battery voltage" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="6000" RangeEnd="16800" />
+        <Parameter Name="photoCurrentIn0" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="508"/>
+		<Parameter Name="photoCurrentIn1" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="508"/>
+		<Parameter Name="photoCurrentIn2" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="508"/>
+        <Parameter Name="boostConverterCurrent" Type="uint16" IsLittleEndian="true" />
+        <Parameter Name="systemCurrent" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="reserved1" Type="uint16" IsLittleEndian="true" />
       </ServiceSubtype>	  
 
        <ServiceSubtype Value="58" Name="gom_eps_hk_out_t">
         <Parameter Name="commandReply" Type="uint16"  IsLittleEndian="true" />
-        <Parameter Name="curout[0]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[1]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[2]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[3]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[4]" Type="uint16" Unit="mA" IsLittleEndian="true" />
-		<Parameter Name="curout[5]" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="currentChanel0" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel1" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel2" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel3" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel4" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
+		<Parameter Name="currentChanel5" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2500" />
         <Parameter Name="output_on_delta[0]" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="output_on_delta[1]" Type="uint16" IsLittleEndian="true" />
 		<Parameter Name="output_on_delta[2]" Type="uint16" IsLittleEndian="true" />
@@ -343,24 +343,24 @@
 	   <ServiceSubtype Value="60" Name="gom_eps_hk_basic_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="counter_boot" Type="int32" IsLittleEndian="true" />
-        <Parameter Name="temp[0]" Type="int16" IsLittleEndian="true" />
-		<Parameter Name="temp[1]" Type="int16" IsLittleEndian="true" />
-		<Parameter Name="temp[2]" Type="int16" IsLittleEndian="true" />
-		<Parameter Name="temp[3]" Type="int16" IsLittleEndian="true" />
-		<Parameter Name="temp[4]" Type="int16" IsLittleEndian="true" />
-		<Parameter Name="temp[5]" Type="int16" IsLittleEndian="true" />
-        <Parameter Name="bootcause" Type="byte"  IsLittleEndian="true" />
-        <Parameter Name="battmode" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="pptMode" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="P31uBoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+		<Parameter Name="P31uBoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+		<Parameter Name="P31uBoardTemp2" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="-40" RangeEnd="125" />
+		<Parameter Name="P31uBoardTemp3" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+		<Parameter Name="BP4BoardTemp0" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+		<Parameter Name="BP4BoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+        <Parameter Name="bootCause" Type="byte"  IsLittleEndian="true" />
+        <Parameter Name="battery_mode" Type="byte" IsLittleEndian="true" RangeStart="0" RangeEnd="0" />
+        <Parameter Name="ppt_mode" Type="byte" IsLittleEndian="true" />
         <Parameter Name="reserved2" Type="uint16" IsLittleEndian="true" />
       </ServiceSubtype>	 
 	
 	   <ServiceSubtype Value="61" Name="eps_config_t">
 	    <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true"/>
-        <Parameter Name="pptmode" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="battheater_mode" Type="byte" IsLittleEndian="true" />
-        <Parameter Name="char battheater_low" Type="byte" Unit="degC" IsLittleEndian="true" />
-        <Parameter Name="char battheater_high" Type="byte" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="ppt_mode" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="batteryHeater_mode" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="char batteryHeater_low" Type="byte" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="char batteryHeater_high" Type="byte" Unit="degC" IsLittleEndian="true" />
         <Parameter Name="output_normal_value [0]" Type="byte" IsLittleEndian="true" />
 		<Parameter Name="output_normal_value [1]" Type="byte" IsLittleEndian="true" />
 		<Parameter Name="output_normal_value [2]" Type="byte" IsLittleEndian="true" />
@@ -393,9 +393,9 @@
 		<Parameter Name="output_initial_off_delay [5]" Type="uint16" Unit="s" IsLittleEndian="true" />
 		<Parameter Name="output_initial_off_delay [6]" Type="uint16" Unit="s" IsLittleEndian="true" />
 		<Parameter Name="output_initial_off_delay [7]" Type="uint16" Unit="s" IsLittleEndian="true" />
-        <Parameter Name="vboost [0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-		<Parameter Name="vboost [1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
-		<Parameter Name="vboost [2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+        <Parameter Name="boostConverterCurrent [0]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="boostConverterCurrent [1]" Type="uint16" Unit="mV" IsLittleEndian="true" />
+		<Parameter Name="boostConverterCurrent [2]" Type="uint16" Unit="mV" IsLittleEndian="true" />
 	   </ServiceSubtype>
 
 	   <ServiceSubtype Value="62" Name="eps_config2_t">
@@ -410,18 +410,18 @@
 
 	   <ServiceSubtype Value="55" Name="gom_eps_hkparam_t">
         <Parameter Name="commandReply" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="pc" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="bv" Type="uint16" Unit="mV" IsLittleEndian="true" />
-        <Parameter Name="sc" Type="uint16" Unit="mA" IsLittleEndian="true" />
-        <Parameter Name="tempConverter1" Type="int16" Unit="degC" IsLittleEndian="true" />
-        <Parameter Name="tempConverter2" Type="int16" Unit="degC" IsLittleEndian="true" />
-        <Parameter Name="tempConverter3" Type="int16" Unit="degC" IsLittleEndian="true" />
-        <Parameter Name="tempBattery" Type="int16" Unit="degC" IsLittleEndian="true" />
-        <Parameter Name="batteryBoardTemp [0]" Type="int16" Unit="degC" IsLittleEndian="true" />
-		<Parameter Name="batteryBoardTemp [1]" Type="int16" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="photoVoltaic3" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="0" RangeEnd="20328"/>
+        <Parameter Name="photoVoltaic2" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="0" RangeEnd="18392 "/>
+        <Parameter Name="photoVoltaic1" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="0" RangeEnd="6776"/>
+        <Parameter Name="total photoCurrent" Type="uint16" Unit="mA" IsLittleEndian="true" RangeStart="0" RangeEnd="2000" />
+        <Parameter Name="battery voltage" Type="uint16" Unit="mV" IsLittleEndian="true" RangeStart="6000" RangeEnd="16800" />
+        <Parameter Name="systemCurrent" Type="uint16" Unit="mA" IsLittleEndian="true" />
+        <Parameter Name="photovoltaicPowerConverterTemp1" Type="int16" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="photovoltaicPowerConverterTemp2" Type="int16" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="photovoltaicPowerConverterTemp3" Type="int16" Unit="degC" IsLittleEndian="true" />
+        <Parameter Name="P31uBatteryTemp" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+        <Parameter Name="BP4BoardTemp0" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
+	<Parameter Name="BP4BoardTemp1" Type="int16" Unit="degC" IsLittleEndian="true" RangeStart="0" RangeEnd="45" />
         <Parameter Name="latchUp3v3Channel3" Type="uint16"  IsLittleEndian="true" />
         <Parameter Name="latchUp3v3Channel2" Type="uint16"  IsLittleEndian="true" />
         <Parameter Name="latchUp3v3Channel1" Type="uint16" IsLittleEndian="true" />
@@ -431,7 +431,7 @@
         <Parameter Name="reset" Type="byte" IsLittleEndian="true" />
         <Parameter Name="bootCount" Type="uint16" IsLittleEndian="true" />
         <Parameter Name="swErrors" Type="uint16" IsLittleEndian="true" />
-        <Parameter Name="pptMode" Type="byte" IsLittleEndian="true" />
+        <Parameter Name="ppt_mode" Type="byte" IsLittleEndian="true" />
         <Parameter Name="gom_eps_channelstates_t channelStatus" Type="byte" IsLittleEndian="true" />
 	  </ServiceSubtype>
 	
