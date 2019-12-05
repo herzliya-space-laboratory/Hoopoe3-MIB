@@ -101,27 +101,27 @@
 	<ServiceType Value="3" Name="Global Param">
 	
       <ServiceSubtype Value="25" Name="Beacon">
-        <Parameter Name="vbatt" Type="uint16" Unit="mV" IsLittleEndian="false" />
-        <Parameter Name="Batt_Curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="3v3_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="5v_curr" Type="uint16" Unit="mA" IsLittleEndian="false" />
-        <Parameter Name="LOtrxvu_temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" RangeStart="-40" RangeEnd="60" />
-        <Parameter Name="PAtrxvu_temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" RangeStart="-40" RangeEnd="95" />
-        <Parameter Name="Eps_temp[0]" Type="int16" Unit="deg c" IsLittleEndian="false" />
-        <Parameter Name="Eps_temp[1]" Type="int16" Unit="deg c" IsLittleEndian="false" />
-        <Parameter Name="Eps_temp[2]" Type="int16" Unit="deg c" IsLittleEndian="false" />
-        <Parameter Name="Eps_temp[3]" Type="int16" Unit="deg c" IsLittleEndian="false" />
-        <Parameter Name="Batt_temp[0]" Type="int16" Unit="deg c" IsLittleEndian="false" />
-        <Parameter Name="Batt_temp[1]" Type="int16" Unit="deg c" IsLittleEndian="false" />
-        <Parameter Name="Rxdoppler" Type="uint16" Calibration="6" Unit="Hz" IsLittleEndian="false" />
-        <Parameter Name="Rxrssi" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="false" />
-        <Parameter Name="Txrefl" Type="uint16" Unit="mW" IsLittleEndian="false" />
-        <Parameter Name="Txfrow" Type="uint16" Unit="mW" IsLittleEndian="false" />
-        <Parameter Name="AltitudeAngelsRoll" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="AltitudeAngelsPich" Type="int16" Unit="deg" IsLittleEndian="false" />
-        <Parameter Name="AltitudeAngelsYaw" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="vbatt" description="EPS" Type="uint16" Unit="mV" IsLittleEndian="false" />
+        <Parameter Name="Batt_Curr" description="EPS" Type="uint16" Unit="mA" IsLittleEndian="false" />
+        <Parameter Name="3v3_curr" description="EPS" Type="uint16" Unit="mA" IsLittleEndian="false" />
+        <Parameter Name="5v_curr" description="EPS" Type="uint16" Unit="mA" IsLittleEndian="false" />
+        <Parameter Name="LOtrxvu_temp" description="Comms, name: Local Oscillator Temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" RangeStart="-40" RangeEnd="60" />
+        <Parameter Name="PAtrxvu_temp" description="Comms, name: Power Amplifier Temp" Type="uint16" Calibration="7" Unit="deg c" IsLittleEndian="false" RangeStart="-40" RangeEnd="95" />
+        <Parameter Name="Eps_temp[0]" description="EPS" Type="int16" Unit="deg c" IsLittleEndian="false" />
+        <Parameter Name="Eps_temp[1]" description="EPS" Type="int16" Unit="deg c" IsLittleEndian="false" />
+        <Parameter Name="Eps_temp[2]" description="EPS" Type="int16" Unit="deg c" IsLittleEndian="false" />
+        <Parameter Name="Eps_temp[3]" description="EPS" Type="int16" Unit="deg c" IsLittleEndian="false" />
+        <Parameter Name="Batt_temp[0]" description="EPS" Type="int16" Unit="deg c" IsLittleEndian="false" />
+        <Parameter Name="Batt_temp[1]" description="EPS" Type="int16" Unit="deg c" IsLittleEndian="false" />
+        <Parameter Name="Rxdoppler" description="Comms, name: RX Doppler" Type="uint16" Calibration="6" Unit="Hz" IsLittleEndian="false" />
+        <Parameter Name="Rxrssi" description="Comms, name: RX RSSI" Type="uint16" Calibration="5" Unit="dBm" IsLittleEndian="false" />
+        <Parameter Name="Txrefl" description="Comms, name: TX Reflected SWR" Type="uint16" Unit="mW" IsLittleEndian="false" />
+        <Parameter Name="Txfrow" description="Comms, name: TX Forward SWR" Type="uint16" Unit="mW" IsLittleEndian="false" />
+        <Parameter Name="AltitudeAngelsRoll" description="ADCS, name: AttitudeAnglesRoll" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="AltitudeAngelsPich" description="ADCS, name: AttitudeAnglesPitch" Type="int16" Unit="deg" IsLittleEndian="false" />
+        <Parameter Name="AltitudeAngelsYaw" description="ADCS, name: AttitudeAnglesYaw" Type="int16" Unit="deg" IsLittleEndian="false" />
         <Parameter Name="FileSystem last error" Type="byte" IsLittleEndian="false" />
-        <Parameter Name="EPS battery state" Type="byte" IsLittleEndian="false" />
+        <Parameter Name="EPS battery state" description="EPS" Type="byte" IsLittleEndian="false" />
         <Parameter Name="NumberDelayd_comms" Type="byte" IsLittleEndian="false" />
         <Parameter Name="Number_Resets" Type="uint32" IsLittleEndian="false" />
         <Parameter Name="Last_Resets" Type="dateTime" Unit="sec" IsLittleEndian="false" />
