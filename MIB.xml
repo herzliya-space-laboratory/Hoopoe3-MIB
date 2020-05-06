@@ -848,16 +848,20 @@
 			<Parameter Name="ECEF Velocity z" Type="int16" Unit="m/s" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="190" Name="ADCS_GET_STATE_TLM_ST">
-			<Parameter Name="Current State" Type ="bitmap" IsLittleEndian="true" >
+			<Parameter Name="Current State 1" Type ="bitmap" IsLittleEndian="true" >
 				<bitfield size="4" isnull="false" Name = "Current attitude estimation mode" calibration="1"	/>	
-				<bitfield size="4" isnull="false" Name = "Current attitude control mode" calibration="1"	/>	
-				<bitfield size="2" isnull="false" Name = "Current ADCS running mode" calibration="1"	/>	
+				<bitfield size="4" isnull="false" Name = "Current attitude control mode" calibration="1"	/>
+			</Parameter>
+			<Parameter Name="Current State 2" Type ="bitmap" IsLittleEndian="true" >
+				<bitfield size="2" isnull="false" Name = "Current ADCS run mode" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "CubeControl Signal enable status" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "CubeControl Motor enable status" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "CubeSense enable status" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "CubeWheel 1 enable status" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "CubeWheel 2 enable status" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "CubeWheel 3 enable status" calibration="1"	/>	
+			</Parameter>
+			<Parameter Name="Current State 3" Type ="bitmap" IsLittleEndian="true" >
 				<bitfield size="1" isnull="false" Name = "CubeStar enable status" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "GPS receiver enable status" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "GPS antenna LNA enable status" calibration="1"	/>	
@@ -866,6 +870,8 @@
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeSense" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeControl Signal MCU" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeControl Motor MCU" calibration="1"	/>	
+			</Parameter>
+			<Parameter Name="Current State 4" Type ="bitmap" IsLittleEndian="true" >
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeWheel 1" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeWheel 2" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Comm error occurred with the CubeWheel 3" calibration="1"	/>	
@@ -873,7 +879,9 @@
 				<bitfield size="1" isnull="false" Name = "Magnetometer measured magnetic field with size  100 nT or  100,000 nT" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Cam1 sensor overcurrent detected" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Cam1 sensor was not idle at the start of ADCS loop" calibration="1"	/>	
-				<bitfield size="1" isnull="false" Name = "Cam1 sensor was unable to compute angles (could be not in FOV)" calibration="1"	/>	
+				<bitfield size="1" isnull="false" Name = "Cam1 sensor was unable to compute angles (could be not in FOV)" calibration="1"	/>
+			</Parameter>
+			<Parameter Name="Current State 5" Type ="bitmap" IsLittleEndian="true" >
 				<bitfield size="1" isnull="false" Name = "Detected sun angles were outside of +/- 90 deg" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Cam2 sensor overcurrent detected" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Cam2 sensor was not idle at the start of ADCS loop" calibration="1"	/>	
@@ -882,6 +890,8 @@
 				<bitfield size="1" isnull="false" Name = "Measured XYZ-body rate is outside of the range +/- 20 deg/s" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Wheel XYZ speed measurement was outside of the range +/- 8500 rpm" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Unable to compute Coarse Sun vector (could be not in FOV)" calibration="1"	/>	
+			</Parameter>
+			<Parameter Name="Current State 6" Type ="bitmap" IsLittleEndian="true" >
 				<bitfield size="1" isnull="false" Name = "Unable to obtain enough matched stars" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Star tracker overcurrent detected" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Orbit Parameters are not in allowed bounds" calibration="1"	/>	
@@ -889,29 +899,29 @@
 				<bitfield size="1" isnull="false" Name = "Attempt was made to select control mode without appropriate estimator" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Attempt was made to change to an estimation mode that would be inappropriate for the current ctrl mode" calibration="1"	/>	
 				<bitfield size="1" isnull="false" Name = "Modelled and measured magnetic field differs in size by mode than 5000 nT" calibration="1"	/>	
+				<bitfield size="1" isnull="false" Name = "Failed to Recover an ADCS Node by successive resets" calibration="1"	/>	
 			</Parameter>
-			<Parameter Type="int16" Name="Failed to Recover an ADCS Node by successive resets"	calibration="1" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Roll angle"						Unit ="deg" 		calibration="1" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Pitch angle"						Unit ="deg" 			calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Yaw angle"						Unit ="deg" 		calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="quaternion error q1 component"						calibration="11" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="quaternion error q2 component"	 					calibration="11" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="quaternion error q3 component"	 					calibration="11" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="X Angular Rate"					Unit ="deg/s" 	calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Y Angular Rate"					Unit ="deg/s" 	calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Z Angular Rate"					Unit ="deg/s" 	calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced x-pos vector"		Unit ="km"			calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced y-pos vector"		Unit ="km" 			calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced z-pos vector"		Unit ="km" 			calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced x-velocity"		Unit ="m/s"		calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced y-velocity"		Unit ="m/s" 	calibration="99" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECI referenced z-velocity"		Unit ="m/s"		calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated Roll angle"				Unit ="deg" 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated Pitch angle"			Unit ="deg" 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated Yaw angle"				Unit ="deg" 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated q1 component"								calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimatedr q2 component"	 							calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated q3 component"	 							calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated X Angular Rate"			Unit ="deg/s" 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated Y Angular Rate"			Unit ="deg/s" 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="Estimated Z Angular Rate"			Unit ="deg/s" 		calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced x coordinate"		Unit ="km"			calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced y coordinate"		Unit ="km" 			calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced z coordinate"		Unit ="km" 			calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced x-velocity"		Unit ="m/s"			calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced y-velocity"		Unit ="m/s" 		calibration="99" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECI referenced z-velocity"		Unit ="m/s"			calibration="99" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="Latitude angle" 					Unit ="deg"	 		calibration="4" IsLittleEndian="true" />
 			<Parameter Type="int16" Name="Longitude angle"					Unit ="deg"	 		calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="Altitude angle"					Unit ="deg"		calibration="4" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECEF x position"					Unit ="m"				calibration="1" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECEF y position"					Unit ="m"	 			calibration="1" IsLittleEndian="true" />
-			<Parameter Type="int16" Name="ECEF z position"					Unit ="m"	 			calibration="1" IsLittleEndian="true" />
+			<Parameter Type="uint16" Name="Altitude"						Unit ="km"			calibration="4" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECEF x position"					Unit ="m"			calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECEF y position"					Unit ="m"	 		calibration="1" IsLittleEndian="true" />
+			<Parameter Type="int16" Name="ECEF z position"					Unit ="m"	 		calibration="1" IsLittleEndian="true" />
 		</ServiceSubtype>
 		<ServiceSubtype Value="191" Name="ADCS_GET_ADCS_MEASUREMENTS_ST">
 			<Parameter Name="magfield_x" 			Type="int16" IsLittleEndian="true"	calibration="4"	Unit="uT" />
@@ -1016,13 +1026,13 @@
 			<Parameter Name="Wheel 2 Current" 					 Type="uint16" IsLittleEndian="true" calibration="4"	Unit="mA"/>
 			<Parameter Name="Wheel 3 Current" 					 Type="uint16" IsLittleEndian="true" calibration="4"	Unit="mA"/>
 			<Parameter Name="CubeStar current" 					 Type="uint16" IsLittleEndian="true" calibration="4"	Unit="mA"/>
-			<Parameter Name="Magnetorquer current" 				 Type="uint16" IsLittleEndian="true" calibration="4"	Unit="mA"/>
-			<Parameter Name="MCU Temperature" 					 Type="uint16" IsLittleEndian="true" calibration="1"	Unit="C"/>
-			<Parameter Name="Magnetometer Temperature" 			 Type="uint16" IsLittleEndian="true" calibration="4"	Unit="C"/>
-			<Parameter Name="Redundant Magnetometer Temperature" Type="uint16" IsLittleEndian="true" calibration="1"	Unit="C"/>
-			<Parameter Name="X-rate sensor temp vector" 		 Type="uint16" IsLittleEndian="true" calibration="1"	Unit="C"/>
-			<Parameter Name="Y-rate sensor temp vector" 		 Type="uint16" IsLittleEndian="true" calibration="1"	Unit="C"/>
-			<Parameter Name="Z-rate sensor temp vector" 		 Type="uint16" IsLittleEndian="true" calibration="1"	Unit="C"/>
+			<Parameter Name="Magnetorquer current" 				 Type="uint16" IsLittleEndian="true" calibration="13"	Unit="mA"/>
+			<Parameter Name="MCU Temperature" 					 Type="int16" IsLittleEndian="true" calibration="1"	Unit="C"/>
+			<Parameter Name="Magnetometer Temperature" 			 Type="int16" IsLittleEndian="true" calibration="4"	Unit="C"/>
+			<Parameter Name="Redundant Magnetometer Temperature" Type="int16" IsLittleEndian="true" calibration="4"	Unit="C"/>
+			<Parameter Name="X-rate sensor temp vector" 		 Type="int16" IsLittleEndian="true" calibration="1"	Unit="C"/>
+			<Parameter Name="Y-rate sensor temp vector" 		 Type="int16" IsLittleEndian="true" calibration="1"	Unit="C"/>
+			<Parameter Name="Z-rate sensor temp vector" 		 Type="int16" IsLittleEndian="true" calibration="1"	Unit="C"/>
 		</ServiceSubtype>
 		<ServiceSubtype Value="196" Name="ADCS_GET_ADCS_EXC_TIMES_ST">
 			<Parameter Name="Time to perform complete" 				Type="int16" Unit="[ms]" IsLittleEndian="true" />
